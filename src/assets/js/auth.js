@@ -22,7 +22,20 @@ export const loginGoogle = () =>{
 }
 
 export const createAccount = () =>{
-    return 'Cuenta creada Ok';
+    let emailNewUser = document.getElementById('emailnewuser').value;
+    let passwordNewUser = document.getElementById('passwordnewuser').value;
+      
+      /*2.) Código de Firebase para registrar nuevos usuarios*/
+      /*firebase.autentificación a partir del email y el password, luego hace una promesa (catch) por si no funciona*/
+      firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
+      .catch(function(error) {
+          // Handle Errors here.
+          var errorCode = alert(error.code);
+          var errorMessage = alert(error.message);        
+         
+      });
+  
+    return 'Cuenta creada OK';
 }
 
 //Este archivo no lleva nada mas, por lo que se debe testear
