@@ -5,9 +5,9 @@
   "main": "src/index.html",
   "scripts": {
     "test": "jest --coverage",
-    "eslint":"eslint ext .js src/ test/",
-    "htmlhint":"htmlhint src/*.html",
-    "deploy":"gh-pages -d src/"
+    "eslint": "eslint ext .js src/ test/",
+    "htmlhint": "htmlhint src/*.html",
+    "deploy": "gh-pages -d src/"
   },
   "repository": {
     "type": "git",
