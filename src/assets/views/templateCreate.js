@@ -6,7 +6,9 @@ export const templateCreate = () => {
   // creamos el contenido del login
   const contentCreate = `<p>Crear cuenta</p>
                           <input type="email" id="emailnewuser" placeholder="ingrese su correo"/>
+                          <p id="emailerror"></p>
                           <input type="password" id="passwordnewuser" placeholder="ingrese su contraseña"/>
+                          <p id="passworderror"></p>
                           <button id="create">Crear cuenta</button>`;
   // pasar el contenido al div
   containerCreate.innerHTML = contentCreate;
