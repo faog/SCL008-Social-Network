@@ -1,4 +1,18 @@
-import {firebase} from "./firebase.js"
+//Inicialización de firebase
+  let config = {
+    apiKey: "AIzaSyCVDZrZyWXI-xAVlz9mCDjLS48i1DKFTWU",
+    authDomain: "pet-community-sn.firebaseapp.com",
+    databaseURL: "https://pet-community-sn.firebaseio.com",
+    projectId: "pet-community-sn",
+    storageBucket: "pet-community-sn.appspot.com",
+    messagingSenderId: "443792892793"
+  };
+  
+  firebase.initializeApp(config);
+  
+// Initialize Cloud Firestore through Firebase
+  let db = firebase.firestore();
+
 
 export const loginGoogle = () =>{
   return 'Login con Google Ok';

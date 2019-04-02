@@ -1,4 +1,6 @@
-//Inicialización de firebase
+/*global firebase*/
+
+
 //llamado a las rutas
 //Archivo base que comunica a todas las cosas
 
