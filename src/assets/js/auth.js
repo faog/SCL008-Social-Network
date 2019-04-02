@@ -12,6 +12,9 @@ var config = {
 
 firebase.initializeApp(config);
 
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+
 /*
 1-Crear 2 funciones que simularan el login con google y la creación de cuenta 
 */
@@ -38,18 +41,31 @@ export const createAccount = () =>{
     // Handle Errors here.
     if(error){
       if(error.code==="auth/invalid-email"){
-        document.getElementById('emailerror').innerHTML=`Debes ingresar un correo válido`;
+        document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
       }
       else if (error.code==="auth/weak-password"){
-        document.getElementById('passworderror').innerHTML=`La contraseña debe ser superior a 5 caracteres`;
+        document.getElementById('passworderror').innerHTML=`*La contraseña debe ser superior a 5 carácteres.`;
       }
       else if (error.code==="auth/email-already-in-use"){
-        document.getElementById('emailerror').innerHTML=`Este correo ya se encuentra registrado`;
+        document.getElementById('emailerror').innerHTML=`*Este correo ya se encuentra registrado.`;
       }
       else{
         alert('No se ha podido crear el usuario');
       }
     }
+    // Add a new document in collection "cities"
+      db.collection("cities").doc("LA").set({
+      name: "Los Angeles",
+      state: "CA",
+      country: "USA"
+      })
+      .then(function() {
+      console.log("Document successfully written!");
+      })
+      .catch(function(error) {
+      console.error("Error writing document: ", error);
+      });
+
   });
 }
 
