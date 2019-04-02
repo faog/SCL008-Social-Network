@@ -8,7 +8,7 @@ import {templateCreate} from './assets/views/templateCreate.js';
 
 /*
 1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
- el template en el html*/
+el template en el html*/
 
 //cada vez que recibe un # distinto, lo actualizará
 const changeRoute = (hash) =>{
@@ -26,7 +26,7 @@ const changeRoute = (hash) =>{
 const showTemplate = (hash) =>{
     //necesito sacar el #/ a mi string
     const router = hash.substring(2);
-    const containerRoot = document.getElementById('root');
+    const containerRoot = document.getElementById('containersocialnetwork');
     containerRoot.innerHTML='';
 
     //hacemos el match del hash utilizado y el template que quiero mostrar

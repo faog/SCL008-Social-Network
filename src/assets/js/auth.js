@@ -2,15 +2,15 @@
 //Inicialización de firebase
 
 var config = {
-    apiKey: "AIzaSyCVDZrZyWXI-xAVlz9mCDjLS48i1DKFTWU",
-    authDomain: "pet-community-sn.firebaseapp.com",
-    databaseURL: "https://pet-community-sn.firebaseio.com",
-    projectId: "pet-community-sn",
-    storageBucket: "pet-community-sn.appspot.com",
-    messagingSenderId: "443792892793"
-    };
-  
-  firebase.initializeApp(config);
+  apiKey: "AIzaSyCVDZrZyWXI-xAVlz9mCDjLS48i1DKFTWU",
+  authDomain: "pet-community-sn.firebaseapp.com",
+  databaseURL: "https://pet-community-sn.firebaseio.com",
+  projectId: "pet-community-sn",
+  storageBucket: "pet-community-sn.appspot.com",
+  messagingSenderId: "443792892793"
+  };
+
+firebase.initializeApp(config);
 
 /*
 1-Crear 2 funciones que simularan el login con google y la creación de cuenta 
@@ -18,39 +18,25 @@ var config = {
 
 /*Simular que son asi, agregando export*/
 export const loginGoogle = () =>{
-    return 'Login con Google Ok';
+  return 'Login con Google Ok';
 }
 
-/*Función para crear una nueva cuenta*/
 export const createAccount = () =>{
   let emailNewUser = document.getElementById('emailnewuser').value;
   let passwordNewUser = document.getElementById('passwordnewuser').value;
-  let valid = true;
     
-  if(!valid){
-    return;
-  }
+    /*2.) Código de Firebase para registrar nuevos usuarios*/
+    /*firebase.autentificación a partir del email y el password, luego hace una promesa (catch) por si no funciona*/
+    firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = alert(error.code);
+        var errorMessage = alert(error.message);        
+       
+    });
+    
 
-  /*Función de Firebase para registrar nuevos usuarios*/
-  firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
-  .catch(function(error) {
-    // Handle Errors here.
-    if(error){
-      if(error.code==="auth/invalid-email"){
-        document.getElementById('emailerror').innerHTML=`Debes ingresar un correo válido`;
-      }
-      else if (error.code==="auth/weak-password"){
-        document.getElementById('emailpassword').innerHTML=`La contraseña debe ser superior a 5 caracteres`;
-      }
-      else if (error.code==="auth/email-already-in-use"){
-        document.getElementById('emailerror').innerHTML=`Este correo ya se encuentra registrado`;
-      }
-      else{
-        alert("No se ha podido crear el usuario");
-      }
-    }
-  });
-
+  return 'Cuenta creada OK';
 }
 
 //Este archivo no lleva nada mas, por lo que se debe testear
