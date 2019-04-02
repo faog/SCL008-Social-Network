@@ -8,18 +8,13 @@ var config = {
   projectId: "pet-community-sn",
   storageBucket: "pet-community-sn.appspot.com",
   messagingSenderId: "443792892793"
-  };
+};
 
 firebase.initializeApp(config);
 
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 
-/*
-1-Crear 2 funciones que simularan el login con google y la creación de cuenta 
-*/
-
-/*Simular que son asi, agregando export*/
 export const loginGoogle = () =>{
   return 'Login con Google Ok';
 }
@@ -29,8 +24,24 @@ export const createAccount = () =>{
   cleanErrors();
   let emailNewUser = document.getElementById('emailnewuser').value;
   let passwordNewUser = document.getElementById('passwordnewuser').value;
+  let firstNameNewUser = document.getElementById('firstnamenewuser').value;
+  let lastNameNewUser = document.getElementById('lastnamenewuser').value;
   let valid = true;
   
+  if(emailNewUser===""){
+    document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
+  }
+  if (firstNameNewUser===""){
+    document.getElementById('emailerror').innerHTML=`*Debes ingresar un nombre.`;
+  }
+  if (lastNameNewUser===""){
+    document.getElementById('emailerror').innerHTML=`*Debes ingresar un apellido.`;
+  } 
+
+  if (passwordNewUser===""){
+    document.getElementById('emailerror').innerHTML=`*Debes ingresar una contraseña.`;
+  } 
+
   if(!valid){
     return;
   }
@@ -39,7 +50,7 @@ export const createAccount = () =>{
   firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
   .catch(function(error) {
     // Handle Errors here.
-    if(error){
+    /*if(error){
       if(error.code==="auth/invalid-email"){
         document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
       }
@@ -52,19 +63,20 @@ export const createAccount = () =>{
       else{
         alert('No se ha podido crear el usuario');
       }
-    }
+    }*/
     // Add a new document in collection "cities"
-      db.collection("cities").doc("LA").set({
-      name: "Los Angeles",
-      state: "CA",
-      country: "USA"
-      })
-      .then(function() {
-      console.log("Document successfully written!");
-      })
-      .catch(function(error) {
-      console.error("Error writing document: ", error);
-      });
+    db.collection("users").add({
+      firstname: firstNameNewUser,
+      lastname: lastNameNewUser,
+      email: emailNewUser,
+      password:passwordNewUser  
+  })
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
 
   });
 }
@@ -72,6 +84,8 @@ export const createAccount = () =>{
 function cleanErrors(){
   document.getElementById('emailerror').innerHTML='';
   document.getElementById('passworderror').innerHTML='';
+  document.getElementById('firstnamenewuser').innerHTML='';
+  document.getElementById('lastnamenewuser').innerHTML='';
 }
 
 //Este archivo no lleva nada mas, por lo que se debe testear

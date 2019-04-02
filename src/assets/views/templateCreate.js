@@ -13,7 +13,9 @@ export const templateCreate = () => {
                           <h3 class="accounttitle">Bienvenido</h3>                          
                           <h5 class="accountparagraph">Rellene los siguientes campos:</h5>
                           <input type="text" id="firstnamenewuser" class="element" placeholder="Nombre" autofocus/>
+                          <p id="emailerror" class="errormessage"></p>
                           <input type="text" id="lastnamenewuser" class="element" placeholder="Apellido"/>
+                          <p id="emailerror" class="errormessage"></p>
                           <input type="email" id="emailnewuser" class="element" placeholder="Correo"/>
                           <p id="emailerror" class="errormessage"></p>
                           <input type="password" id="passwordnewuser" class="element" placeholder="Contraseña"/>
