@@ -33,11 +33,11 @@ const showTemplate = (hash) =>{
     switch (router) {
         case 'login':
             //si es el caso, imprime la vista templateLogin en el html
-            containerRoot.appendChild(templateLogin());
+            templateLogin();
             break;
     
         case 'create':
-            containerRoot.appendChild(templateCreate());
+            templateCreate();
             break;
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`
