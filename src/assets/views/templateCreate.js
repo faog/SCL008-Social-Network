@@ -17,6 +17,7 @@ export const templateCreate = () => {
                           <input type="password" id="passwordnewuser" class="element" placeholder="Contraseña"/>
                           <p id="passworderror"></p>
                           <button id="create" class="element">Crear tu cuenta</button>
+                          <p id="accounterror"></p>
                         </section>`;
   // pasar el contenido al div
   containerCreate.innerHTML = contentCreate;

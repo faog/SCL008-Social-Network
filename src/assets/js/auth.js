@@ -21,22 +21,41 @@ export const loginGoogle = () =>{
   return 'Login con Google Ok';
 }
 
+/*Función para crear una nueva cuenta*/
 export const createAccount = () =>{
+  cleanErrors();
   let emailNewUser = document.getElementById('emailnewuser').value;
   let passwordNewUser = document.getElementById('passwordnewuser').value;
-    
-    /*2.) Código de Firebase para registrar nuevos usuarios*/
-    /*firebase.autentificación a partir del email y el password, luego hace una promesa (catch) por si no funciona*/
-    firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
-    .catch(function(error) {
-        // Handle Errors here.
-        var errorCode = alert(error.code);
-        var errorMessage = alert(error.message);        
-       
-    });
-    
+  let valid = true;
+  
+  if(!valid){
+    return;
+  }
 
-  return 'Cuenta creada OK';
+  /*Función de Firebase para registrar nuevos usuarios*/
+  firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
+  .catch(function(error) {
+    // Handle Errors here.
+    if(error){
+      if(error.code==="auth/invalid-email"){
+        document.getElementById('emailerror').innerHTML=`Debes ingresar un correo válido`;
+      }
+      else if (error.code==="auth/weak-password"){
+        document.getElementById('passworderror').innerHTML=`La contraseña debe ser superior a 5 caracteres`;
+      }
+      else if (error.code==="auth/email-already-in-use"){
+        document.getElementById('emailerror').innerHTML=`Este correo ya se encuentra registrado`;
+      }
+      else{
+        alert('No se ha podido crear el usuario');
+      }
+    }
+  });
+}
+
+function cleanErrors(){
+  document.getElementById('emailerror').innerHTML='';
+  document.getElementById('passworderror').innerHTML='';
 }
 
 //Este archivo no lleva nada mas, por lo que se debe testear
