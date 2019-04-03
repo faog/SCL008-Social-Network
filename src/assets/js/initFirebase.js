@@ -14,3 +14,4 @@ export const initFirebase = () => {
     // Initialize Cloud Firestore through Firebase
     return firebase.firestore();
 }
+
