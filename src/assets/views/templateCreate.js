@@ -34,6 +34,23 @@ export const templateCreate = () => {
     let emailNewUser = document.getElementById('emailnewuser').value;
     let passwordNewUser = document.getElementById('passwordnewuser').value;
     let userCreateResponse = createAccount(firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser);
+    
+    /*IMPRESION VÁLIDACIONES EN EL DOM*/
+    if (firstNameNewUser===""){
+      document.getElementById('firstnameerror').innerHTML=`*Debes ingresar un nombre.`;
+    }
+  
+    if (lastNameNewUser===""){
+      document.getElementById('lastnameerror').innerHTML=`*Debes ingresar un apellido.`;
+    } 
+  
+    if(emailNewUser===""){
+      document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
+    }
+  
+    if(passwordNewUser===""){
+      document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
+    }
 
     if(userCreateResponse==="OK"){
       // TODO: Falta navegar al login
