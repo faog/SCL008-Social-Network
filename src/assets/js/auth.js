@@ -28,23 +28,47 @@ export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,pass
   }
 
   /*Función de Firebase para registrar nuevos usuarios*/
-  firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser)
+  firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser) 
+  .then(function(){
+    emailVerification();
+  })
   .catch(function(error) {
     if(error){
       alert('No se ha podido crear el usuario');
       return 'No se ha podido crear el usuario';
     }    
-  } 
-);
-alert("El usuario fue creado");
-return "OK";
+  });
+
+  alert("El usuario fue creado");
+  return "OK";
+}
+/*
+observer=()=>{
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('existe usuario activo')
+      let name= users.firstname;
+      console.log(name);
+      let last= users.lastname;
+      console.log(last);
+    } else {
+      console.log('no existe usuario activo')
+    }
+  });
+}
+
+observer();
+*/
+function emailVerification () {
+  let user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+    console.log("enviando correo");
+    // Update successful.
+  }).catch(function(error) {
+    console.log(error);
+  })
 }
 
 
 
-//Este archivo no lleva nada mas, por lo que se debe testear
-
-//Función de ejemplo
-export const suma =(a,b)=>{   
-  return a+b;
-}
