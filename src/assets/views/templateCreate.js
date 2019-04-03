@@ -29,7 +29,17 @@ export const templateCreate = () => {
   const btn = containerCreate.querySelector('#create');
   // evento del botón que llama a la autentificación de google.
   btn.addEventListener('click', () => {
-    console.log(createAccount());
+    let firstNameNewUser = document.getElementById('firstnamenewuser').value;
+    let lastNameNewUser = document.getElementById('lastnamenewuser').value;
+    let emailNewUser = document.getElementById('emailnewuser').value;
+    let passwordNewUser = document.getElementById('passwordnewuser').value;
+    let userCreateResponse = createAccount(firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser);
+
+    if(userCreateResponse==="OK"){
+      // TODO: Falta navegar al login
+    } else {
+      console.log(userCreateResponse);
+    }
   })
   return containerCreate;
 }
