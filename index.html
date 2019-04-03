@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/Images/logoVerde.png" type="image/x-icon"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pet Community</title>
+    <!--Google Font Lato y Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:300" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/style.css" />  
 </head>
 <body>
-    <h1>Hola</h1>
+    <main id="containersocialnetwork" >  
+      <input type="email" id="email" placeholder="ingrese su correo"/>
+      <input type="password" id="password" placeholder="ingrese su contraseña"/>
+      <a href="#/login">Iniciar Sesión</a>    
+      <a href="#/create">Crear cuenta</a>     
+    </main>
     <!--Basta con linkear el main, ya que el será eñ encargado de conectar los otros archivos--> 
     <script type="module" src="./main.js"></script>
     <!--Linkear los script de firebase-->
+    <!--1.) Conexión con Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 </body>
 </html>
