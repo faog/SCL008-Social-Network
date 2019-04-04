@@ -2,10 +2,9 @@
 
 //necesito mirar el templateLogin que esta en view
 import {templateLogin} from './assets/views/templateLogin.js';
-
-//necesito mirar el templateCreate que esta en view
 import {templateCreate} from './assets/views/templateCreate.js';
-import { templateSignIn } from './assets/views/templateSignIn.js';
+import {templateSignIn } from './assets/views/templateSignIn.js';
+import {templateTimeLine} from './assets/views/templateTimeLine.js'
 
 /*
 1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
@@ -23,6 +22,10 @@ const changeRoute = (hash) =>{
     }
 
     if (hash === '') {
+        return showTemplate(hash);
+    }
+
+    if (hash === '#/timeline') {
         return showTemplate(hash);
     }
 }
@@ -44,6 +47,9 @@ const showTemplate = (hash) =>{
             templateCreate();
             break;
         case '':
+            templateSignIn();
+            break;
+        case 'timeline':
             templateSignIn();
             break;
         default:
