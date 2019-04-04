@@ -5,6 +5,7 @@ import {templateLogin} from './assets/views/templateLogin.js';
 
 //necesito mirar el templateCreate que esta en view
 import {templateCreate} from './assets/views/templateCreate.js';
+import { templateSignIn } from './assets/views/templateSignIn.js';
 
 /*
 1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
@@ -18,6 +19,10 @@ const changeRoute = (hash) =>{
     }
 
     if (hash === '#/create') {
+        return showTemplate(hash);
+    }
+
+    if (hash === '') {
         return showTemplate(hash);
     }
 }
@@ -34,10 +39,12 @@ const showTemplate = (hash) =>{
         case 'login':
             //si es el caso, imprime la vista templateLogin en el html
             templateLogin();
-            break;
-    
+            break;    
         case 'create':
             templateCreate();
+            break;
+        case '':
+            templateSignIn();
             break;
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`

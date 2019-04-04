@@ -1,7 +1,7 @@
 import {validateAccount} from "./../src/assets/js/validation.js"
 
 describe("validateAccount",()=>{
-    it('deberia retornar fals, si el usuario no ingresa correo y email',()=>{
+    it('deberia retornar false, si el usuario no ingresa correo y email',()=>{
         expect(validateAccount("Fabiola","Orellana","","")).toBe(false);
     })
 })
