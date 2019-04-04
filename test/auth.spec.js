@@ -2,7 +2,7 @@ import {validateAccount,validateEmail} from "./../src/assets/js/validation.js"
 
 /*1) Validaciones de las funciones que chequean createAccount()*/
 describe("validateAccount",()=>{
-    it('deberia retornar false, si el usuario no ingresa correo y email',()=>{
+    it('deberia retornar false, si el usuario no ingresa correo y contraseña',()=>{
         expect(validateAccount("Fabiola","Orellana","","")).toBe(false);
     })
 })
