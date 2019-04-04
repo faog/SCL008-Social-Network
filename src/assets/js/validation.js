@@ -6,9 +6,4 @@ export const validateAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,pa
   }
 }
 
-export const cleanErrors = () => {
-    document.getElementById('emailerror').innerHTML='';
-    document.getElementById('passworderror').innerHTML='';
-    document.getElementById('firstnamenewuser').innerHTML='';
-    document.getElementById('lastnamenewuser').innerHTML='';
-}
+
