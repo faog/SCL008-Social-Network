@@ -6,4 +6,7 @@ export const validateAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,pa
   }
 }
 
-
+export const validateEmail = (emailNewUser)=>{
+  let pattern = /\S+@\S+\.\S+/;
+  return pattern.test(emailNewUser);
+}

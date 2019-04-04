@@ -1,4 +1,4 @@
-import {validateAccount} from "./../src/assets/js/validation.js"
+import {validateAccount,validateEmail} from "./../src/assets/js/validation.js"
 
 describe("validateAccount",()=>{
     it('deberia retornar false, si el usuario no ingresa correo y email',()=>{
@@ -16,5 +16,17 @@ describe("validateAccount",()=>{
 describe("validateAccount",()=>{
     it('deberia retornar false, si el usuario no completa ningun campo solicitado',()=>{
         expect(validateAccount("","","","")).toBe(false);
+    })
+})
+
+describe("validateEmail",()=>{
+    it('deberia retornar false, si el correo es invalido',()=>{
+        expect(validateEmail("correomalo")).toBe(false);
+    })
+})
+
+describe("validateEmail",()=>{
+    it('deberia retornar true, si el correo es valido',()=>{
+        expect(validateEmail("correobueno@gmail.com")).toBe(true);
     })
 })
