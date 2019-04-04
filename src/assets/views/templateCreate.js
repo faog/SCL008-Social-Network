@@ -1,7 +1,9 @@
 import { createAccount } from './../js/auth.js';
-//Export: Lo va usar otro archivo, siendo route quien las mirará
+//Se exporta la templateCreate(), siendo route quien lo observa
 export const templateCreate = () => {
+  //Obtengo el elemento donde equiero imprimir el template.
   const containerCreate = document.getElementById('containersocialnetwork');
+  //Creo la estructura que necesito imprimir
   const contentCreate = `
                         <section id="informationsocialnetwork">
                           <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/> 
@@ -23,11 +25,11 @@ export const templateCreate = () => {
                           <button id="create" class="element">Crear tu cuenta</button>
                           <p id="accounterror"></p>
                         </section>`;
-  // pasar el contenido al div
+  // pasar el contenido de contentCreate a containerCreate
   containerCreate.innerHTML = contentCreate;
   // le pido que busque el id del boton dentro del div creado
   const btn = containerCreate.querySelector('#create');
-  // evento del botón que llama a la autentificación de google.
+  // evento del botón que llama a los elementos
   btn.addEventListener('click', () => {
     let firstNameNewUser = document.getElementById('firstnamenewuser').value;
     let lastNameNewUser = document.getElementById('lastnamenewuser').value;

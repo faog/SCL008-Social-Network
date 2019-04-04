@@ -1,5 +1,6 @@
 import {validateAccount,validateEmail} from "./../src/assets/js/validation.js"
 
+/*1) Validaciones de las funciones que chequean createAccount()*/
 describe("validateAccount",()=>{
     it('deberia retornar false, si el usuario no ingresa correo y email',()=>{
         expect(validateAccount("Fabiola","Orellana","","")).toBe(false);
@@ -30,3 +31,5 @@ describe("validateEmail",()=>{
         expect(validateEmail("correobueno@gmail.com")).toBe(true);
     })
 })
+
+/*2) */
