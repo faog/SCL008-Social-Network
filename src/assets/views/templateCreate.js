@@ -37,19 +37,27 @@ export const templateCreate = () => {
     
     /*IMPRESION VÁLIDACIONES EN EL DOM*/
     if (firstNameNewUser===""){
-      document.getElementById('firstnameerror').innerHTML=`*Debes ingresar un nombre.`;
+      document.getElementById('firstnameerror').innerHTML=`*Debes ingresar un nombre.`;      
+    }else{
+      document.getElementById('firstnameerror').innerHTML='';
     }
   
     if (lastNameNewUser===""){
       document.getElementById('lastnameerror').innerHTML=`*Debes ingresar un apellido.`;
+    }else{
+      document.getElementById('lastnameerror').innerHTML='';
     } 
   
     if(emailNewUser===""){
       document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
+    }else{
+      document.getElementById('emailerror').innerHTML='';
     }
   
     if(passwordNewUser===""){
       document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
+    }else{
+      document.getElementById('emailerror').innerHTML='';
     }
 
     if(userCreateResponse==="OK"){
