@@ -1,4 +1,5 @@
 import {signIn} from "./../js/auth.js";
+import { validateEmailSignIn } from '../js/validation.js';
 
 export const templateSignIn = () =>{
     /*Obtengo el id desde el html donde quiero que se imprima mi ventana inicial y le traspaso el 
@@ -24,20 +25,20 @@ export const templateSignIn = () =>{
         let userSignIn = signIn(emailSignIn,passwordSignIn);
 
         /*IMPRESION VÁLIDACIONES EN EL DOM*/
-        if(emailSignIn===""){
+        if(emailSignIn==="" || !validateEmailSignIn(emailSignIn)){
             document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
         }else{
             document.getElementById('emailerror').innerHTML='';
         }
         
-        if(passwordSignIn===""){
+        if(passwordSignIn==="" || passwordSignIn.length<6){
             document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
         }else{
             document.getElementById('passworderror').innerHTML='';
         }
 
         if(userSignIn==="OK"){
-            
+            console.log("usuario Ok");
         } else {
             console.log(userSignIn);
         }
