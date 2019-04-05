@@ -1,7 +1,5 @@
 import { validateAccount} from './../js/validation.js';
 import { initFirebase } from './../js/initFirebase.js';
-import { templateSignIn } from '../views/templateSignIn.js';
-
 
 //Variable que obtiene la inicialización de firestone 
 let dbProfiles = initFirebase();
@@ -133,6 +131,18 @@ export const observer = () => {
     } else {
       console.log('no existe usuario activo')
     }
+  });
+}
+
+/*Función signOut(), que sirve para que cuando el usuario cierre sesión, lo dirigia a la pantalla de inicio*/
+
+export const signOut = () =>{
+  firebase.auth().signOut()
+  .then(function() {
+    alert("Has cerrado tu sesión en Pet Community");
+    window.location.hash='';
+  }).catch(function(error) {
+    // An error happened.
   });
 }
 
