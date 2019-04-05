@@ -1,4 +1,5 @@
 import { createAccount } from './../js/auth.js';
+import { validateEmail } from '../js/validation.js';
 //Se exporta la templateCreate(), siendo route quien lo observa
 export const templateCreate = () => {
   //Obtengo el elemento donde equiero imprimir el template.
@@ -50,16 +51,16 @@ export const templateCreate = () => {
       document.getElementById('lastnameerror').innerHTML='';
     } 
   
-    if(emailNewUser===""){
+    if(emailNewUser==="" || !validateEmail(emailNewUser)){
       document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
     }else{
       document.getElementById('emailerror').innerHTML='';
     }
   
-    if(passwordNewUser===""){
+    if(passwordNewUser==="" || passwordNewUser.length<6){
       document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
     }else{
-      document.getElementById('emailerror').innerHTML='';
+      document.getElementById('passworderror').innerHTML='';
     }
 
     if(userCreateResponse==="OK"){

@@ -5,7 +5,8 @@
 /*a)Función que valida que el usuario no puede tener input vacios,
 para los parametros definidos en el flujo de la aplicación*/
 export const validateAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) => {
-  if(firstNameNewUser === ""|| lastNameNewUser ==="" || emailNewUser==="" || passwordNewUser===""){
+  if(firstNameNewUser === ""|| lastNameNewUser ==="" || emailNewUser==="" || passwordNewUser==="" 
+  || passwordNewUser.length<6 || !validateEmail(emailNewUser)){
     return false;
   }else{
     return true;
