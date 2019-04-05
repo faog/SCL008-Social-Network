@@ -1,7 +1,7 @@
 import { loginGoogle} from './../js/auth.js'; 
 
 export const templateLogin = () =>{
-    
+
     const containerLogin = document.getElementById('containersocialnetwork');     
     const contentLogin =`
                         <p>Login con Google</p>

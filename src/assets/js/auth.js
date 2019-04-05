@@ -1,5 +1,7 @@
 import { validateAccount} from './../js/validation.js';
-import { initFirebase } from './../js/initFirebase.js'
+import { initFirebase } from './../js/initFirebase.js';
+import { templateSignIn } from '../views/templateSignIn.js';
+
 
 //Variable que obtiene la inicialización de firestone 
 let dbProfiles = initFirebase();
@@ -72,6 +74,30 @@ function cleanErrors(){
 }
 
 /*2.)Función para realizar login usando un correo de Google*/
+
+export const loginGoogle = () =>{
+  /*Crea una instancia del objeto del proveedor de Google*/
+  var provider = new firebase.auth.GoogleAuthProvider();
+  /*Autentica con Firebase a través del objeto del proveedor de Google.*/
+  firebase.auth().signInWithPopup(provider)
+  .then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+}
 
 
 /*3.) Función para realizar login usando un la cuenta creada*/
