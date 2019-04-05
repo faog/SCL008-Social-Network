@@ -52,7 +52,7 @@ const showTemplate = (hash) =>{
             templateSignIn();
             break;
         case 'timeline':
-            templateSignIn();
+            templateTimeLine();
             break;
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`
