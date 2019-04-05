@@ -1,16 +1,10 @@
 import { validateAccount} from './../js/validation.js';
 import { initFirebase } from './../js/initFirebase.js'
-import { templateLogin } from '../views/templateLogin.js';
-import { templateSignIn } from '../views/templateSignIn.js';
+
 //Variable que obtiene la inicialización de firestone 
 let dbProfiles = initFirebase();
 
-/*1.)Función para realizar login usando un correo de Google*/
-export const loginGoogle = () =>{
-  return 'Login con Google Ok';
-}
-
-/*2.)Función para crear una nueva cuenta
+/*1.)Función para crear una nueva cuenta
 De acuerdo al flujo diseñado para la aplicación, creo una función la que necesita los 
 parámetros definidos*/
 export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) =>{
@@ -55,23 +49,6 @@ export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,pass
     return "Error en la validación del usuario";
   }
 }
-/*
-observer=()=>{
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      console.log('existe usuario activo')
-      let name= users.firstname;
-      console.log(name);
-      let last= users.lastname;
-      console.log(last);
-    } else {
-      console.log('no existe usuario activo')
-    }
-  });
-}
-
-observer();
-*/
 
 /*Función que envia un correo de validación de la cuenta 
 una vez que el usuario se registra satisfactoriamente*/
@@ -94,4 +71,21 @@ function cleanErrors(){
   document.getElementById('lastnamenewuser').innerHTML='';
 }
 
+/*2.)Función para realizar login usando un correo de Google*/
 
+
+/*3.) Función para realizar login usando un la cuenta creada*/
+
+export const signIn= (emailSignIn,passwordSignIn) => {
+  firebase.auth().signInWithEmailAndPassword(emailSignIn, passwordSignIn)
+  .then(function() {
+    alert("Has iniciado sesión con exito");
+    window.location.hash='#/timeline';
+  })   
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(error.message);
+  });
+}
