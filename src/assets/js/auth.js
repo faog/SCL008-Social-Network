@@ -1,4 +1,4 @@
-import { validateAccount} from './../js/validation.js';
+import { validateAccount, validateSignIn} from './../js/validation.js';
 import { initFirebase } from './../js/initFirebase.js';
 
 //Variable que obtiene la inicialización de firestone 
@@ -8,7 +8,7 @@ let dbProfiles = initFirebase();
 De acuerdo al flujo diseñado para la aplicación, creo una función la que necesita los 
 parámetros definidos*/
 export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) =>{
-  /*Si la validación realizada en el arrchivo validation.js fue true, ingresa al if*/
+  /*Si la validación realizada en el archivo validation.js fue true, ingresa al if*/
   if(validateAccount(firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser)){
     /*Llama a la función cleanErrors()*/
     cleanErrors();
@@ -103,17 +103,23 @@ export const loginGoogle = () =>{
 /*3.) Función para realizar login usando un la cuenta creada*/
 
 export const signIn= (emailSignIn,passwordSignIn) => {
-  firebase.auth().signInWithEmailAndPassword(emailSignIn, passwordSignIn)
-  .then(function() {
-    alert("Has iniciado sesión con exito");
-    window.location.hash='#/timeline';
-  })   
-  .catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    alert(error.message);
-  });
+/*Si la validación realizada en el archivo validation.js fue true, ingresa al if*/
+  if(validateSignIn(emailSignIn,passwordSignIn)){
+    /*Función firebase para ingreso de usuarios registrados*/
+    firebase.auth().signInWithEmailAndPassword(emailSignIn, passwordSignIn)
+    .then(function() {
+      alert("Has iniciado sesión con exito");
+      window.location.hash='#/timeline';
+    })   
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(error.message);
+    });
+  }else{
+    alert ("Error en el ingreso del usuario");
+  }
 }
 
 /*Función Observador, que verifica que el usuario se encuentra logueado*/
