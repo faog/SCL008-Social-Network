@@ -1,114 +1,139 @@
-# Creando una Red Social.
 
-## Índice
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Consideraciones generales](#consideraciones-generales)
-* [Parte obligatoria](#parte-obligatoria)
-* [Hacker Edition](#hacker-edition)
-* [Consideraciones técnicas](#consideraciones-técnicas-front-end)
-* [Contenido de referencia](#pistas-/-tips-/-lecturas-complementarias)
+<h1 id=">Readme Social Network</h1>
+<p>Para el proyecto de Red Social hemos creado una red social pensada en los amantes de los animales , llamada PetComunity</p>
 
-***
+## Sobre PetComunity
+PetComunity fue creada pensando en la necesidad de unificar.....
 
-## Preámbulo.
+## Planificación
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+Nuestra planificacion puedes revisarla en el siguiente link:
+[Planificacion Trello](https://trello.com/b/zX6iPOCP/pet-community)
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+## Usuarios
 
-## Resumen del proyecto
+Nuestros Usuarios pueden ser 
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [empanadas](https://es.wikipedia.org/wiki/Empanada) o de
-los [tacos de canasta](https://es.wikipedia.org/wiki/Taco), etc.
+## Encuestas
+|  ![enter image description here](https://i.postimg.cc/rm2Y1N7v/a.png)| ![enter image description here](https://i.postimg.cc/2SJt6DGj/b.png)|
+|--|--|
+|![enter image description here](https://i.postimg.cc/Ls1bgbQt/c.png)  |  ![enter image description here](https://i.postimg.cc/sxV68Djm/d.png)|
+|![enter image description here](https://i.postimg.cc/NM8CprcL/e.png)  |
 
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
-acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
 
-## Objetivos de Aprendizaje
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+Se realizaron encuestas para realizar las historias de Usuario  
+[Revisa aquí nuestra encuesta](https://docs.google.com/forms/d/1OpTLBJWgQkFGSWZOun8EQUjy1WaPa1qyCMfaPmHA3ro/edit)
 
-## Consideraciones generales
+# Historias de usuario y Criterios de aceptación
 
-- Este proyecto se debe "resolver" en tríos.
 
-- La lógica del proyecto debe estar implementada completamente en JavaScript (ES6+),
-HTML y CSS :smiley:. Para este proyecto no está permitido utilizar
-frameworks o librerías de CSS y JS.
+**COMO** amante de las mascotas   **QUIERO**  crear una cuenta en la página **PARA** poder ingresar a la comunidad de manera segura.
+ **Criterio de aceptación**   Para realizar la historia de usuario N°1 voy a :
 
-- La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todo lo esperado **cada sprint**. _No se dividan el
-trabajo como en una fábrica._
+	Permitir al usuario ingresar una contraseña.
+	Generar un mensaje de error, si la contraseña es menor a 6 caracteres.
+	Generar un mensaje de error, si el correo electrónico no es válido.
+	Cuando el usuario crea una cuenta, adicionalmente se le solicita su nombre y apellido.
+	Genera mensaje de error si el usuario no ingresa nombre o apellido.
+	Cuando el usuario crea la cuenta, debe recibir un correo de verificación.
 
-- Trabajen en una sola historia por vez, no pueden avanzar a la siguiente sin
-haber completado la anterior.
+**COMO** usuario de la página, **QUIERO** ingresar nuevamente de manera segura **PARA**  ver las novedades de la comunidad.
+**Criterio de aceptación**   Para realizar la historia de usuario N°2 voy a :
 
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+	El usuario pueda ingresar con su usuario y contraseña (input secreto).
+	El usuario pueda recuperar su contraseña en caso de olvido.
+	Cuando el usuario ingrese una contraseña incorrecta, se genere un error informando la situación (Firebase)
+	El usuario puede ingresar a la aplicación con tener un correo de google.
+	Si el usuario logra conectarse satisfactoriamente, enviarlo al timeline de la aplicación.
 
-## Parte obligatoria
 
-### General
+**COMO** veterinario **QUIERO** que mi perfil no sea el mismo de un dueño de mascotas, **PARA**  poder diferenciar mis servicios.
+**Criterio de aceptación**   Para realizar la historia de usuario N°3 voy a :
 
-Este proyecto no incluye un _boilerplate_, así es que tendrás que definir la
-estructura de carpetas y escribir tus propias Pruebas Unitarias (tests). Para
-hacerlo, puedes guiarte de los proyectos anteriores.
+	Luego de crear el perfil básico, los distintos tipos de usuario podrán elegir el tipo de perfil , los cuales serán : Perfil de Veterinario , Perfil Dueño de Mascotas ,Perfil Vendedor, Perfil Otro
+	Podrán responder una encuesta de acuerdo a su perfil
+	Los perfiles de veterinario y vendedor tendrán la opción de agregar información que consideren relevante.
 
-### Definición del producto
+**COMO** usuario de la aplicación, **QUIERO** publicar una mascota encontrada para ubicar a su dueño.
+**Criterio de aceptación**   Para realizar la historia de usuario N°4 voy a :
 
-En el `README.md` cuéntanos brevemente cómo descubriste las necesidades de los
-usuarios y cómo llegaste a la definición final de tu producto. Comparte fotos de
-entrevistas (si las tienes), cuestionarios y tus sketches/(bocetos).
+	El usuario puede crear un post visible para la comunidad.
+	El usuario puede agregar una etiqueta para que se pueda filtrar por mascota encontrada.
+	La publicación debe tener contenido para poder publicarla antes de enviar.
+	Luego que el usuario crea el post, este quede en las primeras publicaciones de la comunidad..
 
-Es importante que detalles:
 
-* Quiénes son los principales usuarios de producto.
-* Qué problema resuelve el producto / para qué le servirá a estos usuarios.
+**COMO** vendedor **QUIERO** editar la publicación de un articulo, **PARA**  actualizar una oferta.
+**Criterio de aceptación**   Para realizar la historia de usuario N°5 voy a :
 
-### Historias de usuario
+	Se debe permitir que el veterinario pueda editar un post.
+	Para permitir editar, el post debe tener contenido antes de publicarlo.
+	Que al editar el post, este quede en las primeras publicaciones..
 
-Una vez que entiendas las necesidades de tus usuarixs, escribe las Historias de
-Usuario que representen todo lo que necesitan hacer/ver en la Red Social.
+**COMO** usuario que encontró una mascota perdida **QUIERO** eliminar el post **PARA**  que no sigan preguntándome por ella ya que encontré a sus dueños
+**Criterio de aceptación**   Para realizar la historia de usuario N°6 voy a :
 
-Cada una de tus Historias de Usuario debe tener:
-- **Criterios de Aceptación:** todo lo que debe ocurrir para satisfacer las
-  necesidades del usuario.
+	Permitir al usuario eliminar un post.
+	Error de acción, preguntar si esta seguro que quiere eliminar el post
+	Que el post quede eliminado del muro del usuario y del muro de la comunidad.
+	
+**COMO** un usuario **QUIERO** adoptar una mascota y poder ver solo los post relacionados con adopciones **PARA**  encontrar la mascota que quiero
+**Criterio de aceptación**   Para realizar la historia de usuario N°7 voy a :
 
-- **Definición de terminado:** todos los aspectos técnicos que deben cumplirse
-para que, como equipo, sepan que esa historia está terminada y lista
-para publicarse. **Todas** tus Historias de Usuario (salvo excepciones), deben
-incluir estos aspectos en su Definición de Terminado (más todas las que
-  necesiten agregar):
+	Elegir un filtro que permita seleccionar solo las publicaciones con el tag adopcion
+	Ordenar por fecha de publicación
 
-  * Debe ser una SPA.
-  * Debe ser _responsive_.
-  * Debes haber recibido _code review_ de al menos una compañera de otro equipo.
-  * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-  * Hiciste _pruebas_ de usabilidad e incorporaste el _feedback_ del usuario.
-  * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+**COMO** dueño de mascotas **QUIERO** que mis amigos sepan que me gusta un producto, **PARA**  que ellos conozcan al producto y su vendedor.
+**Criterio de aceptación**   Para realizar la historia de usuario N°8 voy a :
 
-### Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
+	El usuario puede agregar un Like a la publicación y visualizar el conteo de esta.
+	El usuario puede quitar el like a una publicación (Unlike).
 
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu producto y
-con eso deberás diseñar la Interfaz de Usuario (UI por sus siglas en inglés) de
-esta red social que siga este flujo.
-Este diseño debe representar la solución que se implementará finalmente en
-código.
+# Experiencia de usuario  
+Diseño  
+[Puedes revisar LUL aquí](https://majomarquez.github.io/SCL008-Cipher/src/index.html)
+
+## Prototipo de Baja Fidelidad
+
+| ![enter image description here](https://i.postimg.cc/4xVJsBv0/login.jpg) |![enter image description here](https://i.postimg.cc/WzdvKnbX/crea-cuenta.jpg)|
+|--|--|
+| ![enter image description here](https://i.postimg.cc/C1LYCYyy/crea-cuenta2.jpg) | ![enter image description here](https://i.postimg.cc/fL2sBFZV/crear-cuenta3.jpg) |
+|  ![enter image description here](https://i.postimg.cc/rp9MtsPC/crear-cuenta4.jpg)| ![enter image description here](https://i.postimg.cc/7hjky25D/perfil.jpg) |
+|--|--|
+| ![enter image description here](https://i.postimg.cc/wxrHNS0P/Post.jpg) |![enter image description here](https://i.postimg.cc/7L4q60mZ/post-2.jpg)|
+
+
+
+
+## Prototipo de Alta Fidelidad
+|  ![enter image description here](https://i.postimg.cc/43vV7vGL/1.png)| ![enter image description here](https://i.postimg.cc/1t96pg59/Selecci-n-007.png) |
+|--|--|
+
+
+
+
+El prototipo de Alta Fidelidad fue realizado en Figma .  
+[Aquí Puedes encontrar el prototipo de alta fidelidad Completo](https://www.figma.com/proto/Y8LPqP0VJDA85Vsl8ZPXTnPj/Pet-Community?node-id=1%3A3&scaling=fit-width) .
+
+## Testeos de Usabilidad.
+
+-   **Prototipo de Baja Fidelidad**
+
+Se realizaron x pruebas con el prototipo de baja fidelidad de la que obtuvimos feedback sobre xxxxxxxxo, lo anterior fue modificado en el prototipo de alta fidelidad mostrado a continuación.
+
+-   **Pruebas de Prototipo de Alta Fidelidad.**
+
+Se realizaron xpruebas con el prototipo de alta fidelidad, realizadas en loom ,estos pueden ser vistos en los links a continuación:
+
+[Ver Pruebas con prototipo de alta fidelidad](https://docs
+
+## Implementación de la Interfaz de Usuario 
+
+Se utilizó Vanilla JS, CSS , HTML yFirebase.  
+
+
 
 ### Responsive
 
