@@ -7,13 +7,15 @@ export const templateSignIn = () =>{
     
     document.getElementById('containersocialnetwork').innerHTML=    
         `
-        <input type="email" id="emailsignin" placeholder="ingrese su correo"/>
-        <p id="emailerror" class=""></p>
-        <input type="password" id="passwordsigin" placeholder="ingrese su contraseña"/>
-        <p id="passworderror" class=""></p>
-        <button id="signin">Iniciar Sesión</button>   
-        <a href="#/login">Google</a>    
-        <a href="#/create">Crear cuenta</a>  
+        <section id="signinview">
+            <input type="email" id="emailsignin" placeholder="ingrese su correo"/>
+            <p id="emailerror" class=""></p>
+            <input type="password" id="passwordsigin" placeholder="ingrese su contraseña"/>
+            <p id="passworderror" class=""></p>
+            <button id="signin">Iniciar Sesión</button>   
+            <a href="#/login">Google</a>    
+            <a href="#/create">Crear cuenta</a>  
+        </section>
         `;      
     
     document.getElementById('signin').addEventListener('click', () => {
