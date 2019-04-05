@@ -26,7 +26,7 @@ export const validateEmail = (emailNewUser)=>{
 /*a)Función que valida que el usuario no puede tener input vacios,
 para los parametros definidos en el flujo de la aplicación*/
 export const validateSignIn = (emailSignIn,passwordSignIn) => {
-  if(emailSignIn === ""|| passwordSignIn ==="" ){
+  if(emailSignIn === ""|| passwordSignIn ==="" || passwordSignIn.length<6 || !validateEmail(emailSignIn)){
     return false;
   }else{
     return true;
