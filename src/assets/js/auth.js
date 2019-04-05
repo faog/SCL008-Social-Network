@@ -85,6 +85,9 @@ export const loginGoogle = () =>{
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
+
+    alert("Has iniciado sesión con exito");
+    window.location.hash='#/timeline';
     // ...
   })
   .catch(function(error) {
@@ -132,3 +135,4 @@ export const observer = () => {
     }
   });
 }
+
