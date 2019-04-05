@@ -29,9 +29,7 @@ export const templateCreate = () => {
   // pasar el contenido de contentCreate a containerCreate
   containerCreate.innerHTML = contentCreate;
   // le pido que busque el id del boton dentro del div creado
-  const btn = containerCreate.querySelector('#create');
-  // evento del botón que llama a los elementos
-  btn.addEventListener('click', () => {
+  containerCreate.querySelector('#create').addEventListener('click', () => {
     let firstNameNewUser = document.getElementById('firstnamenewuser').value;
     let lastNameNewUser = document.getElementById('lastnamenewuser').value;
     let emailNewUser = document.getElementById('emailnewuser').value;
