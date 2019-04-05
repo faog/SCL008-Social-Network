@@ -99,7 +99,6 @@ export const loginGoogle = () =>{
   });
 }
 
-
 /*3.) Función para realizar login usando un la cuenta creada*/
 
 export const signIn= (emailSignIn,passwordSignIn) => {
@@ -113,5 +112,23 @@ export const signIn= (emailSignIn,passwordSignIn) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     alert(error.message);
+  });
+}
+
+/*Función Observador, que verifica que el usuario se encuentra logueado*/
+export const observer = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('existe usuario activo')
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+    } else {
+      console.log('no existe usuario activo')
+    }
   });
 }
