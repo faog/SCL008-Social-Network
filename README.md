@@ -1,7 +1,9 @@
 
-<h1 id=">Readme Social Network</h1>
-<p>Para el proyecto de Red Social hemos creado una red social pensada en los amantes de los animales , llamada PetComunity</p>
+## Readme Social Network 
+ Para el proyecto de Red Social hemos creado una red social pensada en los amantes de los animales , llamada PetComunity 
 
+## Sobre PetComunity
+PetComunity fue creada pensando en la necesidad de unificar.....
 ## Sobre PetComunity
 PetComunity fue creada pensando en la necesidad de unificar.....
 
