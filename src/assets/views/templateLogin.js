@@ -8,9 +8,7 @@ export const templateLogin = () =>{
                         <button id="login">Loguealo</button>
                         `;        
     containerLogin.innerHTML = contentLogin;     
-    const btn = containerLogin.querySelector('#login');
-
-    btn.addEventListener('click',()=>{
+    containerLogin.querySelector('#login').addEventListener('click',()=>{
         loginGoogle();
     })   
 }
