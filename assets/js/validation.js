@@ -1,31 +1,21 @@
+/*VALIDACIONES: Estas se deben testear en auth.spec.js*/
+
+/*1)Validaciones de la función createAccount();*/
+
+/*a)Función que valida que el usuario no puede tener input vacios,
+para los parametros definidos en el flujo de la aplicación*/
 export const validateAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) => {
-  
-  if (document.getElementById('firstnameerror') && firstNameNewUser===""){
-    document.getElementById('firstnameerror').innerHTML=`*Debes ingresar un nombre.`;
-  }
-
-  if (document.getElementById('lastnameerror') && lastNameNewUser===""){
-    document.getElementById('lastnameerror').innerHTML=`*Debes ingresar un apellido.`;
-  } 
-
-  if(document.getElementById('emailerror') && emailNewUser===""){
-    document.getElementById('emailerror').innerHTML=`*Debes ingresar un correo válido.`;
-  }
-
-  if(document.getElementById('passworderror') && passwordNewUser===""){
-    document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
-  }
-
-  if(firstNameNewUser === ""|| lastNameNewUser ==="" || emailNewUser==="" || passwordNewUser===""){
+  if(firstNameNewUser === ""|| lastNameNewUser ==="" || emailNewUser==="" || passwordNewUser==="" 
+  || passwordNewUser.length<6 || !validateEmail(emailNewUser)){
     return false;
   }else{
-      return true;
+    return true;
   }
 }
 
-export const cleanErrors = () => {
-    document.getElementById('emailerror').innerHTML='';
-    document.getElementById('passworderror').innerHTML='';
-    document.getElementById('firstnamenewuser').innerHTML='';
-    document.getElementById('lastnamenewuser').innerHTML='';
+/*b)Función que valida que el usuario debe ingresar un @ cuando ingresa un correo*/
+export const validateEmail = (emailNewUser)=>{
+  /*expresión regular que simula el patron de búsqueda del correo electrónico*/
+  let pattern = /\S+@\S+\.\S+/;
+  return pattern.test(emailNewUser);
 }

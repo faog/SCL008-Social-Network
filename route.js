@@ -1,13 +1,12 @@
 //Configuración de las rutas
 
-//necesito mirar el templateLogin que esta en view
+//importación de los templates constridos
 import {templateLogin} from './assets/views/templateLogin.js';
-
-//necesito mirar el templateCreate que esta en view
 import {templateCreate} from './assets/views/templateCreate.js';
+import {templateSignIn } from './assets/views/templateSignIn.js';
+import {templateTimeLine} from './assets/views/templateTimeLine.js'
 
-/*
-1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
+/*1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
 el template en el html*/
 
 //cada vez que recibe un # distinto, lo actualizará
@@ -18,26 +17,42 @@ const changeRoute = (hash) =>{
     }
 
     if (hash === '#/create') {
+        //le pasa como parametro #/create a la función showTemplate
+        return showTemplate(hash);
+    }
+
+    if (hash === '') {
+        //le pasa como parametro #/a la función showTemplate
+        return showTemplate(hash);
+    }
+
+    if (hash === '#/timeline') {
+        //le pasa como parametro #/timeline a la función showTemplate
         return showTemplate(hash);
     }
 }
 
-//imprimira el template en el html
+/*2.La función showTemplate(), se encarga de imprimir el template en el index.html*/
 const showTemplate = (hash) =>{
     //necesito sacar el #/ a mi string
     const router = hash.substring(2);
+    //Obtener desde el html el id del elemento donde se imprimirá shohTemplate
     const containerRoot = document.getElementById('containersocialnetwork');
     containerRoot.innerHTML='';
 
-    //hacemos el match del hash utilizado y el template que quiero mostrar
+    //Se hace el match del hash utilizado y el template que quiero mostrar
     switch (router) {
         case 'login':
-            //si es el caso, imprime la vista templateLogin en el html
             templateLogin();
-            break;
-    
+            break;    
         case 'create':
             templateCreate();
+            break;
+        case '':
+            templateSignIn();
+            break;
+        case 'timeline':
+            templateSignIn();
             break;
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`
