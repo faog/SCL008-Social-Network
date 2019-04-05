@@ -3,10 +3,9 @@ export const templateTimeLine = () =>{
     
     //Crearemos el contenido del login
     const contentLogin =`
-                        <p>Muro/p>                        
+                        <p>Muro</p>                        
                         `;
     
     //traspasar el contenido de contentLogin al div
     containerLogin.innerHTML = contentLogin;
-
 }
