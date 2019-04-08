@@ -1,7 +1,7 @@
 export const initFirebase = () => {
 
     // Initialize Firebase
-    letconfig = {
+    let config = {
         apiKey: "AIzaSyCVDZrZyWXI-xAVlz9mCDjLS48i1DKFTWU",
         authDomain: "pet-community-sn.firebaseapp.com",
         databaseURL: "https://pet-community-sn.firebaseio.com",
