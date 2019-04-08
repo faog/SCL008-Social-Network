@@ -10,8 +10,6 @@ parámetros definidos*/
 export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) =>{
   /*Si la validación realizada en el archivo validation.js fue true, ingresa al if*/
   if(validateAccount(firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser)){
-    /*Llama a la función cleanErrors()*/
-    cleanErrors();
     /*Función de Firebase para registrar nuevos usuarios*/
     firebase.auth().createUserWithEmailAndPassword(emailNewUser, passwordNewUser) 
     .then(function(){
@@ -61,14 +59,6 @@ function emailVerification() {
   }).catch(function(error) {
     console.log(error);
   })
-}
-
-/*función que permite borrar la ayuda cuando el usuario soluciona un error en campos solicitados*/
-function cleanErrors(){
-  document.getElementById('emailerror').innerHTML='';
-  document.getElementById('passworderror').innerHTML='';
-  document.getElementById('firstnamenewuser').innerHTML='';
-  document.getElementById('lastnamenewuser').innerHTML='';
 }
 
 /*2.)Función para realizar login usando un correo de Google*/

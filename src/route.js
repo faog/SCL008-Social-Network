@@ -1,7 +1,6 @@
 //Configuración de las rutas
 
 //importación de los templates constridos
-import {templateLogin} from './assets/views/templateLogin.js';
 import {templateCreate} from './assets/views/templateCreate.js';
 import {templateSignIn } from './assets/views/templateSignIn.js';
 import {templateTimeLine} from './assets/views/templateTimeLine.js'
@@ -11,11 +10,6 @@ el template en el html*/
 
 //cada vez que recibe un # distinto, lo actualizará
 const changeRoute = (hash) =>{
-    if (hash === '#/login') {
-        //le pasa como parametro #/login a la función showTemplate
-        return showTemplate(hash);
-    }
-
     if (hash === '#/create') {
         //le pasa como parametro #/create a la función showTemplate
         return showTemplate(hash);
@@ -41,10 +35,7 @@ const showTemplate = (hash) =>{
     containerRoot.innerHTML='';
 
     //Se hace el match del hash utilizado y el template que quiero mostrar
-    switch (router) {
-        case 'login':
-            templateLogin();
-            break;    
+    switch (router) {          
         case 'create':
             templateCreate();
             break;

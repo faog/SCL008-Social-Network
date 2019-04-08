@@ -1,4 +1,4 @@
-import {signIn} from "./../js/auth.js";
+import {signIn, loginGoogle} from "./../js/auth.js";
 import { validateEmailSignIn } from '../js/validation.js';
 
 export const templateSignIn = () =>{
@@ -16,9 +16,9 @@ export const templateSignIn = () =>{
             <p id="emailerror" class=""></p>
             <input type="password" id="passwordsigin" placeholder="ingrese su contraseña"/>
             <p id="passworderror" class=""></p>
-            <button id="signin">Ingresa</button>   <br>
-            <a href="#/login">Inicia sesión con Google</a>    
-            <a href="#/create">Crea tu Cuenta</a>  
+            <button id="signin">Iniciar Sesión</button>   
+            <button id="googlesignin">Google</button>    
+            <a href="#/create">Crear cuenta</a>  
         </section>
         `;      
     
@@ -45,6 +45,10 @@ export const templateSignIn = () =>{
         } else {
             console.log(userSignIn);
         }
+    })
+
+    document.getElementById('googlesignin').addEventListener('click',()=>{
+        loginGoogle();
     })
     
 }
