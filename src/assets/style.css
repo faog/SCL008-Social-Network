@@ -89,23 +89,14 @@
         #logosignin{
             width: 25%;
             height:15%;
-        }
-        
-        .elementsignin{
+        }   
+
+        #signin, #googlesignin,.elementsignin {
             width: 80%;
             height: 40px;
         }
 
-        #signin, #googlesignin{
-            width: 80%;
-            height: 40px;
-        }
-
-        .errorsignin{            
-            width: 80%;
-        }
-
-        #createaccount{
+        .errorsignin, #createaccount {            
             width: 80%;
         }
     }
@@ -122,12 +113,7 @@
             height:30%;
         }
 
-        .elementsignin{
-            width: 80%;
-            height: 30px;
-        }
-
-        #signin, #googlesignin{
+        .elementsignin, #signin, #googlesignin{
             width: 80%;
             height: 30px;
         }
@@ -175,16 +161,11 @@
         font-size:16px;
     }
     
-    .elementsignin{
+    .elementsignin, #signin, #googlesignin {
         width: 70%;
         height: 30px;
     }
-    
-    #signin, #googlesignin{        
-        height: 30px;
-        width: 70%;        
-    }
-    
+
     #createaccount{        
         height: 30px;
         width: 70%;     
@@ -196,11 +177,9 @@
     
 }
 
-
 /*2) ESTILOS templateCreate*/
 
 /*DESKTOP*/
-
 #newaccount {  
     display: flex;   
     flex-direction: column;  
@@ -276,8 +255,7 @@
 
 /*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){
-    
-    
+        
     #containersocialnetwork{
         flex-direction: column;
         height: 100vh;   
@@ -388,13 +366,10 @@
         height:20vh;
     }
 
-    .element{    
+    .element, .errormessage{    
         width: 80%;           
     }
 
-    .errormessage{         
-        width: 80%;   
-    }
 }
 
 
@@ -429,7 +404,6 @@
         justify-content: flex-start;
     }
     
-
     .accountparagraph{            
         font-size: 18px;      
         width: 80%;     
@@ -457,3 +431,23 @@
         width: 80%;   
     }
 }
+
+/*1) Estilos templateTimeLine*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    #userinformation{
+        background-color:#00BF6F;
+        width:100%;
+        flex-direction:row;
+    }
+
+    #postinformation{
+        width:80%;
+    }
+
+    #textpost{
+        height:100px;
+        width: 100%;
+        border:none;
+    }
+}
+

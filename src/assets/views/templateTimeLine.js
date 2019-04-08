@@ -1,5 +1,5 @@
 import {signOut} from "./../js/auth.js";
-import {postCreate} from "./../js/datamodel.js"
+//import {postCreate} from "./../js/datamodel.js"
 
 export const templateTimeLine = () =>{
     document.getElementById('containersocialnetwork').innerHTML=
@@ -7,11 +7,11 @@ export const templateTimeLine = () =>{
                         <section id="userinformation">
                             <h3>Muro</h3> 
                             <p>Usuario1</p>
+                            <button id="signout">Salir</button> 
                         </section>
                         <section id="postinformation">
                             <textarea id="textpost" placeholder="¿Qué estás pensando?"></textarea>
-                            <button id="post">Publicar</button>
-                            <button id="signout">Salir</button>  
+                            <button id="post">Publicar</button>                            
                         </section>
                         <section id="timeline">
                             
