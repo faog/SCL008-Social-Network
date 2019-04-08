@@ -1,5 +1,6 @@
 import { createAccount } from './../js/auth.js';
 import { validateEmail } from '../js/validation.js';
+import { templateSignIn } from './templateSignIn.js';
 //Se exporta la templateCreate(), siendo route quien lo observa
 export const templateCreate = () => {
   //Obtengo el elemento donde equiero imprimir el template.
@@ -7,7 +8,9 @@ export const templateCreate = () => {
   //Creo la estructura que necesito imprimir
   const contentCreate = `
                         <section id="informationsocialnetwork">
-                          <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/> 
+                          <a href="#" class="brand-logo">
+                            <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/>
+                          </a>                           
                           <h2 class="accounttitle">Pet Community</h2>
                           <h5 class="accountparagraph">La comunidad de mascotas</h5>                     
                         </section>
@@ -26,9 +29,10 @@ export const templateCreate = () => {
                           <button id="create" class="element">Crear tu cuenta</button>
                           <p id="accounterror"></p>
                         </section>`;
+
   // pasar el contenido de contentCreate a containerCreate
   containerCreate.innerHTML = contentCreate;
-  // le pido que busque el id del boton dentro del div creado
+  
   containerCreate.querySelector('#create').addEventListener('click', () => {
     let firstNameNewUser = document.getElementById('firstnamenewuser').value;
     let lastNameNewUser = document.getElementById('lastnamenewuser').value;
@@ -68,4 +72,6 @@ export const templateCreate = () => {
     }
   })
   return containerCreate;
+
+  
 }
