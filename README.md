@@ -120,15 +120,12 @@ El prototipo de Alta Fidelidad fue realizado en Figma .
 
 ## Testeos de Usabilidad.
 
--   **Prototipo de Baja Fidelidad**
-
-Se realizaron x pruebas con el prototipo de baja fidelidad de la que obtuvimos feedback sobre xxxxxxxxo, lo anterior fue modificado en el prototipo de alta fidelidad mostrado a continuación.
-
 -   **Pruebas de Prototipo de Alta Fidelidad.**
 
-Se realizaron xpruebas con el prototipo de alta fidelidad, realizadas en loom ,estos pueden ser vistos en los links a continuación:
+Se realizó prueba con el prototipo de alta fidelidad, realizada en loom ,estos pueden ser vistos en el link a continuación:
 
-[Ver Pruebas con prototipo de alta fidelidad](https://docs
+[Ver Pruebas con prototipo de alta fidelidad](https://www.loom.com/share/da8a634cb76d42f9a6daf35dd8356a2b)
+
 
 ## Implementación de la Interfaz de Usuario 
 
