@@ -5,9 +5,10 @@
     /*font-family: 'Lato', sans-serif; titulos*/
 }
 
-/*ESTILOS templateCreate*/
+/*1) Estilos templateSignIn*/
 
 /*DESKTOP*/
+
 #containersocialnetwork{
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -17,6 +18,188 @@
     align-items: center; 
     background-color:#FAFAFA;
 }
+
+#signinview{
+    display: flex;   
+    flex-direction: column; 
+    background-color:white; 
+    width: 50%; 
+    height: 80%;
+    justify-content: center;
+}
+
+#signinview h2, #signinview h5 {
+    color:#4B4B4B; 
+}
+
+.elementsignin{
+    width: 50%;
+    height: 30px; 
+    margin-top: 10px; 
+    font-family: 'Roboto', sans-serif;    
+    font-size: 16px;   
+}
+
+#signin, #googlesignin{
+    margin-top:10px;
+    background-color: #00BF6F;    
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    font-size: 18px;
+    border:none;
+}
+
+#createaccount{
+    margin-top:10px;
+    padding-top:10px;
+    background-color:#808080;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+    border:none;
+    text-align:center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.errorsignin{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 14px; 
+    color:#4B4B4B; 
+    text-align: left;
+    font-style: italic;
+    width: 50%;
+}
+
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){   
+    /*Elementos de los contenedores para pantallas tamaño tablet*/
+    @media (min-height: 860px) and (max-height: 1366px){
+        #signinview{        
+            width: 100%; 
+            height: 100%;        
+        }
+    
+        #logosignin{
+            width: 25%;
+            height:15%;
+        }
+        
+        .elementsignin{
+            width: 80%;
+            height: 40px;
+        }
+
+        #signin, #googlesignin{
+            width: 80%;
+            height: 40px;
+        }
+
+        .errorsignin{            
+            width: 80%;
+        }
+
+        #createaccount{
+            width: 80%;
+        }
+    }
+
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
+        #signinview{        
+            width: 100%; 
+            height: 100%;        
+        }
+    
+        #logosignin{
+            width: 40%;
+            height:30%;
+        }
+
+        .elementsignin{
+            width: 80%;
+            height: 30px;
+        }
+
+        #signin, #googlesignin{
+            width: 80%;
+            height: 30px;
+        }
+
+        .errorsignin{            
+            width: 80%;
+        }
+
+        #createaccount{
+            padding-top:5px;
+            width: 80%;
+            height:25px;
+        }
+    }
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE*/
+
+/*Dispositivos TABLET Orientation LANDSCAPE*/
+@media (max-width: 1366px) and (orientation: landscape)  {
+    #logosignin{
+        width: 30%;
+        height:30%;
+    }
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+@media (max-width: 860px) and (orientation: landscape)  {
+    #logosignin{
+        width: 25%;
+        height:25%;
+    }
+
+    #signinview{
+        width: 70%; 
+        height: 100%;
+        
+    }
+    
+    #signinview h2 {
+        font-size:24px;
+    }
+
+    #signinview h5 {
+        font-size:16px;
+    }
+    
+    .elementsignin{
+        width: 70%;
+        height: 30px;
+    }
+    
+    #signin, #googlesignin{        
+        height: 30px;
+        width: 70%;        
+    }
+    
+    #createaccount{        
+        height: 30px;
+        width: 70%;     
+    }
+    
+    .errorsignin{        
+        width: 70%;
+    }
+    
+}
+
+
+/*2) ESTILOS templateCreate*/
+
+/*DESKTOP*/
 
 #newaccount {  
     display: flex;   
@@ -31,7 +214,6 @@
     align-content: space-around;    
 }
 
-
 #informationsocialnetwork{    
     display: flex; 
     flex-direction: column; 
@@ -44,7 +226,6 @@
     height: 70vh; 
     margin-left:50px; 
 }
-
 
 .element{    
     width: 60%;
@@ -93,9 +274,10 @@
     font-size: 18px;
 }
 
-/*MOBILE*/
-/*Orientation portrait*/
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    
+    
     #containersocialnetwork{
         flex-direction: column;
         height: 100vh;   
@@ -104,108 +286,174 @@
 
     #newaccount {  
         width: 100%; 
-        margin-right:0px;
-        
+        height: 60%;
+        margin-right:0px;        
     }    
     
     #informationsocialnetwork{  
         width: 100%;
-        margin-left:0px;
-        
+        height:40%;
+        margin-left:0px;        
     }    
 
     /*Elementos de los contenedores para pantallas tamaño tablet*/
     @media (min-height: 860px) and (max-height: 1366px){
         #logo{
-            width: 30%;
-            height:45%;
+            width: 20vh;
+            height:20vh;
         }
 
         .accounttitle{            
             font-size: 48px;
             justify-content: flex-start;
+            font-weight: bold;
         }
 
-        .accountparagraph{            
-            font-size: 32px;           
-        }
-
-        .element{    
-            width: 60%;
-            height: 50px; 
-            margin-top: 20px;          
-            font-size: 28px;            
-        }
-
-        #create{
-            height: 60px;
-            font-size: 28px;
-        }
-
-        .errormessage{ 
-            font-size: 24px;   
-        }
-    }
-
-     /*Elementos de los contenedores para pantallas de celular*/
-     @media (max-height: 860px) {
-        #logo{
-            width: 30%;
-            height:35%;
-        }
-
-        .accounttitle{            
-            font-size: 36px;
+        #newaccount h3{            
+            font-size: 38px;
             justify-content: flex-start;
         }
 
         .accountparagraph{            
-            font-size: 22px;      
+            font-size: 28px;           
+        }
+
+        .element{    
+            width: 60%;
+            height: 40px; 
+            margin-top: 20px;          
+            font-size: 22px;            
+        }
+
+        #create{
+            height: 50px;
+            font-size: 28px;
+        }
+
+        .errormessage{ 
+            width: 60%;
+            font-size: 16px;   
+        }
+    }
+
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
+        #logo{
+            width: 20vh;
+            height:20vh;
+        }
+
+        .accounttitle{            
+            font-size: 28px;
+            justify-content: flex-start;
+        }
+
+        #newaccount h3{            
+            font-size: 22p
+        }
+
+        .accountparagraph{            
+            font-size: 18px;      
+            width: 80%;     
+        }
+
+        #newaccount h5{            
+            font-size: 14px;      
             width: 80%;     
         }
 
         .element{    
             width: 80%;
-            height: 30px; 
+            height: 25px; 
             font-size: 18px;            
         }
 
         #create{
-            height: 40px;
-            font-size: 22px;
+            width: 80%;
+            height: 30px;
+            font-size: 18px;
         }
 
         .errormessage{ 
-            font-size: 18px;   
+            font-size: 12px;
+            width: 80%;   
         }
     }
-
-
-
-
 }
 
-/*Orientation lanscape*/
-@media screen and (max-width: 860px) and (orientation: landscape) {
-    #containersocialnetwork{
-        flex-direction: row;
-        height: 100vh;   
-        align-items: center;           
+/*Dispositivos TABLET Orientation LANDSCAPE*/
+@media (max-width: 1366px) and (orientation: landscape)  {
+    #logo{
+        width: 20vh;
+        height:20vh;
     }
 
-    #newaccount {  
-        width: 100%; 
+    .element{    
+        width: 80%;           
+    }
+
+    .errormessage{         
+        width: 80%;   
+    }
+}
+
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+
+@media (max-width: 860px) and (orientation: landscape)  {
+
+    #logo{
+        width: 30vh;
+        height:30vh;
+    }
+
+    #informationsocialnetwork{       
+        width: 50%;
+        height: 100%;
+        margin-left:0px;
+    }
+
+    #newaccount{       
+        width: 50%;
         height: 100%;
         margin-right:0px;
-        
-    }    
-    
-    #informationsocialnetwork{  
-        width: 100%;
-        height: 100%;
-        margin-left:0px;        
     }
 
+    .accounttitle{            
+        font-size: 28px;
+        justify-content: flex-start;
+    }
+
+    #newaccount h3{            
+        font-size: 22px;
+        justify-content: flex-start;
+    }
+    
+
+    .accountparagraph{            
+        font-size: 18px;      
+        width: 80%;     
+    }
+
+    #newaccount h5{            
+        font-size: 14px;      
+        width: 80%;     
+    }
+
+    .element{    
+        width: 80%;
+        height: 20px; 
+        font-size: 16px;            
+    }
+
+    #create{
+        width: 80%;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .errormessage{ 
+        font-size: 12px;
+        width: 80%;   
+    }
 }
-
-

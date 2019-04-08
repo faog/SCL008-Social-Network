@@ -5,9 +5,11 @@
 
 import { initRouter} from './route.js';
 import { templateSignIn } from './assets/views/templateSignIn.js';
+import { observer } from './assets/js/auth.js'
 
 const init = () => {
     initRouter();
+    observer();
     templateSignIn();
 }
 
