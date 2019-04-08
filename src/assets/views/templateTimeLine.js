@@ -1,5 +1,5 @@
 import {signOut} from "./../js/auth.js";
-//import {postCreate} from "./../js/datamodel.js"
+import {postCreate} from "./../js/datamodel.js"
 
 export const templateTimeLine = () =>{
     document.getElementById('containersocialnetwork').innerHTML=
