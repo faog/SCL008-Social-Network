@@ -9,6 +9,9 @@ export const templateSignIn = () =>{
     document.getElementById('containersocialnetwork').innerHTML=    
         `
         <section id="signinview">
+            <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/> 
+            <h2 class="accounttitle">Pet Community</h2>
+            <h5 class="accountparagraph">La comunidad más grande de mascotas</h5>                     
             <input type="email" id="emailsignin" placeholder="ingrese su correo"/>
             <p id="emailerror" class=""></p>
             <input type="password" id="passwordsigin" placeholder="ingrese su contraseña"/>
