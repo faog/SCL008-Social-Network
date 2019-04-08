@@ -5,67 +5,248 @@
     /*font-family: 'Lato', sans-serif; titulos*/
 }
 
-/*ESTILOS templateCreate
+/*1) Estilos templateSignIn*/
 
 /*DESKTOP*/
+
 #containersocialnetwork{
     display:-webkit-flex;
     display:-ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    width: 90%;
     flex-direction: row;   
-    background-color:none;
-    margin-top: 5%;
+    height: 100vh;   
+    align-items: center; 
+    background-color:#FAFAFA;
 }
 
-#newaccount{  
-    display: flex;
-    justify-content: space-around;
-    align-content: center;  
+#signinview{
+    display: flex;   
+    flex-direction: column; 
+    background-color:white; 
+    width: 50%; 
+    height: 80%;
+    justify-content: center;
+}
+
+#signinview h2, #signinview h5 {
+    color:#4B4B4B; 
+}
+
+.elementsignin{
+    width: 50%;
+    height: 30px; 
+    margin-top: 10px; 
+    font-family: 'Roboto', sans-serif;    
+    font-size: 16px;   
+}
+
+#signin, #googlesignin{
+    margin-top:10px;
+    background-color: #00BF6F;    
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    font-size: 18px;
+    border:none;
+}
+
+#createaccount{
+    margin-top:10px;
+    padding-top:10px;
+    background-color:#808080;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+    border:none;
+    text-align:center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.errorsignin{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 14px; 
+    color:#4B4B4B; 
+    text-align: left;
+    font-style: italic;
+    width: 50%;
+}
+
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){   
+    /*Elementos de los contenedores para pantallas tamaño tablet*/
+    @media (min-height: 860px) and (max-height: 1366px){
+        #signinview{        
+            width: 100%; 
+            height: 100%;        
+        }
+    
+        #logosignin{
+            width: 25%;
+            height:15%;
+        }
+        
+        .elementsignin{
+            width: 80%;
+            height: 40px;
+        }
+
+        #signin, #googlesignin{
+            width: 80%;
+            height: 40px;
+        }
+
+        .errorsignin{            
+            width: 80%;
+        }
+
+        #createaccount{
+            width: 80%;
+        }
+    }
+
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
+        #signinview{        
+            width: 100%; 
+            height: 100%;        
+        }
+    
+        #logosignin{
+            width: 40%;
+            height:30%;
+        }
+
+        .elementsignin{
+            width: 80%;
+            height: 30px;
+        }
+
+        #signin, #googlesignin{
+            width: 80%;
+            height: 30px;
+        }
+
+        .errorsignin{            
+            width: 80%;
+        }
+
+        #createaccount{
+            padding-top:5px;
+            width: 80%;
+            height:25px;
+        }
+    }
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE*/
+
+/*Dispositivos TABLET Orientation LANDSCAPE*/
+@media (max-width: 1366px) and (orientation: landscape)  {
+    #logosignin{
+        width: 30%;
+        height:30%;
+    }
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+@media (max-width: 860px) and (orientation: landscape)  {
+    #logosignin{
+        width: 25%;
+        height:25%;
+    }
+
+    #signinview{
+        width: 70%; 
+        height: 100%;
+        
+    }
+    
+    #signinview h2 {
+        font-size:24px;
+    }
+
+    #signinview h5 {
+        font-size:16px;
+    }
+    
+    .elementsignin{
+        width: 70%;
+        height: 30px;
+    }
+    
+    #signin, #googlesignin{        
+        height: 30px;
+        width: 70%;        
+    }
+    
+    #createaccount{        
+        height: 30px;
+        width: 70%;     
+    }
+    
+    .errorsignin{        
+        width: 70%;
+    }
+    
+}
+
+
+/*2) ESTILOS templateCreate*/
+
+/*DESKTOP*/
+
+#newaccount {  
+    display: flex;   
     flex-direction: column;  
     flex-wrap:wrap;
-    flex-basis: 45%;   
-    background-color:#464646;
+    justify-content: center;
+    width: 50%;   
+    background-color:#808080;
     color:white; 
+    height: 70vh; 
+    margin-right:50px; 
+    align-content: space-around;    
 }
 
 
-#informationsocialnetwork{  
+#informationsocialnetwork{    
     display: flex; 
-    justify-content: space-around;
-    align-content: center;  
     flex-direction: column; 
     flex-wrap:wrap;   
-    flex-basis: 45%;
-    height: auto; 
+    justify-content: center;      
+    width: 50%;
     background-color:white;
-    align-content: center; 
-    color:#464646; 
+    align-content: space-around; 
+    color:#4B4B4B; 
+    height: 70vh; 
+    margin-left:50px; 
 }
 
-.element , input#emailsignin, input#passwordsigin{    
-    width: 90%;
-    margin: 2% 5%;
+.element{    
+    width: 60%;
+    height: 30px; 
+    margin-top: 10px; 
     font-family: 'Roboto', sans-serif;    
-    font-size: 17px;   
-    flex-wrap:wrap;    
-    justify-content: flex-start; 
+    font-size: 16px;     
 }
+
 
 .errormessage{      
-    font-family: 'Lato', sans-serif;    
+    font-family: 'Roboto', sans-serif;    
     font-size: 14px; 
-    color:rgb(252, 1, 1);
+    color:white;
     text-align: left;
     margin-left: 0px;
-    font-style: bold;
+    font-style: italic;
 }
 
 .accounttitle{
-    margin-top: 5%;
-    text-align: center;
     font-family: 'Lato', sans-serif; 
     font-size: 32px;
     justify-content: flex-start;
@@ -79,14 +260,12 @@
     padding: 10px 0px;
 }
 
-#logo, img#logo{
-    width: 32%;
-    height:32%;
-    display:block;
-    margin:auto;
+#logo{
+    width: 35vh;
+    height:35vh;
 }
 
-#create, button#signin{
+#create{
     background-color: #00BF6F;
     border: none;
     color:white;
@@ -94,145 +273,188 @@
     font-weight: bold;
     height: 40px;
     font-size: 18px;
-    margin: 2% 0% 5% 5%;
-    
 }
 
-
-#signinview{
-    
-    border-color: #464646;
-    border-style: solid;
-    flex-basis: 50%;
-    border-width: 15px;
-    padding: 2%;;
-}
-a{
-    font-size: 19px;
-    text-decoration: none;
-    color: #464646;
-    padding: 3%;
-    margin-left: 10%;
-}
-
-/*MOBILE*/
-/*Orientation portrait*/
-
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
     #containersocialnetwork{
         flex-direction: column;
-        height: 100%;   
+        height: 100vh;   
         align-items: flex-start;           
     }
 
     #newaccount {  
         width: 100%; 
-        margin-right:0px;
-        
+        height: 60%;
+        margin-right:0px;        
     }    
     
     #informationsocialnetwork{  
         width: 100%;
-        margin-left:0px;
-        
+        height:40%;
+        margin-left:0px;        
     }    
 
     /*Elementos de los contenedores para pantallas tamaño tablet*/
     @media (min-height: 860px) and (max-height: 1366px){
         #logo{
-            width: 30%;
-            height:45%;
+            width: 40%;
+            height:55%;
         }
 
         .accounttitle{            
             font-size: 48px;
             justify-content: flex-start;
+            font-weight: bold;
         }
-      
+
+        #newaccount h3{            
+            font-size: 38px;
+            justify-content: flex-start;
+        }
+
         .accountparagraph{            
-            font-size: 32px;           
+            font-size: 28px;           
         }
 
         .element{    
-            height: 50px; 
+            width: 60%;
+            height: 40px; 
             margin-top: 20px;          
-            font-size: 28px;            
+            font-size: 22px;            
         }
 
         #create{
-            height: 60px;
+            height: 50px;
             font-size: 28px;
         }
 
         .errormessage{ 
-            font-size: 24px;   
+            width: 60%;
+            font-size: 16px;   
         }
     }
 
-     /*Elementos de los contenedores para pantallas de celular*/
-     @media (max-height: 860px) {
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
         #logo{
-            width: 20%;
-            height:20%;
+            width: 40%;
+            height:50%;
         }
-        a{
-            font-size: 15px;
-        }
+
         .accounttitle{            
             font-size: 28px;
             justify-content: flex-start;
         }
 
-        .accountparagraph{            
+        #newaccount h3{            
             font-size: 22px;      
+
+        }
+
+        .accountparagraph{            
+            font-size: 18px;      
+            width: 80%;     
+        }
+
+        #newaccount h5{            
+            font-size: 14px;      
             width: 80%;     
         }
 
         .element{    
+            width: 80%;
             height: 25px; 
             font-size: 18px;            
         }
 
-        .button#signin{    
-            
-            height: 25px; 
-            font-size: 16px;            
-        }
-
         #create{
-            height: 40px;
-            font-size: 22px;
+            width: 80%;
+            height: 30px;
+            font-size: 18px;
         }
 
         .errormessage{ 
-            font-size: 18px;   
+            font-size: 12px;
+            width: 80%;   
         }
     }
-
-
-
-
 }
 
-/*Orientation lanscape*/
-@media screen and (max-width: 860px) and (orientation: landscape) {
-    #containersocialnetwork{
-        flex-direction: row;
-        height: 100vh;   
-        align-items: center;           
+/*Dispositivos TABLET Orientation LANDSCAPE*/
+@media (max-width: 1366px) and (orientation: landscape)  {
+    #logo{
+        width: 30%;
+        height:30%;
     }
 
-    #newaccount {  
-        width: 100%; 
+    .element{    
+        width: 80%;           
+    }
+
+    .errormessage{         
+        width: 80%;   
+    }
+}
+
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+
+@media (max-width: 860px) and (orientation: landscape)  {
+
+    #informationsocialnetwork{       
+        width: 50%;
+        height: 100%;
+        margin-left:0px;
+    }
+
+    #newaccount{       
+        width: 50%;
         height: 100%;
         margin-right:0px;
-        
-    }    
-    
-    #informationsocialnetwork{  
-        width: 100%;
-        height: 100%;
-        margin-left:0px;        
     }
 
+
+    #logo{
+        width: 30%;
+        height:30%;
+    }
+
+    .accounttitle{            
+        font-size: 28px;
+        justify-content: flex-start;
+    }
+
+    #newaccount h3{            
+        font-size: 22px;
+        justify-content: flex-start;
+    }
+    
+
+    .accountparagraph{            
+        font-size: 18px;      
+        width: 80%;     
+    }
+
+    #newaccount h5{            
+        font-size: 14px;      
+        width: 80%;     
+    }
+
+    .element{    
+        width: 80%;
+        height: 20px; 
+        font-size: 16px;            
+    }
+
+    #create{
+        width: 80%;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .errormessage{ 
+        font-size: 12px;
+        width: 80%;   
+    }
 }
