@@ -9,7 +9,7 @@ export const templateCreate = () => {
                         <section id="informationsocialnetwork">
                           <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/> 
                           <h2 class="accounttitle">Pet Community</h2>
-                          <h5 class="accountparagraph">La comunidad más grande de mascotas</h5>                     
+                          <h5 class="accountparagraph">La comunidad de mascotas</h5>                     
                         </section>
 
                         <section id="newaccount">
