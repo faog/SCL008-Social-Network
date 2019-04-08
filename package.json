@@ -5,7 +5,7 @@
   "main": "src/index.html",
   "scripts": {
     "test": "jest --coverage",
-    "eslint": "eslint ext .js src/ test/",
+    "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
     "htmlhint": "htmlhint src/*.html",
     "deploy": "gh-pages -d src/"
