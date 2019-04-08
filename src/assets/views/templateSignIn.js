@@ -9,16 +9,16 @@ export const templateSignIn = () =>{
     document.getElementById('containersocialnetwork').innerHTML=    
         `
         <section id="signinview">
-            <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/> 
+            <img src="assets/Images/logoVerde.png" id="logosignin" alt="logo Pet Community"/> 
             <h2 class="accounttitle">Pet Community</h2>
-            <h5 class="accountparagraph">La comunidad más grande de mascotas</h5>                     
-            <input type="email" id="emailsignin" placeholder="ingrese su correo"/>
-            <p id="emailerror" class=""></p>
-            <input type="password" id="passwordsigin" placeholder="ingrese su contraseña"/>
-            <p id="passworderror" class=""></p>
+            <h5 class="accountparagraph">La comunidad de mascotas</h5>                          
+            <input type="email" id="emailsignin" class="elementsignin" autofocus placeholder="Ingrese su correo"/>
+            <p id="emailerror" class="errorsignin"></p>
+            <input type="password" id= "passwordsigin" class="elementsignin" placeholder="Ingrese su contraseña"/>
+            <p id ="passworderror" class="errorsignin"></p>
             <button id="signin">Iniciar Sesión</button>   
-            <button id="googlesignin">Google</button>    
-            <a href="#/create">Crear cuenta</a>  
+            <button id="googlesignin">Iniciar con Google</button>    
+            <a id="createaccount" href="#/create">Crear cuenta</a>  
         </section>
         `;      
     
