@@ -1,8 +1,10 @@
 import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./../views/templatePost.js"
+import { postRead } from "../js/datamodel.js";
 
 export const templateTimeLine = () =>{
     observer();
+    postRead();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">                                                                                  
