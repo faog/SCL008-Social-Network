@@ -1,5 +1,5 @@
 import {signOut, observer} from "./../js/auth.js";
-import {templatePost} from "./templatePost.js";
+import {templatePost} from"./../views/templatePost.js"
 
 export const templateTimeLine = () =>{
     observer();
@@ -23,30 +23,7 @@ export const templateTimeLine = () =>{
                         </section>
                         
                         <section id="timeline">
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                            <h1>Hola2</h1>
+                            
                         </section>                    
                         `;
     
@@ -62,7 +39,7 @@ export const templateTimeLine = () =>{
     //evento que sirve para volver al inicio de la pantalla
     document.getElementById("btnup").addEventListener('click',()=>{
         window.scrollTo(0,0);
-    });                 
-        
+    });    
     
 }
+

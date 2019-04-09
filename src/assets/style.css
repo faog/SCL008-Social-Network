@@ -188,8 +188,7 @@
     width: 50%;   
     background-color:#808080;
     color:white; 
-    height: 70vh; 
-    margin-right:50px; 
+    height: 70vh;     
     align-content: space-around;    
 }
 
@@ -203,7 +202,7 @@
     align-content: space-around; 
     color:#4B4B4B; 
     height: 70vh; 
-    margin-left:50px; 
+    
 }
 
 .element{    
@@ -547,7 +546,7 @@
     @media screen and (max-width: 1025px){
 
         #containersocialnetwork {
-            flex-direction: column;
+            flex-direction: row;
         }
 
         #navinformation{

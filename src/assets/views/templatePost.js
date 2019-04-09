@@ -1,5 +1,6 @@
 import {observer} from "./../js/auth.js";
 import {postCreate} from "./../js/datamodel.js"
+import {templateTimeLine} from"./../views/templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();
@@ -23,3 +24,4 @@ export const templatePost =()=>{
         postCreate(textPost);
     })                    
 }
+
