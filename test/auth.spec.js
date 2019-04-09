@@ -1,4 +1,4 @@
-import {validateAccount,validateEmail, validateSignIn,validateEmailSignIn} 
+import {validateAccount,validateEmail, validateSignIn,validateEmailSignIn, validatePost} 
 from "./../src/assets/js/validation.js"
 
 
@@ -58,5 +58,19 @@ describe("validateEmailSignIn",()=>{
 describe("validateEmailSignIn",()=>{
     it('deberia retornar true, si el correo es valido',()=>{
         expect(validateEmailSignIn("correobueno@gmail.com")).toBe(true);
+    })
+})
+
+//validación función validatePost
+
+describe("validatePost",()=>{
+    it('deberia retornar false, si el input es vacío',()=>{
+        expect(validatePost("")).toBe(false);
+    })
+})
+
+describe("validatePost", () =>{
+    it('deberia retornar true, si el input tiene texto',()=>{
+        expect(validatePost("hola")).toBe(true);
     })
 })
