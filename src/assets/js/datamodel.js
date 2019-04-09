@@ -1,4 +1,5 @@
 import {validatePost} from'./validation.js';
+import {renderPost } from "../views/templateTimeLine.js";
 
 //Variable que obtiene la inicialización de firestone 
 let dbPost = firebase.firestore();
@@ -35,16 +36,7 @@ export const postRead = () =>{
     dbPost.collection("post").orderBy("date","desc").get().then((querySnapshot) => {
         document.getElementById('timeline').innerHTML = '';
         querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().message}`);
-        document.getElementById('timeline').innerHTML +=
-        `   
-            <article id="postone">
-                <h3 id="userpost">${doc.data().user}</h3>
-                <h4 id="postread">${doc.data().message}</h4>                          
-                <button id="update">Editar</button>
-                <button id"delete">Eliminar</button>
-            </article>           
-        `    
+            renderPost(doc);
         });
     });
 }

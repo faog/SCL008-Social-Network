@@ -1,6 +1,6 @@
 import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./../views/templatePost.js"
-import { postRead } from "../js/datamodel.js";
+import {postRead} from "../js/datamodel.js";
 
 export const templateTimeLine = () =>{
     observer();
@@ -42,6 +42,23 @@ export const templateTimeLine = () =>{
     document.getElementById("btnup").addEventListener('click',()=>{
         window.scrollTo(0,0);
     });    
-    
+
 }
+
+    /*Función que imprime el html de los mensajes publicados*/
+export const renderPost =(doc) =>{
+
+        console.log(`${doc.id} => ${doc.data().message}`);
+        document.getElementById('timeline').innerHTML +=
+        `   
+            <article class="post">
+                <h3 id="userpost">${doc.data().user}</h3>
+                <h4 id="postread">${doc.data().message}</h4>                          
+                <button id="update">Editar</button>
+                <button id"delete">Eliminar</button>
+            </article>
+        `
+        
+        
+    }
 
