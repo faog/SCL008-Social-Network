@@ -11,7 +11,8 @@ export const templatePost =()=>{
                                 <img src="assets/Images/left-arrow.png" id="backtimeline" alt="volver al muro"/>                            
                             </a>  
                         </nav>
-                        <section id="userinformation">                            
+                        <section id="userinformation">  
+                            <p id="posterror"></p>                          
                             <img src=""id="userphoto" alt="Foto del usuario"/>
                             <h2 id="username">${firebase.auth().currentUser.displayName}</h2>                                                                                
                         </section>
@@ -20,8 +21,17 @@ export const templatePost =()=>{
                         `
     //evento para publicar un mensaje   
     document.getElementById('post').addEventListener('click',()=>{
-        let textPost = document.getElementById('textpost').value;
-        postCreate(textPost);
+        let userPost = document.getElementById('textpost').value;
+        
+        if(userPost===''){
+            document.getElementById('posterror').innerHTML=`Debes ingresar una publicación`;
+        }
+        else{
+            document.getElementById('posterror').innerHTML='';
+        }
+        
+        postCreate(userPost);
+
     })                    
 }
 

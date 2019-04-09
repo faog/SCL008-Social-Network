@@ -39,3 +39,13 @@ export const validateEmailSignIn = (emailSignIn)=>{
   let pattern = /\S+@\S+\.\S+/;
   return pattern.test(emailSignIn);
 }
+
+//Validación input vacio del post
+export const validatePost = (userPost) =>{
+  if(userPost === ""){
+    return false;
+
+  } else{
+    return true;
+  }
+}
