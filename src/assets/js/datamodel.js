@@ -13,7 +13,8 @@ export const postCreate = (textPost) =>{
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
-        document.getElementById("textpost").value='';  
+        document.getElementById("textpost").value=''; 
+        window.location.hash="#/timeline";
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
