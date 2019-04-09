@@ -1,21 +1,27 @@
 import {signOut, observer} from "./../js/auth.js";
-import {postCreate} from "./../js/datamodel.js"
-import { templatePost } from "./templatePost.js";
+import {templatePost} from "./templatePost.js";
 
 export const templateTimeLine = () =>{
     observer();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
-                        <section id="userinformation">
-                            <h3>Muro</h3> 
-                            <p>Usuario1</p>
-                            <button id="signout">Salir</button> 
-                        </section>
+                        <nav id="userinformation">                                                                                  
+                            <a href="#/profile" class="brand-logo">
+                                <img src="assets/Images/logoBlanco.png" id="btnprofile" alt="Perfil Usuario"/>                            
+                            </a>  
+                            <button id="btnup">
+                                <img src="assets/Images/pageup.png" id="up" alt="Boton subir"/>  
+                            </button> 
+                            <button id="btnsignout">
+                                <img src="assets/Images/logout.png" id="logout" alt="Boton salir aplicación"/>  
+                            </button>  
+                        </nav>
+
                         <section id="postinformation">                            
                             <img src="" id="userphoto" alt="Foto del usuario"/>
-                            <textarea id="textpost" placeholder="¿Qué estás pensando?"></textarea>                                                      
+                            <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
                         </section>
-                        <button id="post">Publicar</button>  
+                        
                         <section id="timeline">
                             <h1>Hola2</h1>
                             <h1>Hola2</h1>
@@ -44,17 +50,19 @@ export const templateTimeLine = () =>{
                         </section>                    
                         `;
     
-    //evento para publicar un mensaje   
-    document.getElementById('post').addEventListener('click',()=>{
-        let textPost = document.getElementById('textpost').value;
-        postCreate(textPost);
-    })
-
-    document.getElementById('textpost').addEventListener('click',()=>{
+    document.getElementById('text').addEventListener('click',()=>{
         templatePost();
+        window.location.hash="#/post";        
     })
     //evento para cerrar la sesión del usuario
-    document.getElementById('signout').addEventListener('click', ()=>{
+    document.getElementById('btnsignout').addEventListener('click', ()=>{
         signOut();
     })
+
+    //evento que sirve para volver al inicio de la pantalla
+    document.getElementById("btnup").addEventListener('click',()=>{
+        window.scrollTo(0,0);
+    });                 
+        
+    
 }
