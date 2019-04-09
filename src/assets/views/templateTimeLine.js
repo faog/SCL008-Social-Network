@@ -5,7 +5,7 @@ export const templateTimeLine = () =>{
     observer();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
-                        <nav id="userinformation">                                                                                  
+                        <nav id="navinformation">                                                                                  
                             <a href="#/profile" class="brand-logo">
                                 <img src="assets/Images/logoBlanco.png" id="btnprofile" alt="Perfil Usuario"/>                            
                             </a>  
@@ -17,7 +17,7 @@ export const templateTimeLine = () =>{
                             </button>  
                         </nav>
 
-                        <section id="postinformation">                            
+                        <section id="userinformation">                            
                             <img src="" id="userphoto" alt="Foto del usuario"/>
                             <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
                         </section>
