@@ -1,8 +1,9 @@
-import {signOut} from "./../js/auth.js";
+import {signOut, observer} from "./../js/auth.js";
 import {postCreate} from "./../js/datamodel.js"
 import { templatePost } from "./templatePost.js";
 
 export const templateTimeLine = () =>{
+    observer();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <section id="userinformation">
@@ -11,7 +12,7 @@ export const templateTimeLine = () =>{
                             <button id="signout">Salir</button> 
                         </section>
                         <section id="postinformation">                            
-                            <img src="${firebase.auth().currentUser.photoURL}" id="userphoto" alt="Foto del usuario"/>
+                            <img src="" id="userphoto" alt="Foto del usuario"/>
                             <textarea id="textpost" placeholder="¿Qué estás pensando?"></textarea>                                                      
                         </section>
                         <button id="post">Publicar</button>  

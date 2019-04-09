@@ -1,5 +1,7 @@
 import { validateAccount, validateSignIn} from './../js/validation.js';
 import { initFirebase } from './../js/initFirebase.js';
+import { templateSignIn } from '../views/templateSignIn.js';
+
 
 //Variable que obtiene la inicialización de firestone 
 let dbProfiles = initFirebase();
@@ -121,11 +123,15 @@ export const observer = () => {
       var email = user.email;
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
+      if (document.getElementById("userphoto")){
+        document.getElementById("userphoto").src = photoURL;
+      } 
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
     } else {
-      console.log('no existe usuario activo')
+      console.log('no existe usuario activo');
+      window.location.hash="";
     }
   });
 }
