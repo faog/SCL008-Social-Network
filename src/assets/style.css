@@ -472,7 +472,8 @@
             height:95%;        
             justify-content: space-between;  
             background-color: transparent; 
-            border:none;           
+            border:none;      
+            display:block;      
         }
     
         #backtimeline{
@@ -540,7 +541,7 @@
     }   
 }
 
-/*Dispositivos MOBILE Orientation PORTRAIT*/
+/*Dispositivos MOBILE Orientation LANDSCAPE*/
 
 @media screen and (max-height: 1366px) and (orientation: landscape){   
     @media screen and (max-width: 1025px){

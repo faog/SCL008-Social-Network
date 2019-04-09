@@ -16,7 +16,7 @@ export const templateTimeLine = () =>{
                                 <img src="assets/Images/logout.png" id="logout" alt="Boton salir aplicación"/>  
                             </button>  
                         </nav>
-
+                        
                         <section id="userinformation">                            
                             <img src="" id="userphoto" alt="Foto del usuario"/>
                             <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
@@ -46,8 +46,8 @@ export const templateTimeLine = () =>{
                             <h1>Hola2</h1>
                             <h1>Hola2</h1>
                             <h1>Hola2</h1>
-                            <h1>Hola2</h1>
-                        </section>                    
+                            <h1>Hola2</h1>  
+                        </section>                   
                         `;
     
     document.getElementById('text').addEventListener('click',()=>{
