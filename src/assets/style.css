@@ -510,6 +510,13 @@
             font-size: 18px;
             border:none;
         }
+
+        #postone{
+            padding: 10px 0px;
+            width:80%;
+            color:#4B4B4B; 
+            font-family: 'Lato', sans-serif;
+        }
     }
     
     /*Dispositivos TABLET Orientation PORTRAIT*/
@@ -626,10 +633,11 @@
             font-size: 18px;
             border:none;
         }
+
     }
     
     /*Dispositivos TABLET Orientation PORTRAIT*/
-    @media (min-width: 860px) and (max-width: 1366px){
+    @media (min-width: 860px) and (max-width: 1366px) and (orientation: landscape){
     
         #userinformation{
             margin-top: 120px;         

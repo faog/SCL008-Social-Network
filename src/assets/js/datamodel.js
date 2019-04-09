@@ -38,10 +38,12 @@ export const postRead = () =>{
             console.log(`${doc.id} => ${doc.data().message}`);
         document.getElementById('timeline').innerHTML +=
         `   
-            <h3 id="userpost">${doc.data().user}</h3>
-            <h4 id="postread">${doc.data().message}</h4>                          
-            <button id="update">Editar</button>
-            <button id"delete">Eliminar</button>           
+            <article id="postone">
+                <h3 id="userpost">${doc.data().user}</h3>
+                <h4 id="postread">${doc.data().message}</h4>                          
+                <button id="update">Editar</button>
+                <button id"delete">Eliminar</button>
+            </article>           
         `    
         });
     });
