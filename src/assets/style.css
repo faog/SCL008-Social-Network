@@ -382,16 +382,10 @@
         height:30vh;
     }
 
-    #informationsocialnetwork{       
+    #informationsocialnetwork, #newaccount {       
         width: 50%;
         height: 100%;
         margin-left:0px;
-    }
-
-    #newaccount{       
-        width: 50%;
-        height: 100%;
-        margin-right:0px;
     }
 
     .accounttitle{            
@@ -432,23 +426,33 @@
     }
 }
 
-/*1) Estilos templateTimeLine*/
+/*3) Estilos templateTimeLine*/
+
+/*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){
     #userinformation{
         background-color:#00BF6F;
+        height:60px;
         width:100%;
         flex-direction:row;
+        position: fixed;
     }
 
     #postinformation{
-        width:80%;
+        margin-top: 70px;   
+        width: 80%; 
     }
 
     #textpost{
-        height:100px;
-        width: 100%;
-        border:none;
+        height: 30px;
+        width: 80%;        
+        border-radius: 30px;
+        border: solid grey 1px;
+    }      
+
+    #userphoto{
+        width: 15%;
+        border-radius: 50px;
     }
-    
 }
 
