@@ -432,27 +432,49 @@
 @media screen and (max-width: 1024px) and (orientation: portrait){
     #userinformation{
         background-color:#00BF6F;
-        height:60px;
+        height:7%;
         width:100%;
-        flex-direction:row;
-        position: fixed;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: fixed; 
+        align-content:center;
     }
 
     #postinformation{
         margin-top: 70px;   
         width: 80%; 
+        background-color:white;
     }
 
-    #textpost{
+    #text{
         height: 30px;
         width: 80%;        
         border-radius: 30px;
         border: solid grey 1px;
+        font-size:16px;
     }      
 
     #userphoto{
         width: 15%;
         border-radius: 50px;
     }
+
+    .brand-logo{
+        color:transparent;
+    }
+
+    #btnprofile,#up, #btnup, #btnsignout, #logout {       
+        height:95%;        
+        justify-content: space-between;  
+        background-color: transparent; 
+        border:none;           
+    }
+
+    #textpost{
+        margin-top:100px;
+    }
+
 }
+
 
