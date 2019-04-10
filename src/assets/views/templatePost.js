@@ -1,5 +1,6 @@
 import {observer} from "./../js/auth.js";
 import {postCreate} from "./../js/datamodel.js"
+import {templateTimeLine} from "./templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();
@@ -10,9 +11,9 @@ export const templatePost =()=>{
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">
-                            <a href="#/timeline" class="brand-logo">
-                                <img src="assets/Images/left-arrow.png" id="backtimeline" alt="volver al muro"/>                            
-                            </a>  
+                            <button id="btnreturntimeline">
+                                <img src="assets/Images/left-arrow.png" id="returntimeline" alt="volver al muro"/>                            
+                            </button>  
                         </nav>
                         <section id="templatepost">
                             <section id="userpost">  
@@ -37,6 +38,15 @@ export const templatePost =()=>{
         
         postCreate(userPost);
 
-    })                    
+    })   
+    
+    //evento que permite ir al templateTimeLine
+    document.getElementById('btnreturntimeline').addEventListener('click',()=>{
+        templateTimeLine();
+        window.location.hash="#/timeline";        
+    })
+
+
+
 }
 
