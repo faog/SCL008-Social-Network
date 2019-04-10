@@ -55,7 +55,7 @@ export const templateTimeLine = () =>{
 
 }
 
-    /*Función que imprime el html de los mensajes publicados*/
+/*Función que imprime el html de los mensajes publicados*/
 export const renderPost =(doc) =>{
     let postDate = new Date(doc.data().date);
     document.getElementById('timeline').innerHTML +=
