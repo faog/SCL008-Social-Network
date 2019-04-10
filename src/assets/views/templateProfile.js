@@ -10,7 +10,7 @@ export const templateProfile =()=>{
                                 <img src="assets/Images/left-arrow.png" id="backtimeline" alt="volver al muro"/>                            
                             </button>  
                         </nav>
-                        <section id="userinformation">
+                        <section id="userprofile">
                             <h3>perfil</h3> 
                         </section>
                         `
