@@ -1,9 +1,12 @@
 import {observer} from "./../js/auth.js";
 import {postCreate} from "./../js/datamodel.js"
-import {templateTimeLine} from"./../views/templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();
+    let nameProfile = firebase.auth().currentUser.profileName;
+    if(firebase.auth().currentUser.displayName){
+        nameProfile = firebase.auth().currentUser.displayName;
+    }
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">
@@ -14,7 +17,7 @@ export const templatePost =()=>{
                         <section id="userinformation">  
                             <p id="posterror"></p>                          
                             <img src=""id="userphoto" alt="Foto del usuario"/>
-                            <h2 id="username">${firebase.auth().currentUser.displayName}</h2>                                                                                
+                            <h2 id="username">${nameProfile}</h2>                                                                                
                         </section>
                         <textarea id="textpost" placeholder="¿Qué estás pensando?" autofocus></textarea>   
                         <button id="post">Publicar</button>  
