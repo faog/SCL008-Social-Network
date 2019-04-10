@@ -40,13 +40,13 @@ export const postRead = () =>{
     .then((querySnapshot) => {
         if(document.getElementById('timeline')){
             document.getElementById('timeline').innerHTML = '';
-            }
+        }
         querySnapshot.forEach((doc) => {
             renderPost(doc);
         });
         querySnapshot.forEach((doc) => {
             attachEvents(doc);
-    });
+        });
     });
 }
 
@@ -64,15 +64,14 @@ export const getName = (email) =>{
 }
 /*3.)Función para eliminar post*/
 
-    export const postDelete=(id)=>{
-        let dbPost = firebase.firestore();
-        if(confirm("¿Realmente deseas eliminar este comentario?")){
+export const postDelete=(id)=>{
+    let dbPost = firebase.firestore();
+    if(confirm("¿Realmente deseas eliminar este comentario?")){
         dbPost.collection("post").doc(id).delete().then(function() {
             console.log("Document successfully deleted!");
-            postRead();
-        
+            postRead();        
         }).catch(function(error) {
             console.error("Error removing document: ", error);
         });
-        }
     }
+}

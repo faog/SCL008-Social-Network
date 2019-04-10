@@ -71,10 +71,10 @@ export const renderPost =(doc) =>{
     `  
 }
 
- //Función para eliminar post
 
 export const attachEvents =(doc) =>{
-document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
- postDelete(doc.id);
-})
+    //Función para eliminar post
+    document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
+    postDelete(doc.id);
+    })
 }
