@@ -1,6 +1,7 @@
 import {signOut, observer} from "./../js/auth.js";
-import {templatePost} from"./../views/templatePost.js"
+import {templatePost} from"./templatePost.js"
 import {postRead} from "../js/datamodel.js";
+import {templateProfile} from "./templateProfile.js"
 
 export const templateTimeLine = () =>{
     observer();
