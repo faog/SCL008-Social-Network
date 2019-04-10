@@ -8,9 +8,9 @@ export const templateTimeLine = () =>{
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">                                                                                  
-                            <a href="#/profile" class="brand-logo">
-                                <img src="assets/Images/logoBlanco.png" id="btnprofile" alt="Perfil Usuario"/>                            
-                            </a>  
+                            <button id="btnprofile">
+                                <img src="assets/Images/logoBlanco.png" id="profile" alt="Perfil Usuario"/>                            
+                            </button>  
                             <button id="btnup">
                                 <img src="assets/Images/pageup.png" id="up" alt="Boton subir"/>  
                             </button> 
@@ -18,21 +18,30 @@ export const templateTimeLine = () =>{
                                 <img src="assets/Images/logout.png" id="logout" alt="Boton salir aplicación"/>  
                             </button>  
                         </nav>
-
-                        <section id="userinformation">                            
-                            <img src="" id="userphoto" alt="Foto del usuario"/>
-                            <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
-                        </section>
-                        
-                        <section id="timeline">
+                        <section id="sectiontimeline">
+                            <section id="userinformation">                            
+                                <img src="" id="userphoto" alt="Foto del usuario"/>
+                                <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
+                            </section>
                             
-                        </section>                    
+                            <section id="timeline">
+                                
+                            </section>   
+                        </section>                   
                         `;
     
+    //evento que permite ir al templatePost
     document.getElementById('text').addEventListener('click',()=>{
         templatePost();
         window.location.hash="#/post";        
     })
+
+    //evento que permite ir al templateProfile
+    document.getElementById('btnprofile').addEventListener('click',()=>{
+        templateProfile();
+        window.location.hash="#/profile";        
+    })
+    
     //evento para cerrar la sesión del usuario
     document.getElementById('btnsignout').addEventListener('click', ()=>{
         signOut();
