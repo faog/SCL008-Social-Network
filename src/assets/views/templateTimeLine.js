@@ -1,8 +1,8 @@
 import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./templatePost.js"
-import {postRead} from "../js/datamodel.js";
+import {postRead, postDelete} from "../js/datamodel.js";
 import {templateProfile} from "./templateProfile.js"
-import {deletePost} from "../js/datamodel.js";
+
 
 export const templateTimeLine = () =>{
     observer();
@@ -66,20 +66,15 @@ export const renderPost =(doc) =>{
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
             <h4>${doc.data().message}</h4>                          
             <button id="update">Editar</button>
-            <button id="btndelete" data-id="${doc.id}">Eliminar</button>
+            <button id="delete_${doc.id}">Eliminar</button>
         </article>
     `  
 }
 
  //Función para eliminar post
 
-//  document.getElementById('btndelete').addEventListener('click', (e)=>{
-//     let postToDelete = e.target;
-//     let id = postToDelete.getAttribute('data-id');
-//     console.log(id);
-//     deletePost(id);
-// });
-// }
-//document.getElementById('btndelete').addEventListener('click', ()=>{
-//  deletepost();
-// })
+export const attachEvents =(doc) =>{
+document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
+ postDelete(doc.id);
+})
+}
