@@ -35,7 +35,9 @@ export const postCreate = (userPost) =>{
 
 /*2.)Función para mostrar los post en el muro de la aplicación*/
 export const postRead = () =>{
-    dbPost.collection("post").orderBy("date","desc").get().then((querySnapshot) => {
+    let dbPost = firebase.firestore();
+    dbPost.collection("post").orderBy("date","desc").get()
+    .then((querySnapshot) => {
         document.getElementById('timeline').innerHTML = '';
         querySnapshot.forEach((doc) => {
             renderPost(doc);
