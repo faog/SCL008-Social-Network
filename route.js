@@ -4,6 +4,8 @@
 import {templateCreate} from './assets/views/templateCreate.js';
 import {templateSignIn } from './assets/views/templateSignIn.js';
 import {templateTimeLine} from './assets/views/templateTimeLine.js'
+import {templatePost} from './../assets/views/templatePost.js'
+import {templateProfile} from './../assets/views/templateProfile.js'
 
 /*1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
 el template en el html*/
@@ -24,6 +26,17 @@ const changeRoute = (hash) =>{
         //le pasa como parametro #/timeline a la función showTemplate
         return showTemplate(hash);
     }
+
+    if (hash === '#/post') {
+        //le pasa como parametro #/post a la función showTemplate
+        return showTemplate(hash);
+    }
+
+    if (hash === '#/profile') {
+        //le pasa como parametro #/profile a la función showTemplate
+        return showTemplate(hash);
+    }
+
 }
 
 /*2.La función showTemplate(), se encarga de imprimir el template en el index.html*/
@@ -44,6 +57,12 @@ const showTemplate = (hash) =>{
             break;
         case 'timeline':
             templateTimeLine();
+            break;
+        case 'post':
+            templatePost();
+            break;
+        case 'profile':
+            templateProfile();
             break;
         default:
             containerRoot.innerHTML = `<p>Error 404</p>`

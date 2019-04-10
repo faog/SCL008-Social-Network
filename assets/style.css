@@ -1,8 +1,6 @@
 *{
     margin:0px auto;
     padding: 0px auto;
-    /*font-family: 'Roboto', sans-serif; (Secciones)*/
-    /*font-family: 'Lato', sans-serif; titulos*/
 }
 
 /*1) Estilos templateSignIn*/
@@ -89,23 +87,14 @@
         #logosignin{
             width: 25%;
             height:15%;
-        }
-        
-        .elementsignin{
+        }   
+
+        #signin, #googlesignin,.elementsignin {
             width: 80%;
             height: 40px;
         }
 
-        #signin, #googlesignin{
-            width: 80%;
-            height: 40px;
-        }
-
-        .errorsignin{            
-            width: 80%;
-        }
-
-        #createaccount{
+        .errorsignin, #createaccount {            
             width: 80%;
         }
     }
@@ -122,12 +111,7 @@
             height:30%;
         }
 
-        .elementsignin{
-            width: 80%;
-            height: 30px;
-        }
-
-        #signin, #googlesignin{
+        .elementsignin, #signin, #googlesignin{
             width: 80%;
             height: 30px;
         }
@@ -175,16 +159,11 @@
         font-size:16px;
     }
     
-    .elementsignin{
+    .elementsignin, #signin, #googlesignin {
         width: 70%;
         height: 30px;
     }
-    
-    #signin, #googlesignin{        
-        height: 30px;
-        width: 70%;        
-    }
-    
+
     #createaccount{        
         height: 30px;
         width: 70%;     
@@ -196,11 +175,9 @@
     
 }
 
-
 /*2) ESTILOS templateCreate*/
 
 /*DESKTOP*/
-
 #newaccount {  
     display: flex;   
     flex-direction: column;  
@@ -209,8 +186,7 @@
     width: 50%;   
     background-color:#808080;
     color:white; 
-    height: 70vh; 
-    margin-right:50px; 
+    height: 70vh;     
     align-content: space-around;    
 }
 
@@ -224,7 +200,7 @@
     align-content: space-around; 
     color:#4B4B4B; 
     height: 70vh; 
-    margin-left:50px; 
+    
 }
 
 .element{    
@@ -276,8 +252,7 @@
 
 /*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){
-    
-    
+        
     #containersocialnetwork{
         flex-direction: column;
         height: 100vh;   
@@ -364,7 +339,7 @@
 
         .element{    
             width: 80%;
-            height: 25px; 
+            height: 20px; 
             font-size: 18px;            
         }
 
@@ -388,13 +363,10 @@
         height:20vh;
     }
 
-    .element{    
+    .element, .errormessage{    
         width: 80%;           
     }
 
-    .errormessage{         
-        width: 80%;   
-    }
 }
 
 
@@ -407,16 +379,10 @@
         height:30vh;
     }
 
-    #informationsocialnetwork{       
+    #informationsocialnetwork, #newaccount {       
         width: 50%;
         height: 100%;
         margin-left:0px;
-    }
-
-    #newaccount{       
-        width: 50%;
-        height: 100%;
-        margin-right:0px;
     }
 
     .accounttitle{            
@@ -429,7 +395,6 @@
         justify-content: flex-start;
     }
     
-
     .accountparagraph{            
         font-size: 18px;      
         width: 80%;     
@@ -457,3 +422,267 @@
         width: 80%;   
     }
 }
+
+/*3) Estilos templateTimeLine y templatePost*/
+
+
+
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+
+#navinformation{
+    top:0px;
+    background-color:#00BF6F;
+    height:6%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed; 
+    align-content:center;
+}
+
+#userinformation{
+    margin-top: 60px;         
+    width: 80%; 
+    background-color:white;        
+}
+
+@media screen and (max-height: 1366px) {   
+    
+    #text{
+        height: 30px;
+        width: 80%;        
+        border-radius: 30px;
+        border: solid grey 1px;
+        font-size:16px;
+        font-family: 'Lato', sans-serif;
+        color:#4B4B4B; 
+    }      
+    
+    #userphoto{
+        width: 15%;
+        border-radius: 80px;
+    }
+    
+    #btnprofile, #profile,#up, #btnup, #btnsignout, #logout, #btnbacktimeline, #backtimeline, #btnreturntimeline, #returntimeline{           
+        height:95%;        
+        justify-content: space-between;  
+        background-color: transparent; 
+        border:none;      
+        display:block;      
+    }
+    
+    #backtimeline{
+        height:95%;        
+        justify-content: flex-start;  
+        background-color: transparent; 
+        border:none;    
+    }
+    
+    #textpost{        
+        width: 100%;
+        height:350px;
+        border:none;
+        font-size:16px;
+        padding-top:10px;
+        font-family: 'Roboto', sans-serif;
+        color:#4B4B4B; 
+    }
+    
+    #username{
+        font-family: 'Lato', sans-serif;
+        font-size:18px;
+        color:#4B4B4B; 
+        
+    }
+    
+    #post{
+        margin-top:10px;
+        background-color: #00BF6F;    
+        color:white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        height: 40px;
+        width: 100%;
+        font-size: 18px;
+        border:none;
+    }
+    
+    .postread{
+        padding: 10px 0px;
+        width:80%;
+        color:#4B4B4B;         
+        background-color:white;
+    }
+
+    .postread h3, .postread h5 {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .postread h4{
+        padding:5px 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #userpost{
+        margin-top:60px;
+        width:100%;
+    }
+
+    #templatepost{
+        width:80%;
+    }
+    /*Dispositivos TABLET Orientation PORTRAIT*/
+    @media (min-width:700px) and (max-width: 1366px){
+
+        #userpost{
+            margin-top:90px;
+            
+        }
+
+        #textpost{ 
+            height:600px;             
+        }
+
+        #userinformation{
+            margin-top: 90px;         
+        }
+    
+        #text{
+            height: 40px;        
+            font-size:22px;        
+        }  
+    
+        #username{       
+            font-size:28px;                 
+        }
+    
+        #post{
+            font-size: 28px;
+            height: 60px;
+            
+        }
+    
+        #textpost{        
+            font-size:24px;
+        }
+
+        #userphoto{
+            width: 9%;
+            border-radius: 60px;
+        }  
+    }   
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE*/
+
+@media screen and (max-width: 1400px) and (orientation: landscape){  
+    #templatepost{
+        display:flex;
+        flex-direction:column;
+    }
+
+    #textpost{ 
+        height:150px;
+         
+    }
+    #userpost{
+        margin-top:20px;
+        width:100%;
+        
+    }
+
+    #navinformation{            
+        height:10%;
+    }
+
+    #post{
+        font-size: 22px;
+        height: 40px;
+        
+    } 
+    #userphoto{
+        width: 10%;
+        border-radius: 60px;
+    } 
+
+    
+    
+    @media screen and (max-width: 600px){
+        #userinformation{  
+            top:0px;          
+            margin-top: 1200px; 
+        }   
+        
+        #textpost{ 
+            height:120px;
+             
+        }
+        #userpost{
+            margin-top:20px;
+            width:100%;
+            
+        }
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 860px){
+
+        #sectiontimeline {
+            flex-direction: column;
+        }      
+    
+        #userinformation{  
+            top:0px;          
+            margin-top: 1120px;  
+        }    
+    }
+    
+    /*Dispositivos TABLET Orientation LANDSCAPE*/
+    @media (min-width: 900px) and (max-width: 1200px){
+
+        #userphoto{
+            width: 10%;
+            border-radius: 60px;
+        } 
+    
+        #userinformation{            
+            margin-top: 800px;  
+        }
+    
+        #text{
+            height: 50px;        
+            font-size:22px;        
+        }  
+    
+        #username{       
+            font-size:28px;                 
+        }
+    
+        #post{
+            font-size: 28px;
+            height: 60px;
+            
+        }
+    
+        #textpost{        
+            font-size:24px;
+        }
+
+        #textpost{ 
+            height:300px;             
+        }
+    }  
+    
+    @media(min-width: 1200px){
+        #userinformation{            
+            margin-top: 800px;  
+        }    
+
+        #textpost{ 
+            height:300px;             
+        }
+    }
+}
+
+
+
