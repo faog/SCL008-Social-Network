@@ -57,3 +57,13 @@ export const getName = (email) =>{
         
     });
 }
+/*3.)Función para eliminar post*/
+
+// export const deletePost=(id)=>{
+   
+//     dbPost.collection("post").doc("id").delete().then(function() {
+//         console.log("Document successfully deleted!");
+//     }).catch(function(error) {
+//         console.error("Error removing document: ", error);
+//     });
+// }
