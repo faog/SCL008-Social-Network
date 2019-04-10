@@ -480,8 +480,8 @@
     }
     
     #textpost{        
-        width: 80%;
-        height:60%;
+        width: 100%;
+        height:350px;
         border:none;
         font-size:16px;
         padding-top:10px;
@@ -503,7 +503,7 @@
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         height: 40px;
-        width: 80%;
+        width: 100%;
         font-size: 18px;
         border:none;
     }
@@ -524,12 +524,24 @@
         font-family: 'Roboto', sans-serif;
     }
 
+    #userpost{
+        margin-top:60px;
+        width:100%;
+    }
+
+    #templatepost{
+        width:80%;
+    }
     /*Dispositivos TABLET Orientation PORTRAIT*/
     @media (min-width:700px) and (max-width: 1366px){
 
-        #userphoto{
-            width: 10%;
-            border-radius: 80px;
+        #userpost{
+            margin-top:90px;
+            
+        }
+
+        #textpost{ 
+            height:600px;             
         }
 
         #userinformation{
@@ -565,21 +577,52 @@
 /*Dispositivos MOBILE Orientation LANDSCAPE*/
 
 @media screen and (max-width: 1400px) and (orientation: landscape){  
+    #templatepost{
+        display:flex;
+        flex-direction:column;
+    }
+
+    #textpost{ 
+        height:150px;
+         
+    }
+    #userpost{
+        margin-top:10px;
+        width:100%;
+        
+    }
 
     #navinformation{            
         height:10%;
     }
 
+    #post{
+        font-size: 22px;
+        height: 40px;
+        
+    } 
     #userphoto{
         width: 10%;
         border-radius: 60px;
     } 
+
+    
     
     @media screen and (max-width: 600px){
         #userinformation{  
             top:0px;          
             margin-top: 1420px; 
-        }        
+        }   
+        
+        #textpost{ 
+            height:120px;
+             
+        }
+        #userpost{
+            margin-top:10px;
+            width:100%;
+            
+        }
     }
 
     @media screen and (min-width: 600px) and (max-width: 860px){
@@ -624,12 +667,20 @@
         #textpost{        
             font-size:24px;
         }
+
+        #textpost{ 
+            height:300px;             
+        }
     }  
     
     @media(min-width: 1200px){
         #userinformation{            
             margin-top: 800px;  
         }    
+
+        #textpost{ 
+            height:300px;             
+        }
     }
 }
 

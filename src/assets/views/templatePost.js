@@ -14,13 +14,15 @@ export const templatePost =()=>{
                                 <img src="assets/Images/left-arrow.png" id="backtimeline" alt="volver al muro"/>                            
                             </a>  
                         </nav>
-                        <section id="userinformation">  
-                            <p id="posterror"></p>                          
-                            <img src=""id="userphoto" alt="Foto del usuario"/>
-                            <h2 id="username">${nameProfile}</h2>                                                                                
-                        </section>
-                        <textarea id="textpost" placeholder="¿Qué estás pensando?" autofocus></textarea>   
-                        <button id="post">Publicar</button>  
+                        <section id="templatepost">
+                            <section id="userpost">  
+                                <p id="posterror"></p>                          
+                                <img src=""id="userphoto" alt="Foto del usuario"/>
+                                <h2 id="username">${nameProfile}</h2>                                                                                
+                            </section>
+                            <textarea id="textpost" placeholder="¿Qué estás pensando?" autofocus></textarea>   
+                            <button id="post">Publicar</button> 
+                        </section> 
                         `
     //evento para publicar un mensaje   
     document.getElementById('post').addEventListener('click',()=>{
