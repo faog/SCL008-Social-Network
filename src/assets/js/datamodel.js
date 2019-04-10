@@ -1,17 +1,19 @@
 import {validatePost} from'./validation.js';
 import {renderPost } from "../views/templateTimeLine.js";
 
-//Variable que obtiene la inicialización de firestone 
-let dbPost = firebase.firestore();
-
 /*1.)Función para crear un nuevo post
 Necesito traspasar desde el template el texto de la publicación*/
 export const postCreate = (userPost) =>{
+    let dbPost = firebase.firestore();
     if(validatePost(userPost)){
         let date=Date.now();
-
+        let nameProfile = firebase.auth().currentUser.profileName;
+        if(firebase.auth().currentUser.displayName){
+            nameProfile = firebase.auth().currentUser.displayName;
+        }
         dbPost.collection("post").add({
             user: firebase.auth().currentUser.email,
+            name: nameProfile,
             message: userPost,
             date:date         
         })
