@@ -42,3 +42,16 @@ export const postRead = () =>{
         });
     });
 }
+
+//*Funcion getName, para obtener desde la BD el nombre del usuario
+export const getName = (email) =>{
+    //consulta para obtener los datos del usuario, cuyo correo que se envia es igual al correo de la BD
+    let dbProfiles = firebase.firestore();
+    let userProfile = dbProfiles.collection("users").where("email","==",email);
+    userProfile.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc)=>{
+            firebase.auth().currentUser.profileName = doc.data().firstname + " " +doc.data().lastname;
+        })
+        
+    });
+}
