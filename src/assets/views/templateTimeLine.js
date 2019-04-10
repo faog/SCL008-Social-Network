@@ -60,10 +60,10 @@ export const renderPost =(doc) =>{
     let postDate = new Date(doc.data().date);
     document.getElementById('timeline').innerHTML +=
     `   
-        <article class="post">
-            <h3 id="userpost">${doc.data().name}</h3>
-            <h5 id="postdate">${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
-            <h4 id="postread">${doc.data().message}</h4>                          
+        <article class="postread">
+            <h3>${doc.data().name}</h3>
+            <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
+            <h4>${doc.data().message}</h4>                          
             <button id="update">Editar</button>
             <button id"delete">Eliminar</button>
         </article>
