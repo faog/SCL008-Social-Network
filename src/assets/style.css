@@ -467,7 +467,7 @@
             color:transparent;
         }
     
-        #btnprofile,#up, #btnup, #btnsignout, #logout{       
+        #btnprofile, #profile,#up, #btnup, #btnsignout, #logout{           
             height:95%;        
             justify-content: space-between;  
             background-color: transparent; 
@@ -516,6 +516,7 @@
             width:80%;
             color:#4B4B4B; 
             font-family: 'Lato', sans-serif;
+            background-color:white;
         }
     }
     
@@ -552,8 +553,8 @@
 @media screen and (max-height: 1366px) and (orientation: landscape){   
     @media screen and (max-width: 1025px){
 
-        #containersocialnetwork {
-            flex-direction: row;
+        #sectiontimeline {
+            flex-direction: column;
         }
 
         #navinformation{
@@ -565,6 +566,7 @@
             flex-wrap: nowrap;
             position: fixed; 
             align-content:center;
+            top: 0px;
         }
     
         #userinformation{
