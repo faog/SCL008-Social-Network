@@ -1,15 +1,11 @@
 import { validateAccount, validateSignIn} from './../js/validation.js';
-import { initFirebase } from './../js/initFirebase.js';
-import { templateSignIn } from '../views/templateSignIn.js';
-
-
-//Variable que obtiene la inicialización de firestone 
-let dbProfiles = initFirebase();
+import { getName } from './datamodel.js';
 
 /*1.)Función para crear una nueva cuenta
 De acuerdo al flujo diseñado para la aplicación, creo una función la que necesita los 
 parámetros definidos*/
 export const createAccount = (firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser) =>{
+  let dbProfiles = firebase.firestore();
   /*Si la validación realizada en el archivo validation.js fue true, ingresa al if*/
   if(validateAccount(firstNameNewUser,lastNameNewUser,emailNewUser,passwordNewUser)){
     /*Función de Firebase para registrar nuevos usuarios*/
@@ -119,16 +115,16 @@ export const observer = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log('existe usuario activo')
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
+      if(!user.displayName && user.email){
+        getName(user.email);
+      }      
+      let photoURL = "assets/Images/logoVerde.png";
+      if(user.photoURL){
+        photoURL= user.photoURL;
+      }       
       if (document.getElementById("userphoto")){
         document.getElementById("userphoto").src = photoURL;
       } 
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
     } else {
       console.log('no existe usuario activo');
       window.location.hash="";
