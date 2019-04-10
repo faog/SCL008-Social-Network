@@ -1,6 +1,6 @@
 import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./templatePost.js"
-import {postRead, postDelete} from "../js/datamodel.js";
+import {postRead, postDelete/*, upDate*/} from "../js/datamodel.js";
 import {templateProfile} from "./templateProfile.js"
 
 
@@ -78,3 +78,10 @@ export const attachEvents =(doc) =>{
     postDelete(doc.id);
     })
 }
+
+/*Función para editar post
+export const attachEvents1 =(doc) =>{
+    document.getElementById('update_'+doc.id).addEventListener('click', ()=>{
+     upDate(doc.id);
+    })
+    }*/

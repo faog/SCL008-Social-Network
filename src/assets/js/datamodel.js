@@ -1,5 +1,5 @@
 import {validatePost} from'./validation.js';
-import {renderPost, attachEvents} from "../views/templateTimeLine.js";
+import {renderPost, attachEvents /*, attachEvents*/} from "../views/templateTimeLine.js";
 
 /*1.)Función para crear un nuevo post
 Necesito traspasar desde el template el texto de la publicación*/
@@ -75,3 +75,20 @@ export const postDelete=(id)=>{
         });
     }
 }
+
+/*4.)Función para editar post
+
+export const upDate=(id)=>{
+    let dbPost = firebase.firestore();
+    dbPost.collection("post").doc(id);
+
+    return upDatepost.update({
+        upDate:true
+    })
+    .then(function() {
+        console.log("Document successfully updated!");
+    })
+    .catch(function(error) {
+        console.error("Error updating document: ", error);
+    });
+    }*/
