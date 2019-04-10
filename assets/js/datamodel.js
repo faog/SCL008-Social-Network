@@ -1,5 +1,5 @@
 import {validatePost} from'./validation.js';
-import {renderPost } from "../views/templateTimeLine.js";
+import {renderPost, attachEvents} from "../views/templateTimeLine.js";
 
 /*1.)Función para crear un nuevo post
 Necesito traspasar desde el template el texto de la publicación*/
@@ -38,9 +38,14 @@ export const postRead = () =>{
     let dbPost = firebase.firestore();
     dbPost.collection("post").orderBy("date","desc").get()
     .then((querySnapshot) => {
-        document.getElementById('timeline').innerHTML = '';
+        if(document.getElementById('timeline')){
+            document.getElementById('timeline').innerHTML = '';
+        }
         querySnapshot.forEach((doc) => {
             renderPost(doc);
+        });
+        querySnapshot.forEach((doc) => {
+            attachEvents(doc);
         });
     });
 }
@@ -56,4 +61,17 @@ export const getName = (email) =>{
         })
         
     });
+}
+/*3.)Función para eliminar post*/
+
+export const postDelete=(id)=>{
+    let dbPost = firebase.firestore();
+    if(confirm("¿Realmente deseas eliminar este comentario?")){
+        dbPost.collection("post").doc(id).delete().then(function() {
+            console.log("Document successfully deleted!");
+            postRead();        
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });
+    }
 }
