@@ -163,8 +163,7 @@
     
     #signin, #googlesignin{        
         font-size: 16px; 
-        height: 50px;  
-              
+        height: 50px; 
     }
 
     #signininformation h2 {
@@ -184,6 +183,10 @@
     .errorsignin{            
         font-size:14px;
     } 
+
+    #signin, #googlesignin, #createaccount, .errorsignin, .elementsignin{
+        width: 80%;
+    }
 }
 
 
