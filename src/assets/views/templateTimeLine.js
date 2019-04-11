@@ -2,11 +2,11 @@ import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./templatePost.js"
 import {postRead, postDelete} from "../js/datamodel.js";
 import {templateProfile} from "./templateProfile.js"
+import { templateEditPost } from "./templateEditPost.js";
 
 
 export const templateTimeLine = () =>{
     observer();
-    postRead();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">                                                                                  
@@ -33,7 +33,7 @@ export const templateTimeLine = () =>{
                             </section>   
                         </section>                
                         `;
-    
+    postRead();
     //evento que permite ir al templatePost
     document.getElementById('text').addEventListener('click',()=>{
         templatePost();
@@ -67,7 +67,7 @@ export const renderPost =(doc) =>{
             <h3>${doc.data().name}</h3>
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
             <h4>${doc.data().message}</h4>                          
-            <button id="update" class="btnupdate">Editar</button>
+            <button id="update_${doc.id}" class="btnupdate">Editar</button>
             <button id="delete_${doc.id}" class="btndelete">Eliminar</button>
         </article>
     `  
@@ -75,10 +75,15 @@ export const renderPost =(doc) =>{
 
 
 export const attachEvents =(doc) =>{
-    //Función para eliminar post
+    /*Evento que permite eliminar un post*/
     document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
-    postDelete(doc.id);
+        postDelete(doc.id);
     })
+    /*Evento que permite editar una publicación*/
+    document.getElementById('update_'+doc.id).addEventListener('click',()=>{
+        window.location.hash = "#/editpost";
+        templateEditPost(doc);
+    }); 
 }
 
 /*Función para editar post
