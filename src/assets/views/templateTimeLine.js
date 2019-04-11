@@ -66,24 +66,36 @@ export const renderPost =(doc) =>{
         <article class="postread">
             <h3>${doc.data().name}</h3>
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
-            <h4>${doc.data().message}</h4>                          
+            <h4>${doc.data().message}</h4>  
+    `
+    if(firebase.auth().currentUser.email===doc.data().user){
+        document.getElementById('timeline').innerHTML +=
+        `
+        <div class="btntimeline">
             <button id="update_${doc.id}" class="btnupdate">Editar</button>
             <button id="delete_${doc.id}" class="btndelete">Eliminar</button>
+        </div>
+        `
+    }        
+        document.getElementById('timeline').innerHTML +=
+        `           
         </article>
-    `  
+        `   
 }
 
 
 export const attachEvents =(doc) =>{
-    /*Evento que permite eliminar un post*/
-    document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
-        postDelete(doc.id);
-    })
-    /*Evento que permite editar una publicación*/
-    document.getElementById('update_'+doc.id).addEventListener('click',()=>{
-        window.location.hash = "#/editpost";
-        templateEditPost(doc);
-    }); 
+    if(firebase.auth().currentUser.email===doc.data().user){
+        /*Evento que permite eliminar un post*/
+        document.getElementById('delete_'+doc.id).addEventListener('click', ()=>{
+            postDelete(doc.id);
+        })
+        /*Evento que permite editar una publicación*/
+        document.getElementById('update_'+doc.id).addEventListener('click',()=>{
+            window.location.hash = "#/editpost";
+            templateEditPost(doc);
+        }); 
+    }
 }
 
 /*Función para editar post
