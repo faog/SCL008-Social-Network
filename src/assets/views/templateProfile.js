@@ -1,8 +1,10 @@
 import { observer } from "./../js/auth.js";
 import {templateTimeLine} from "./templateTimeLine.js"
+import { validateName } from "../js/datamodel.js";
 
 export const templateProfile =()=>{
     observer();
+    let nameProfile = validateName(); 
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">
@@ -11,7 +13,9 @@ export const templateProfile =()=>{
                             </button>  
                         </nav>
                         <section id="userprofile">
-                            <h3>perfil</h3> 
+                            <img src=""id="userphoto" alt="Foto del usuario"/>
+                            <h2 id="username">${nameProfile}</h2>
+                            <h3 id="useremail"></h3> 
                         </section>
                         `
 
