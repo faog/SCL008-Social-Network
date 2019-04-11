@@ -189,4 +189,198 @@
     }
 }
 
+/*
+-----------------------------------------------------------------------------------------------
+
+2) VISTA templateCreateAccount
+
+-----------------------------------------------------------------------------------------------
+*/
+
+/*DESKTOP*/
+
+.templatecreate{
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+    flex-direction: row;   
+    height: 100vh;   
+    align-items: center;   
+}
+
+#newaccount {  
+    display: flex;   
+    flex-direction: column;  
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 50%;   
+    background-color:#808080;
+    color:white; 
+    height: 70vh;     
+    align-content: space-around;    
+}
+
+#informationsocialnetwork{    
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap:wrap;   
+    justify-content: center;      
+    width: 50%;
+    background-color:white;
+    align-content: space-around; 
+    color:#4B4B4B; 
+    height: 70vh; 
+    
+}
+
+#informationsocialnetwork h1 {
+    color:#4B4B4B; 
+    font-size: 32px;
+}
+
+#informationsocialnetwork h2 {
+    color:#4B4B4B; 
+    font-size: 28px;
+}
+
+#newaccount h2 {    
+    font-size: 24px;
+}
+
+#newaccount h3  {    
+    font-size: 20px;
+}
+
+.element{    
+    width: 60%;
+    height: 30px; 
+    margin-top: 10px; 
+    font-family: 'Roboto', sans-serif;    
+    font-size: 16px;     
+}
+
+.errormessage{      
+    font-family: 'Roboto', sans-serif;    
+    font-size: 14px; 
+    color:white;
+    text-align: left;
+    margin-left: 0px;
+    font-style: italic;
+}
+
+#create{
+    background-color: #00BF6F;
+    border: none;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    font-size: 18px;
+}
+
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){   
+
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
+        .templatecreate{
+            flex-direction: column;  
+            height: 100vh;             
+        }
+        #newaccount, #informationsocialnetwork  {  
+            width: 100%;                         
+        }  
+
+        #informationsocialnetwork a{
+            text-align: center;
+        }
+        
+        #logo{
+            width: 70%;
+        }
+
+        #informationsocialnetwork h1 {            
+            font-size: 26px;
+        }
+        
+        #informationsocialnetwork h2 {           
+            font-size:22px;
+        }
+        
+        #newaccount h2 {    
+            font-size: 22px;
+        }
+        
+        #newaccount h3  {    
+            font-size: 18px;
+        }
+
+        .element, .errormessage, #createaccount{    
+            width: 80%;
+            font-size: 16px;     
+        }
+
+        .errormessage{
+            font-size: 14px;   
+            font-weight: bold;
+        }        
+    }
+    
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+@media (max-width: 990px) and (orientation: landscape)  {
+    .templatecreate{
+        flex-direction: column;  
+        width: 100%;
+        height: 150vh;           
+    }
+    #informationsocialnetwork  {  
+        width: 100%;       
+        flex-wrap: wrap; 
+        height: 50vh;                          
+    } 
+    #newaccount {  
+        width: 100%;       
+        flex-wrap: wrap; 
+        height: 100vh; 
+                        
+    } 
+    
+    #informationsocialnetwork a{
+        text-align: center;
+    }
+    
+    #logo{
+        width: 40%;
+    }
+
+    #informationsocialnetwork h1 {            
+        font-size: 24px;
+    }
+    
+    #informationsocialnetwork h2, #newaccount h2 {           
+        font-size:20px;
+    }
+       
+    #newaccount h3  {    
+        font-size: 16px;
+    }
+
+    .element, .errormessage{  
+        margin-top: 0px;
+        width: 80%;  
+        height: 20px;      
+        font-size: 16px;     
+    }
+
+    .errormessage{
+        font-size: 14px;      
+    }
+    #create{
+        height: 30px;
+    }
+    
+}
+
 
