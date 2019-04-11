@@ -20,16 +20,18 @@ export const templateTimeLine = () =>{
                                 <img src="assets/Images/logout.png" id="logout" alt="Boton salir aplicación"/>  
                             </button>  
                         </nav>
-                        <section id="sectiontimeline">
-                            <section id="userinformation">                            
-                                <img src="" id="userphoto" alt="Foto del usuario"/>
-                                <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
-                            </section>
-                            
-                            <section id="timeline">
+                        <section class="templatetimeline">
+                            <section id="sectiontimeline">
+                                <section id="userinformation">                            
+                                    <img src="" id="userphoto" alt="Foto del usuario"/>
+                                    <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
+                                </section>
                                 
+                                <section id="timeline">
+                                    
+                                </section>   
                             </section>   
-                        </section>                   
+                        </section>                
                         `;
     
     //evento que permite ir al templatePost
@@ -65,8 +67,8 @@ export const renderPost =(doc) =>{
             <h3>${doc.data().name}</h3>
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
             <h4>${doc.data().message}</h4>                          
-            <button id="update">Editar</button>
-            <button id="delete_${doc.id}">Eliminar</button>
+            <button id="update" class="btnupdate">Editar</button>
+            <button id="delete_${doc.id}" class="btndelete">Eliminar</button>
         </article>
     `  
 }
@@ -78,3 +80,10 @@ export const attachEvents =(doc) =>{
     postDelete(doc.id);
     })
 }
+
+/*Función para editar post
+export const attachEvents1 =(doc) =>{
+    document.getElementById('update_'+doc.id).addEventListener('click', ()=>{
+     upDate(doc.id);
+    })
+    }*/

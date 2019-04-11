@@ -1,32 +1,42 @@
 *{
     margin:0px auto;
     padding: 0px auto;
+    font-family: 'Lato', sans-serif; /*Letra parrafos*/
 }
 
-/*1) Estilos templateSignIn*/
+/*
+-----------------------------------------------------------------------------------------------
+
+1) VISTA templateSignIn
+
+-----------------------------------------------------------------------------------------------
+*/
 
 /*DESKTOP*/
 
-#containersocialnetwork{
+.templatesignin{
     display:-webkit-flex;
     display:-ms-flexbox;
     display: flex;
     flex-direction: row;   
     height: 100vh;   
-    align-items: center; 
-    
+    align-items: center;   
 }
 
-#signinview{
+#logosignin{
+    width: 30%;    
+}
+
+#signininformation{
     display: flex;   
     flex-direction: column; 
     background-color:white; 
-    width: 50%; 
+    width: 40%; 
     height: 80%;
     justify-content: center;
 }
 
-#signinview h2, #signinview h5 {
+#signininformation h2, #signininformation h3 {
     color:#4B4B4B; 
 }
 
@@ -72,43 +82,21 @@
     color:#4B4B4B; 
     text-align: left;
     font-style: italic;
+    font-weight: bold;
     width: 50%;
 }
 
 /*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){   
-    /*Elementos de los contenedores para pantallas tamaño tablet*/
-    @media (min-height: 860px) and (max-height: 1366px){
-        #signinview{        
-            width: 100%; 
-            height: 100%;        
-        }
-    
-        #logosignin{
-            width: 25%;
-            height:15%;
-        }   
-
-        #signin, #googlesignin,.elementsignin {
-            width: 80%;
-            height: 40px;
-        }
-
-        .errorsignin, #createaccount {            
-            width: 80%;
-        }
-    }
 
     /*Elementos de los contenedores para pantallas de celular*/
     @media (max-height: 860px) {
-        #signinview{        
-            width: 100%; 
-            height: 100%;        
+        #signininformation{             
+            width: 90%;            
         }
     
         #logosignin{
-            width: 40%;
-            height:30%;
+            width: 40%;            
         }
 
         .elementsignin, #signin, #googlesignin{
@@ -126,58 +114,100 @@
             height:25px;
         }
     }
-}
 
-/*Dispositivos MOBILE Orientation LANDSCAPE*/
 
-/*Dispositivos TABLET Orientation LANDSCAPE*/
-@media (max-width: 1366px) and (orientation: landscape)  {
-    #logosignin{
-        width: 30%;
-        height:30%;
+    /*Elementos de los contenedores para pantallas tamaño tablet*/
+    @media (min-height: 860px) and (max-height: 1366px){
+
+        #signininformation{             
+            width: 80%;            
+        }
+        
+        #signininformation h2 {
+            font-size: 36px;
+        }
+
+        #signininformation h3 {
+            font-size: 28px;
+        }
+
+        #signin, #googlesignin,.elementsignin {
+            width: 80%;
+            height: 40px;
+        }
+
+        .errorsignin, #createaccount {            
+            width: 80%;
+        }
     }
+    
 }
-
+    
 /*Dispositivos MOBILE Orientation LANDSCAPE */
-@media (max-width: 860px) and (orientation: landscape)  {
+@media (max-width: 1024px) and (orientation: landscape)  {
+    
     #logosignin{
-        width: 25%;
-        height:25%;
+        width: 25%;        
     }
 
-    #signinview{
-        width: 70%; 
-        height: 100%;
+    #signininformation{             
+        width: 70%;            
+    }
+
+    #createaccount{       
+        padding-top:0px;
+        font-size: 16px;
+        height: 50px;  
         
     }
     
-    #signinview h2 {
-        font-size:24px;
+    #signin, #googlesignin{        
+        font-size: 16px; 
+        height: 50px; 
     }
 
-    #signinview h5 {
-        font-size:16px;
-    }
-    
-    .elementsignin, #signin, #googlesignin {
-        width: 70%;
-        height: 30px;
+    #signininformation h2 {
+        font-size: 20px;
     }
 
-    #createaccount{        
-        height: 30px;
-        width: 70%;     
+    #signininformation h3 {
+        font-size: 18px;
     }
-    
-    .errorsignin{        
-        width: 70%;
+
+    .elementsignin {        
+        height: 20px; 
+        font-size: 16px;       
+        margin-top:5px;
     }
-    
+
+    .errorsignin{            
+        font-size:14px;
+    } 
+
+    #signin, #googlesignin, #createaccount, .errorsignin, .elementsignin{
+        width: 80%;
+    }
 }
 
-/*2) ESTILOS templateCreate*/
+/*
+-----------------------------------------------------------------------------------------------
+
+2) VISTA templateCreateAccount
+
+-----------------------------------------------------------------------------------------------
+*/
 
 /*DESKTOP*/
+
+.templatecreate{
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+    flex-direction: row;   
+    height: 100vh;   
+    align-items: center;   
+}
+
 #newaccount {  
     display: flex;   
     flex-direction: column;  
@@ -203,6 +233,24 @@
     
 }
 
+#informationsocialnetwork h1 {
+    color:#4B4B4B; 
+    font-size: 32px;
+}
+
+#informationsocialnetwork h2 {
+    color:#4B4B4B; 
+    font-size: 28px;
+}
+
+#newaccount h2 {    
+    font-size: 24px;
+}
+
+#newaccount h3  {    
+    font-size: 20px;
+}
+
 .element{    
     width: 60%;
     height: 30px; 
@@ -211,7 +259,6 @@
     font-size: 16px;     
 }
 
-
 .errormessage{      
     font-family: 'Roboto', sans-serif;    
     font-size: 14px; 
@@ -219,25 +266,6 @@
     text-align: left;
     margin-left: 0px;
     font-style: italic;
-}
-
-.accounttitle{
-    font-family: 'Lato', sans-serif; 
-    font-size: 32px;
-    justify-content: flex-start;
-}
-
-.accountparagraph{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    justify-content: flex-start;
-    text-align:center;
-    padding: 10px 0px;
-}
-
-#logo{
-    width: 35vh;
-    height:35vh;
 }
 
 #create{
@@ -251,188 +279,132 @@
 }
 
 /*Dispositivos MOBILE Orientation PORTRAIT*/
-@media screen and (max-width: 1024px) and (orientation: portrait){
-        
-    #containersocialnetwork{
-        flex-direction: column;
-        height: 100vh;   
-        align-items: flex-start;           
-    }
-
-    #newaccount {  
-        width: 100%; 
-        height: 60%;
-        margin-right:0px;        
-    }    
-    
-    #informationsocialnetwork{  
-        width: 100%;
-        height:40%;
-        margin-left:0px;        
-    }    
-
-    /*Elementos de los contenedores para pantallas tamaño tablet*/
-    @media (min-height: 860px) and (max-height: 1366px){
-        #logo{
-            width: 20vh;
-            height:20vh;
-        }
-
-        .accounttitle{            
-            font-size: 48px;
-            justify-content: flex-start;
-            font-weight: bold;
-        }
-
-        #newaccount h3{            
-            font-size: 38px;
-            justify-content: flex-start;
-        }
-
-        .accountparagraph{            
-            font-size: 28px;           
-        }
-
-        .element{    
-            width: 60%;
-            height: 40px; 
-            margin-top: 20px;          
-            font-size: 22px;            
-        }
-
-        #create{
-            height: 50px;
-            font-size: 28px;
-        }
-
-        .errormessage{ 
-            width: 60%;
-            font-size: 16px;   
-        }
-    }
+@media screen and (max-width: 1024px) and (orientation: portrait){   
 
     /*Elementos de los contenedores para pantallas de celular*/
     @media (max-height: 860px) {
+        .templatecreate{
+            flex-direction: column;  
+            height: 100vh;             
+        }
+        #newaccount, #informationsocialnetwork  {  
+            width: 100%;                         
+        }  
+
+        #informationsocialnetwork a{
+            text-align: center;
+        }
+        
         #logo{
-            width: 20vh;
-            height:20vh;
+            width: 70%;
         }
 
-        .accounttitle{            
-            font-size: 28px;
-            justify-content: flex-start;
+        #informationsocialnetwork h1 {            
+            font-size: 26px;
         }
-
-        #newaccount h3{            
-            font-size: 22p
+        
+        #informationsocialnetwork h2 {           
+            font-size:22px;
         }
-
-        .accountparagraph{            
-            font-size: 18px;      
-            width: 80%;     
+        
+        #newaccount h2 {    
+            font-size: 22px;
         }
-
-        #newaccount h5{            
-            font-size: 14px;      
-            width: 80%;     
-        }
-
-        .element{    
-            width: 80%;
-            height: 20px; 
-            font-size: 18px;            
-        }
-
-        #create{
-            width: 80%;
-            height: 30px;
+        
+        #newaccount h3  {    
             font-size: 18px;
         }
 
-        .errormessage{ 
-            font-size: 12px;
-            width: 80%;   
+        .element, .errormessage, #createaccount{    
+            width: 80%;
+            font-size: 16px;     
         }
-    }
-}
 
-/*Dispositivos TABLET Orientation LANDSCAPE*/
-@media (max-width: 1366px) and (orientation: landscape)  {
-    #logo{
-        width: 20vh;
-        height:20vh;
-    }
-
-    .element, .errormessage{    
-        width: 80%;           
-    }
-
-}
-
-
-/*Dispositivos MOBILE Orientation LANDSCAPE */
-
-@media (max-width: 860px) and (orientation: landscape)  {
-
-    #logo{
-        width: 30vh;
-        height:30vh;
-    }
-
-    #informationsocialnetwork, #newaccount {       
-        width: 50%;
-        height: 100%;
-        margin-left:0px;
-    }
-
-    .accounttitle{            
-        font-size: 28px;
-        justify-content: flex-start;
-    }
-
-    #newaccount h3{            
-        font-size: 22px;
-        justify-content: flex-start;
+        .errormessage{
+            font-size: 14px;   
+            font-weight: bold;
+        }        
     }
     
-    .accountparagraph{            
-        font-size: 18px;      
-        width: 80%;     
-    }
-
-    #newaccount h5{            
-        font-size: 14px;      
-        width: 80%;     
-    }
-
-    .element{    
-        width: 80%;
-        height: 20px; 
-        font-size: 16px;            
-    }
-
-    #create{
-        width: 80%;
-        height: 30px;
-        font-size: 18px;
-    }
-
-    .errormessage{ 
-        font-size: 12px;
-        width: 80%;   
-    }
 }
 
-/*3) Estilos templateTimeLine y templatePost*/
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+@media (max-width: 990px) and (orientation: landscape)  {
+    .templatecreate{
+        flex-direction: column;  
+        width: 100%;
+        height: 150vh;           
+    }
+    #informationsocialnetwork  {  
+        width: 100%;       
+        flex-wrap: wrap; 
+        height: 50vh;                          
+    } 
+    #newaccount {  
+        width: 100%;       
+        flex-wrap: wrap; 
+        height: 100vh; 
+                        
+    } 
+    
+    #informationsocialnetwork a{
+        text-align: center;
+    }
+    
+    #logo{
+        width: 40%;
+    }
 
+    #informationsocialnetwork h1 {            
+        font-size: 24px;
+    }
+    
+    #informationsocialnetwork h2, #newaccount h2 {           
+        font-size:20px;
+    }
+       
+    #newaccount h3  {    
+        font-size: 16px;
+    }
 
+    .element, .errormessage{  
+        margin-top: 0px;
+        width: 80%;  
+        height: 20px;      
+        font-size: 16px;     
+    }
 
-/*Dispositivos MOBILE Orientation PORTRAIT*/
+    .errormessage{
+        font-size: 14px;      
+    }
+    #create{
+        height: 30px;
+    }
+    
+}
+
+/*
+-----------------------------------------------------------------------------------------------
+
+3) VISTA templateTimeLine y templatePost
+
+-----------------------------------------------------------------------------------------------
+*/
+
+.templatetimeline{
+    flex-direction: column;  
+    width: 100%; 
+}
+
+.templatepost{
+    flex-direction: column;  
+    width: 80%; 
+}
 
 #navinformation{
     top:0px;
     background-color:#00BF6F;
-    height:6%;
+    height:60px;
     width:100%;
     display:flex;
     flex-direction: row;
@@ -442,247 +414,183 @@
 }
 
 #userinformation{
-    margin-top: 60px;         
+    margin-top: 100px;         
     width: 80%; 
     background-color:white;        
 }
 
-@media screen and (max-height: 1366px) {   
+#btnprofile, #profile,#up, #btnup, #btnsignout, #logout, #btnbacktimeline, #backtimeline, #btnreturntimeline, #returntimeline{           
+    height:95%;        
+    justify-content: space-between;  
+    background-color: transparent; 
+    border:none;      
+    display:block;      
+}
+
+#textpost{        
+    width: 100%;
+    height:350px;
+    border:none;
+    font-size:16px;
+    padding-top:10px;
+    font-family: 'Roboto', sans-serif;
+    color:#4B4B4B; 
+   
+}
+
+#backtimeline{
+    height:95%;        
+    justify-content: flex-start;  
+    background-color: transparent; 
+    border:none;    
+}
+
+#username{
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+    color:#4B4B4B; 
     
-    #text{
-        height: 30px;
-        width: 80%;        
-        border-radius: 30px;
-        border: solid grey 1px;
-        font-size:16px;
-        font-family: 'Lato', sans-serif;
-        color:#4B4B4B; 
-    }      
-    
-    #userphoto{
-        width: 15%;
-        border-radius: 80px;
-    }
-    
-    #btnprofile, #profile,#up, #btnup, #btnsignout, #logout, #btnbacktimeline, #backtimeline, #btnreturntimeline, #returntimeline{           
-        height:95%;        
-        justify-content: space-between;  
-        background-color: transparent; 
-        border:none;      
-        display:block;      
-    }
-    
-    #backtimeline{
-        height:95%;        
-        justify-content: flex-start;  
-        background-color: transparent; 
-        border:none;    
-    }
-    
-    #textpost{        
-        width: 100%;
-        height:350px;
-        border:none;
-        font-size:16px;
-        padding-top:10px;
-        font-family: 'Roboto', sans-serif;
-        color:#4B4B4B; 
-    }
-    
-    #username{
-        font-family: 'Lato', sans-serif;
-        font-size:18px;
-        color:#4B4B4B; 
+}
+
+#text{
+    height: 30px;
+    width: 80%;        
+    border-radius: 30px;
+    border: solid grey 1px;
+    font-size:16px;
+    font-family: 'Lato', sans-serif;
+    color:#4B4B4B; 
+}    
+
+#post{
+    margin-top:10px;
+    background-color: #00BF6F;    
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border:none;
+}
+
+.postread{
+    padding: 10px 0px;
+    width:80%;
+    color:#4B4B4B;         
+    background-color:white;
+}
+
+#userphoto{
+    width: 9%;
+    border-radius: 60px;
+}  
+
+#userpost{
+    margin-top:80px;
+    width:100%;
+}
+
+.postread h3{    
+    padding: 5px 0px;
+}
+
+.postread h4{
+    font-family: 'Roboto', sans-serif; 
+    padding: 5px 0px;  
+}
+
+
+.btndelete{
+    margin-top:10px;
+    background-color: #C70039;   
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    border:none;
+}
+
+.btnupdate{
+    margin-top:10px;
+    background-color: #FFC300;   
+    color:#4B4B4B; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    border:none;
+}
+/*Dispositivos MOBILE Orientation PORTRAIT*/
+@media screen and (max-width: 1024px) and (orientation: portrait){   
+
+    /*Elementos de los contenedores para pantallas de celular*/
+    @media (max-height: 860px) {
+        #navinformation{
+            height:40px;       
+        }
+
+        #userphoto{
+            width: 15%;
+            border-radius: 60px;
+        }  
+
+        .postread h3{
+            font-size:18px;
+            padding: 5px 0px;
+        }
+
+        .postread h4{
+            font-size:16px;
+            font-family: 'Roboto', sans-serif; 
+            padding: 5px 0px;  
+        }
         
+        #userinformation {
+            margin-top: 60px;
+            width: 80%;
+            background-color: white;
+        } 
+
+        .btndelete, .btnupdate{    
+            height: 25px;
+            width: 80px;
+            font-size: 14px;
+        }        
+
     }
     
-    #post{
-        margin-top:10px;
-        background-color: #00BF6F;    
-        color:white;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        height: 40px;
-        width: 100%;
-        font-size: 18px;
-        border:none;
-    }
-    
-    .postread{
-        padding: 10px 0px;
-        width:80%;
-        color:#4B4B4B;         
-        background-color:white;
+}
+
+/*Dispositivos MOBILE Orientation LANDSCAPE */
+@media (max-width: 990px) and (orientation: landscape)  {
+    #navinformation{
+        height:40px;       
     }
 
-    .postread h3, .postread h5 {
-        font-family: 'Lato', sans-serif;
+    #userphoto{
+        width: 15%;
+        border-radius: 60px;
+    }  
+
+    .postread h3{
+        font-size:18px;
+        padding: 5px 0px;
     }
 
     .postread h4{
-        padding:5px 0px;
-        font-family: 'Roboto', sans-serif;
+        font-size:16px;
+        font-family: 'Roboto', sans-serif; 
+        padding: 5px 0px;  
     }
-
-    #userpost{
-        margin-top:60px;
-        width:100%;
-    }
-
-    #templatepost{
-        width:80%;
-    }
-    /*Dispositivos TABLET Orientation PORTRAIT*/
-    @media (min-width:700px) and (max-width: 1366px){
-
-        #userpost{
-            margin-top:90px;
-            
-        }
-
-        #textpost{ 
-            height:600px;             
-        }
-
-        #userinformation{
-            margin-top: 90px;         
-        }
     
-        #text{
-            height: 40px;        
-            font-size:22px;        
-        }  
-    
-        #username{       
-            font-size:28px;                 
-        }
-    
-        #post{
-            font-size: 28px;
-            height: 60px;
-            
-        }
-    
-        #textpost{        
-            font-size:24px;
-        }
-
-        #userphoto{
-            width: 9%;
-            border-radius: 60px;
-        }  
-    }   
-}
-
-/*Dispositivos MOBILE Orientation LANDSCAPE*/
-
-@media screen and (max-width: 1400px) and (orientation: landscape){  
-    #templatepost{
-        display:flex;
-        flex-direction:column;
-    }
-
-    #textpost{ 
-        height:150px;
-         
-    }
-    #userpost{
-        margin-top:20px;
-        width:100%;
-        
-    }
-
-    #navinformation{            
-        height:10%;
-    }
-
-    #post{
-        font-size: 22px;
-        height: 40px;
-        
+    #userinformation {
+        margin-top: 60px;
+        width: 80%;
+        background-color: white;
     } 
-    #userphoto{
-        width: 10%;
-        border-radius: 60px;
-    } 
-
     
-    
-    @media screen and (max-width: 600px){
-        #userinformation{  
-            top:0px;          
-            margin-top: 1200px; 
-        }   
-        
-        #textpost{ 
-            height:120px;
-             
-        }
-        #userpost{
-            margin-top:20px;
-            width:100%;
-            
-        }
-    }
-
-    @media screen and (min-width: 600px) and (max-width: 860px){
-
-        #sectiontimeline {
-            flex-direction: column;
-        }      
-    
-        #userinformation{  
-            top:0px;          
-            margin-top: 1120px;  
-        }    
-    }
-    
-    /*Dispositivos TABLET Orientation LANDSCAPE*/
-    @media (min-width: 900px) and (max-width: 1200px){
-
-        #userphoto{
-            width: 10%;
-            border-radius: 60px;
-        } 
-    
-        #userinformation{            
-            margin-top: 800px;  
-        }
-    
-        #text{
-            height: 50px;        
-            font-size:22px;        
-        }  
-    
-        #username{       
-            font-size:28px;                 
-        }
-    
-        #post{
-            font-size: 28px;
-            height: 60px;
-            
-        }
-    
-        #textpost{        
-            font-size:24px;
-        }
-
-        #textpost{ 
-            height:300px;             
-        }
-    }  
-    
-    @media(min-width: 1200px){
-        #userinformation{            
-            margin-top: 800px;  
-        }    
-
-        #textpost{ 
-            height:300px;             
-        }
-    }
 }
-
-
-

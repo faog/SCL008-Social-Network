@@ -7,27 +7,29 @@ export const templateCreate = () => {
   const containerCreate = document.getElementById('containersocialnetwork');
   //Creo la estructura que necesito imprimir
   const contentCreate = `
-                        <section id="informationsocialnetwork">
-                          <a href="#" class="brand-logo">
-                            <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/>
-                          </a>                           
-                          <h2 class="accounttitle">Pet Community</h2>
-                          <h5 class="accountparagraph">La comunidad de mascotas</h5>                     
-                        </section>
+                        <section class="templatecreate">
+                          <section id="informationsocialnetwork">
+                            <a href="#" class="brand-logo">
+                              <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/>
+                            </a>                           
+                            <h1>Pet Community</h1>
+                            <h2>La comunidad de mascotas</h2>                     
+                          </section>
 
-                        <section id="newaccount">
-                          <h3 class="accounttitle">Bienvenido</h3>                          
-                          <h5 class="accountparagraph">Rellene los siguientes campos:</h5>
-                          <input type="text" id="firstnamenewuser" class="element" placeholder="Nombre" autofocus/>
-                          <p id="firstnameerror" class="errormessage"></p>
-                          <input type="text" id="lastnamenewuser" class="element" placeholder="Apellido"/>
-                          <p id="lastnameerror" class="errormessage"></p>
-                          <input type="email" id="emailnewuser" class="element" placeholder="Correo"/>
-                          <p id="emailerror" class="errormessage"></p>
-                          <input type="password" id="passwordnewuser" class="element" placeholder="Contraseña"/>
-                          <p id="passworderror"  class="errormessage"></p>
-                          <button id="create" class="element">Crear tu cuenta</button>
-                          <p id="accounterror"></p>
+                          <section id="newaccount">
+                            <h2>Bienvenido</h2>                          
+                            <h3>Rellene los siguientes campos:</h3>
+                            <input type="text" id="firstnamenewuser" class="element" placeholder="Nombre" autofocus/>
+                            <p id="firstnameerror" class="errormessage"></p>
+                            <input type="text" id="lastnamenewuser" class="element" placeholder="Apellido"/>
+                            <p id="lastnameerror" class="errormessage"></p>
+                            <input type="email" id="emailnewuser" class="element" placeholder="Correo"/>
+                            <p id="emailerror" class="errormessage"></p>
+                            <input type="password" id="passwordnewuser" class="element" placeholder="Contraseña"/>
+                            <p id="passworderror"  class="errormessage"></p>
+                            <button id="create" class="element">Crea tu cuenta</button>
+                            <p id="accounterror"></p>
+                          </section>
                         </section>`;
 
   // pasar el contenido de contentCreate a containerCreate
@@ -60,7 +62,7 @@ export const templateCreate = () => {
     }
   
     if(passwordNewUser==="" || passwordNewUser.length<6){
-      document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con minimo 6 caracteres.`;
+      document.getElementById('passworderror').innerHTML=`*Debes ingresar una contraseña con mínimo 6 caracteres.`;
     }else{
       document.getElementById('passworderror').innerHTML='';
     }

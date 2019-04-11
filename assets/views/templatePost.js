@@ -14,8 +14,8 @@ export const templatePost =()=>{
                             <button id="btnreturntimeline">
                                 <img src="assets/Images/left-arrow.png" id="returntimeline" alt="volver al muro"/>                            
                             </button>  
-                        </nav>
-                        <section id="templatepost">
+                        </nav>                       
+                        <section class="templatepost">
                             <section id="userpost">  
                                 <p id="posterror"></p>                          
                                 <img src=""id="userphoto" alt="Foto del usuario"/>
