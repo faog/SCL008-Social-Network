@@ -32,5 +32,19 @@ export const templateEditPost = (doc) =>{
 
     document.getElementById('postedit').addEventListener('click',()=>{
         postEdit(doc.id);
-    })
+
+       
+            let userPost = document.getElementById('postedit').value;
+            
+            if(userPost===''|| userPost.length<10){
+                document.getElementById('editerror').innerHTML=`Debes ingresar una publicación con mas de 10 caracteres`;
+            }
+            else{
+                document.getElementById('editerror').innerHTML='';
+            }
+            
+            postEdit(userPost);
+        })
+    
 }
+

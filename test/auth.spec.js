@@ -71,6 +71,22 @@ describe("validatePost",()=>{
 
 describe("validatePost", () =>{
     it('deberia retornar true, si el input tiene texto',()=>{
-        expect(validatePost("hola")).toBe(true);
+        expect(validatePost("hola como estas?")).toBe(true);
+    })
+})
+
+
+
+//validación función postedit
+
+describe("postedit",()=>{
+    it('deberia retornar false, si el input es vacío',()=>{
+        expect(validatePost("")).toBe(false);
+    })
+})
+
+describe("postedit", () =>{
+    it('deberia retornar true, si el input tiene texto',()=>{
+        expect(validatePost("hola como estas?")).toBe(true);
     })
 })
