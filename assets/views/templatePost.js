@@ -1,6 +1,6 @@
 import {observer} from "./../js/auth.js";
 import {postCreate, validateName} from "./../js/datamodel.js"
-import {templateTimeLine} from "./templateTimeLine.js"
+//import {templateTimeLine} from "./templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();

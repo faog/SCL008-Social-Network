@@ -1,5 +1,5 @@
 import { observer } from "./../js/auth.js";
-import {templateTimeLine} from "./templateTimeLine.js"
+//import {templateTimeLine} from "./templateTimeLine.js"
 import { validateName } from "../js/datamodel.js";
 
 export const templateProfile =()=>{
