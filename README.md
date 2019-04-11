@@ -1,11 +1,13 @@
 
+![e](https://i.postimg.cc/rpTpnBfM/logo-Verde.png)   
 ## Readme Social Network 
- Para el proyecto de Red Social hemos creado una red social pensada en los amantes de los animales , llamada PetComunity 
+ Para el proyecto de Red Social hemos creado una red social pensada en los amantes y cuidadores de los animales a la que podrán acceder directamente en sus teléfonos moviles, llamada PetComunity. 
 
 ## Sobre PetComunity
-PetComunity fue creada pensando en la necesidad de unificar.....
-## Sobre PetComunity
-PetComunity fue creada pensando en la necesidad de unificar.....
+PetComunity fue creada pensando en la necesidad de unificar las necesidades de las personas que de alguna manera tienen preocupaciones sobre las mascotas. 
+Hoy encontramos algunos sitios principalmente en Facebook donde promueven la adopción de mascotas , otros que buscan mascotas perdidas y muchos otros sobre personas interesadas en vender sus productos para mascotas, pero aun no tenemos un sitio que muestre toda esta informacion en un sólo lugar y que sea de fácil acceso a los usuarios. Por esto creamos PetComunity esperando lograr una gran comunidad de amantes de los animales, donde puedan encontrar toda la información que necesiten al alcance de un click.
+Esto facilitará las adopciones por lo que contribuimos con el bienestar animal y evitamos mas animales sufriendo en las calles, la necesidad inmediata de encontrar a un veterinario cerca de el lugar donde estemos , un hotel canino , incluso accesorios para mascotas. 
+Los usuarios además pueden encontrar informacion de las veterinarias municipales en donde generalmente se hacen programas de Zoonosis comunales y los vecinos pueden acceder a los serviocios a menor costo o gratuito en beneficio de la comunidad.
 
 ## Planificación
 
@@ -14,7 +16,10 @@ Nuestra planificacion puedes revisarla en el siguiente link:
 
 ## Usuarios
 
-Nuestros Usuarios pueden ser 
+Detectamos 3 tipos de Usuarios 
+El primero es un usuario que tiene mascotas , que quiere buscar accesorios , veterinarias y datos directamente para ellos.
+Nuestro segundo usuario son las personas que estan interesados en las adopciones ya sean para dar en adopcion a sus mascotas o encontrar una , aca tambien se encuentran los grupos animalistas que promueven adopciones.
+El tercer usuario son los medicos veterinarios , dueños de petshop , hoteles de mascotas y paseadores de animales que estan interesados en promover sus productos y servicios.
 
 ## Encuestas
 |  ![enter image description here](https://i.postimg.cc/rm2Y1N7v/a.png)| ![enter image description here](https://i.postimg.cc/2SJt6DGj/b.png)|
