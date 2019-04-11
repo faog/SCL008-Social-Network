@@ -103,17 +103,36 @@ Diseño
 
 ## Prototipo de Baja Fidelidad
 
-| ![enter image description here](https://i.postimg.cc/4xVJsBv0/login.jpg) |![enter image description here](https://i.postimg.cc/WzdvKnbX/crea-cuenta.jpg)|
-|--|--|
-| ![enter image description here](https://i.postimg.cc/C1LYCYyy/crea-cuenta2.jpg) | ![enter image description here](https://i.postimg.cc/fL2sBFZV/crear-cuenta3.jpg) |
-|  ![enter image description here](https://i.postimg.cc/rp9MtsPC/crear-cuenta4.jpg)| ![enter image description here](https://i.postimg.cc/7hjky25D/perfil.jpg) |
-|--|--|
-| ![enter image description here](https://i.postimg.cc/wxrHNS0P/Post.jpg) |![enter image description here](https://i.postimg.cc/7L4q60mZ/post-2.jpg)|
+Una vez reconocido el usuario, comienza el proceso creativo de prototipado e creó un boceto con las diferentes interfaces y usos que se proponen para la app web.
+
+* Acá podemos revisar la página de inicio de nuestra aplicación, donde el usuario puede iniciar sesión o crear su cuenta. En la pantalla de la izquierda se ve una alerta, la cuál aparecerá si el usuario ingresará algún dato erroneo.
+| ![enter image description here](https://i.postimg.cc/4xVJsBv0/login.jpg)
+
+* En estas pantallas vemos el proceso de creación de cuenta del usuario, en el cuál se comiezan a desplegar diferentes pantallas para que el usuario ingrese sus datos personales para crear la cuenta.
+![enter image description here](https://i.postimg.cc/WzdvKnbX/crea-cuenta.jpg)![enter image description here](https://i.postimg.cc/C1LYCYyy/crea-cuenta2.jpg) ![enter image description here](https://i.postimg.cc/fL2sBFZV/crear-cuenta3.jpg)
+ 
+* Después que el usuario ingreso sus datos, puede comenzar a definir los datos de su perfil y el tipo de usuario. Además podemos ver la pantalla de su perfil, en el cuál verá sus publicaciones.
+![enter image description here](https://i.postimg.cc/rp9MtsPC/crear-cuenta4.jpg)| ![enter image description here](https://i.postimg.cc/7hjky25D/perfil.jpg) 
+
+* Acá vemos la pantalla del muro principal, donde se ven todas las publicaciones que han hecho los usuarios de PetComunnity.
+![enter image description here](https://i.postimg.cc/wxrHNS0P/Post.jpg)![enter image description here](https://i.postimg.cc/7L4q60mZ/post-2.jpg)
 
 
 
 
 ## Prototipo de Alta Fidelidad
+
+Al reconocer al usuario se definió los colores, el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la pantalla de inicio de sesión y el muro principal.
+
+El prototipo fue probado con un dueño de mascota, orientando por medio de feedback respecto a las próximas mejoras a aplicar en la aplicación.
+
+Las tareas a realizar fueron:
+
+* Iniciar sesión en la aplicación.
+* Crear una publicación con el texto "Encontré una mascota pérdida"
+* Colocar me gusta a la publicación de un veterinario.
+
+
 |  ![enter image description here](https://i.postimg.cc/43vV7vGL/1.png)| ![enter image description here](https://i.postimg.cc/1t96pg59/Selecci-n-007.png) |
 |--|--|
 
