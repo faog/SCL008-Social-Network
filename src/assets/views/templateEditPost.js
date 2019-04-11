@@ -1,5 +1,5 @@
 import { templateTimeLine } from "./templateTimeLine.js";
-import { postEdit } from "../js/datamodel.js";
+import { postEdit, validateName } from "../js/datamodel.js";
 import { observer } from "../js/auth.js";
 
 
