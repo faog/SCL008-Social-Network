@@ -125,6 +125,9 @@ export const observer = () => {
       if (document.getElementById("userphoto")){
         document.getElementById("userphoto").src = photoURL;
       } 
+      if (document.getElementById("useremail")){
+        document.getElementById("useremail").innerHTML = user.email;
+      }
     } else {
       console.log('no existe usuario activo');
       window.location.hash="";

@@ -462,7 +462,7 @@
     color:#4B4B4B; 
 }    
 
-#post{
+#post, #postedit{
     margin-top:10px;
     background-color: #00BF6F;    
     color:white;
@@ -475,7 +475,7 @@
 }
 
 .postread{
-    padding: 10px 0px;
+    padding: 5px 0px;
     width:80%;
     color:#4B4B4B;         
     background-color:white;
@@ -500,9 +500,10 @@
     padding: 5px 0px;  
 }
 
-
-.btndelete{
-    margin-top:10px;
+.btntimeline{
+    width: 80%;
+}
+.btndelete{    
     background-color: #C70039;   
     color:white;
     font-family: 'Roboto', sans-serif;
@@ -513,8 +514,7 @@
     border:none;
 }
 
-.btnupdate{
-    margin-top:10px;
+.btnupdate{    
     background-color: #FFC300;   
     color:#4B4B4B; 
     font-family: 'Roboto', sans-serif;
