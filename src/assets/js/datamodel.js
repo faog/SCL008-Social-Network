@@ -1,5 +1,5 @@
 import {validatePost} from'./validation.js';
-import {renderPost, attachEvents /*, attachEvents*/} from "../views/templateTimeLine.js";
+import {renderPost, attachEvents, templateTimeLine} from "../views/templateTimeLine.js";
 
 /*1.)Función para crear un nuevo post
 Necesito traspasar desde el template el texto de la publicación*/
@@ -86,6 +86,26 @@ export const postDelete=(id)=>{
         });
     }
 }
+
+/*4.) Función que permite editar una publicación seleccionada por el usuario*/
+
+export const postEdit = (id) =>{
+    let dbPost = firebase.firestore();
+    let textPost = document.getElementById("textpost").value;
+    return dbPost.collection("post").doc(id).update({
+        message : textPost
+    }).then(function() {
+        console.log("Document successfully updated!");
+        //templateTimeLine();
+        window.location.hash="#/timeline"; 
+    })
+    .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+}
+
+
 
 /*4.)Función para editar post
 
