@@ -7,10 +7,8 @@ export const postCreate = (userPost) =>{
     let dbPost = firebase.firestore();
     if(validatePost(userPost)){
         let date=Date.now();
-        let nameProfile = firebase.auth().currentUser.profileName;
-        if(firebase.auth().currentUser.displayName){
-            nameProfile = firebase.auth().currentUser.displayName;
-        }
+        let nameProfile = validateName(); 
+
         dbPost.collection("post").add({
             user: firebase.auth().currentUser.email,
             name: nameProfile,
@@ -62,6 +60,19 @@ export const getName = (email) =>{
         
     });
 }
+
+
+/*Función que obtiene el nombre al iniciar sesion con google (displayName) o el nombre al crear una 
+cuenta con correo y contraseña*/
+
+export const validateName =() =>{
+    let nameProfile = firebase.auth().currentUser.profileName;
+    if(firebase.auth().currentUser.displayName){
+        nameProfile = firebase.auth().currentUser.displayName;
+    }
+    return nameProfile;
+}
+
 /*3.)Función para eliminar post*/
 
 export const postDelete=(id)=>{

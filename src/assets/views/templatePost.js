@@ -1,13 +1,10 @@
 import {observer} from "./../js/auth.js";
-import {postCreate} from "./../js/datamodel.js"
+import {postCreate, validateName} from "./../js/datamodel.js"
 import {templateTimeLine} from "./templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();
-    let nameProfile = firebase.auth().currentUser.profileName;
-    if(firebase.auth().currentUser.displayName){
-        nameProfile = firebase.auth().currentUser.displayName;
-    }
+    let nameProfile = validateName();
     document.getElementById('containersocialnetwork').innerHTML=
                         `
                         <nav id="navinformation">
