@@ -92,34 +92,18 @@ export const postDelete=(id)=>{
 export const postEdit = (id) =>{
     let dbPost = firebase.firestore();
     let textPost = document.getElementById("textpost").value;
-    return dbPost.collection("post").doc(id).update({
-        message : textPost
-    }).then(function() {
-        console.log("Document successfully updated!");
-        //templateTimeLine();
-        window.location.hash="#/timeline"; 
-    })
-    .catch(function(error) {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-    });
+    if(validatePost(textPost)){
+        return dbPost.collection("post").doc(id).update({
+            message : textPost
+        }).then(function() {
+            console.log("Document successfully updated!");
+            //templateTimeLine();
+            window.location.hash="#/timeline"; 
+        })
+        .catch(function(error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
+    }
 }
 
-
-
-/*4.)Función para editar post
-
-export const upDate=(id)=>{
-    let dbPost = firebase.firestore();
-    dbPost.collection("post").doc(id);
-
-    return upDatepost.update({
-        upDate:true
-    })
-    .then(function() {
-        console.log("Document successfully updated!");
-    })
-    .catch(function(error) {
-        console.error("Error updating document: ", error);
-    });
-    }*/

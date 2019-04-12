@@ -31,20 +31,17 @@ export const templateEditPost = (doc) =>{
     })
 
     document.getElementById('postedit').addEventListener('click',()=>{
+               
+        let userPost = document.getElementById('textpost').value;
+        
+        if(userPost===''|| userPost.length<10){
+            document.getElementById('posterror').innerHTML=`Debes ingresar una publicación con mas de 10 caracteres`;
+        }
+        else{
+            document.getElementById('posterror').innerHTML='';
+        }            
         postEdit(doc.id);
-
-       
-            let userPost = document.getElementById('postedit').value;
-            
-            if(userPost===''|| userPost.length<10){
-                document.getElementById('editerror').innerHTML=`Debes ingresar una publicación con mas de 10 caracteres`;
-            }
-            else{
-                document.getElementById('editerror').innerHTML='';
-            }
-            
-            postEdit(userPost);
-        })
+    })
     
 }
 
