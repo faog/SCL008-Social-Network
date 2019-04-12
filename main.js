@@ -6,13 +6,11 @@
 import { initRouter} from './route.js';
 import { observer } from './assets/js/auth.js'
 import { initFirebase } from './assets/js/initFirebase.js';
-import { templateSignIn } from './assets/views/templateSignIn.js';
 
 const init = () => {
     initFirebase();
     initRouter();
-    observer();  
-    templateSignIn();  
+    observer();    
 }
 
 

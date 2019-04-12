@@ -1,6 +1,6 @@
 import {observer} from "./../js/auth.js";
 import {postCreate, validateName} from "./../js/datamodel.js"
-//import {templateTimeLine} from "./templateTimeLine.js"
+import {templateTimeLine} from "./templateTimeLine.js"
 
 export const templatePost =()=>{
     observer();
@@ -26,14 +26,14 @@ export const templatePost =()=>{
     document.getElementById('post').addEventListener('click',()=>{
         let userPost = document.getElementById('textpost').value;
         
-        if(userPost===''){
-            document.getElementById('posterror').innerHTML=`Debes ingresar una publicación`;
+        if(userPost===''|| userPost.length<10){
+            document.getElementById('posterror').innerHTML=`Debes ingresar una publicación con mas de 10 caracteres.`;
         }
         else{
             document.getElementById('posterror').innerHTML='';
         }
         
-        postCreate(userPost);
+        postCreate(id);
 
     })   
     

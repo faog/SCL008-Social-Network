@@ -42,7 +42,7 @@ export const validateEmailSignIn = (emailSignIn)=>{
 
 //Validación input vacio del post
 export const validatePost = (userPost) =>{
-  if(userPost === ""){
+  if(userPost === ""|| userPost.length<10){
     return false;
 
   } else{
