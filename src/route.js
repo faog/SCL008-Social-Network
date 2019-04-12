@@ -4,8 +4,8 @@
 import {templateCreate} from './assets/views/templateCreate.js';
 import {templateSignIn } from './assets/views/templateSignIn.js';
 import {templateTimeLine} from './assets/views/templateTimeLine.js'
-import {templatePost} from './../assets/views/templatePost.js'
-import {templateProfile} from './../assets/views/templateProfile.js'
+import {templatePost} from './assets/views/templatePost.js'
+import {templateProfile} from './assets/views/templateProfile.js'
 
 /*1. Crear una función que reciba el hash (#) y según la coincidencia retorne otra función que va imprimir
 el template en el html*/
