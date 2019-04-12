@@ -77,7 +77,7 @@ export const validateName =() =>{
 
 export const postDelete=(id)=>{
     let dbPost = firebase.firestore();
-    if(confirm("¿Realmente deseas eliminar este comentario?")){
+    if(confirm("¿Realmente deseas eliminar esta publicación?")){
         dbPost.collection("post").doc(id).delete().then(function() {
             console.log("Document successfully deleted!");
             postRead();        
@@ -115,6 +115,7 @@ export const like = (doc)=>{
         user: firebase.auth().currentUser.email
     }).then(function(docRef) {
         console.log("Document written with ID: ", docRef.id); 
+        
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);

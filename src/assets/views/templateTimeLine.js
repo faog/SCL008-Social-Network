@@ -67,9 +67,8 @@ export const renderPost =(doc) =>{
         <article class="postread">
             <h3>${doc.data().name}</h3>
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
-            <h4>${doc.data().message}</h4> 
-            <h4 id="likecount">0</h4> 
-            <button id="like_${doc.id}">Like</button>            
+            <h4>${doc.data().message}</h4>             
+            <button id="like_${doc.id}" class="btnlike">Like</button>                       
     `
     if(firebase.auth().currentUser.email===doc.data().user){
         document.getElementById('timeline').innerHTML +=
