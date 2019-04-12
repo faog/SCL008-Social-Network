@@ -1,8 +1,9 @@
 import {signOut, observer} from "./../js/auth.js";
 import {templatePost} from"./templatePost.js"
-import {postRead, postDelete} from "../js/datamodel.js";
+import {postRead, postDelete, like} from "../js/datamodel.js";
 import {templateProfile} from "./templateProfile.js"
 import { templateEditPost } from "./templateEditPost.js";
+
 
 
 export const templateTimeLine = () =>{
@@ -66,7 +67,9 @@ export const renderPost =(doc) =>{
         <article class="postread">
             <h3>${doc.data().name}</h3>
             <h5>${postDate.toLocaleDateString('es-cl')} ${postDate.toLocaleTimeString('es-cl')}</h5>
-            <h4>${doc.data().message}</h4>  
+            <h4>${doc.data().message}</h4> 
+            <h4 id="likecount">0</h4> 
+            <button id="like_${doc.id}">Like</button>            
     `
     if(firebase.auth().currentUser.email===doc.data().user){
         document.getElementById('timeline').innerHTML +=
@@ -96,11 +99,8 @@ export const attachEvents =(doc) =>{
             templateEditPost(doc);
         }); 
     }
+    document.getElementById('like_'+doc.id).addEventListener('click',()=>{
+        like(doc);
+    })
 }
 
-/*Función para editar post
-export const attachEvents1 =(doc) =>{
-    document.getElementById('update_'+doc.id).addEventListener('click', ()=>{
-     upDate(doc.id);
-    })
-    }*/

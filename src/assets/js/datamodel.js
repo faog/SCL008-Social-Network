@@ -1,5 +1,5 @@
 import {validatePost} from'./validation.js';
-import {renderPost, attachEvents, templateTimeLine} from "../views/templateTimeLine.js";
+import {renderPost, attachEvents} from "../views/templateTimeLine.js";
 
 /*1.)Función para crear un nuevo post
 Necesito traspasar desde el template el texto de la publicación*/
@@ -107,3 +107,16 @@ export const postEdit = (id) =>{
     }
 }
 
+/*5) funcion para dar me gusta a un post*/
+/*La base de datos se pueda expandir, creando una nueva voleccion (like), dentro del post*/
+export const like = (doc)=>{
+    let dbPost=firebase.firestore();
+    dbPost.collection('post').doc(doc.id).collection('like').add({
+        user: firebase.auth().currentUser.email
+    }).then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id); 
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+}
