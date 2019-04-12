@@ -13,7 +13,7 @@ export const templateProfile =()=>{
                             </button>  
                         </nav>
                         <section id="userprofile">
-                            <img src=""id="userphoto"  alt="Foto del usuario"/>
+                            <img src="" id="userphoto"  alt="Foto del usuario"/>
                             <h2 id="profilename">${nameProfile}</h2>
                             <h3 id="useremail"></h3> 
                         </section>

@@ -512,7 +512,7 @@
 }  
 
 #userpost{
-    margin-top:60px;
+    margin-top:10px;
     width:100%;
 }
 
@@ -566,6 +566,7 @@
 }
 
 #posterror{
+    margin-top:60px;
     color:#C70039;  
     font-family: 'Roboto', sans-serif;
     font-weight: bold;

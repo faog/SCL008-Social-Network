@@ -14,9 +14,9 @@ export const templateEditPost = (doc) =>{
                             </button>  
                         </nav>
                         <section class="templatepost">
-                            <section id="userpost">  
-                                <p id="posterror"></p>                          
-                                <img src=""id="userphoto" alt="Foto del usuario"/>
+                        <h6 id="posterror"></h6>
+                            <section id="userpost">                                                            
+                                <img src="" id="userphoto" alt="Foto del usuario"/>
                                 <h2 id="username">${nameProfile}</h2>                                                                                
                             </section>
                             <textarea id="textpost" autofocus>${doc.data().message}</textarea>   
