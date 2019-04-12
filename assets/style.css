@@ -146,6 +146,10 @@
 /*Dispositivos MOBILE Orientation LANDSCAPE */
 @media (max-width: 1024px) and (orientation: landscape)  {
     
+    .templatesignin{ 
+        height: 130vh;  
+    }
+    
     #logosignin{
         width: 25%;        
     }
@@ -157,13 +161,13 @@
     #createaccount{       
         padding-top:0px;
         font-size: 16px;
-        height: 50px;  
+        height: 30px;  
         
     }
     
     #signin, #googlesignin{        
         font-size: 16px; 
-        height: 50px; 
+        height: 30px; 
     }
 
     #signininformation h2 {
@@ -252,7 +256,7 @@
 }
 
 .element{    
-    width: 60%;
+    width: 70%;
     height: 30px; 
     margin-top: 10px; 
     font-family: 'Roboto', sans-serif;    
@@ -279,16 +283,24 @@
 }
 
 /*Dispositivos MOBILE Orientation PORTRAIT*/
-@media screen and (max-width: 1024px) and (orientation: portrait){   
+@media screen and (max-width: 1024px) and (orientation: portrait){      
 
     /*Elementos de los contenedores para pantallas de celular*/
     @media (max-height: 860px) {
         .templatecreate{
             flex-direction: column;  
-            height: 100vh;             
+            height: 130vh;             
         }
-        #newaccount, #informationsocialnetwork  {  
-            width: 100%;                         
+        #informationsocialnetwork  {  
+            width: 100%;   
+            height: 50vh; 
+            flex-wrap: nowrap;
+
+        }  
+
+        #newaccount {  
+            width: 100%;   
+            height: 80vh;                  
         }  
 
         #informationsocialnetwork a{
@@ -315,9 +327,10 @@
             font-size: 18px;
         }
 
-        .element, .errormessage, #createaccount{    
-            width: 80%;
-            font-size: 16px;     
+        .element, .errormessage{    
+            width: 70%;
+            font-size: 16px; 
+            margin-top:5px;  
         }
 
         .errormessage{
@@ -327,6 +340,7 @@
     }
     
 }
+
 
 /*Dispositivos MOBILE Orientation LANDSCAPE */
 @media (max-width: 990px) and (orientation: landscape)  {
@@ -343,8 +357,7 @@
     #newaccount {  
         width: 100%;       
         flex-wrap: wrap; 
-        height: 100vh; 
-                        
+        height: 100vh;                         
     } 
     
     #informationsocialnetwork a{
@@ -362,7 +375,7 @@
     #informationsocialnetwork h2, #newaccount h2 {           
         font-size:20px;
     }
-       
+
     #newaccount h3  {    
         font-size: 16px;
     }
@@ -382,6 +395,7 @@
     }
     
 }
+
 
 /*
 -----------------------------------------------------------------------------------------------
@@ -487,7 +501,7 @@
 }  
 
 #userpost{
-    margin-top:80px;
+    margin-top:60px;
     width:100%;
 }
 
@@ -523,6 +537,13 @@
     width: 100px;
     font-size: 16px;
     border:none;
+}
+
+#posterror{
+    color:#C70039;  
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }
 /*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){   
