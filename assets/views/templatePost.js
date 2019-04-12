@@ -33,7 +33,7 @@ export const templatePost =()=>{
             document.getElementById('posterror').innerHTML='';
         }
         
-        postCreate(id);
+        postCreate(userPost);
 
     })   
     
