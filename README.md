@@ -50,75 +50,73 @@ A partir de la encuesta realizada nacen distintas historias de usuario (**HU**) 
 
 **Criterio de aceptación** Para realizar la historia de usuario N°1 voy a :
 
-	Permitir al usuario ingresar una contraseña.
-	Generar un mensaje de error, si la contraseña es menor a 6 caracteres.
-	Generar un mensaje de error, si el correo electrónico no es válido.
-	Cuando el usuario crea una cuenta, adicionalmente se le solicita su nombre y apellido.
-	Genera mensaje de error si el usuario no ingresa nombre o apellido.
-	Cuando el usuario crea la cuenta, debe recibir un correo de verificación.
+	- Permitir al usuario ingresar una contraseña.
+	- Generar un mensaje de error, si la contraseña es menor a 6 caracteres.
+	- Generar un mensaje de error, si el correo electrónico no es válido.
+	- Cuando el usuario crea una cuenta, adicionalmente se le solicita su nombre y apellido.
+	- Genera mensaje de error si el usuario no ingresa nombre o apellido.
+	- Cuando el usuario crea la cuenta, debe recibir un correo de verificación.
 
 **COMO** usuario de la página,**QUIERO** ingresar nuevamente de manera segura **PARA** ver las novedades de la comunidad.
 
 **Criterio de aceptación**  Para realizar la historia de usuario N°2 voy a :
 
-	El usuario pueda ingresar con su usuario y contraseña (input secreto).
-	El usuario pueda recuperar su contraseña en caso de olvido.
-	Cuando el usuario ingrese una contraseña incorrecta, se genere un error informando la situación (Firebase)
-	El usuario puede ingresar a la aplicación con tener un correo de google.
-	Si el usuario logra conectarse satisfactoriamente, enviarlo al timeline de la aplicación.
+	- El usuario pueda ingresar con su usuario y contraseña (input secreto).
+	- El usuario pueda recuperar su contraseña en caso de olvido.
+	- Cuando el usuario ingrese una contraseña incorrecta, se genere un error informando la situación (Firebase)
+	- El usuario puede ingresar a la aplicación con tener un correo de google.
+	- Si el usuario logra conectarse satisfactoriamente, enviarlo al timeline de la aplicación.
 
 
 **COMO** veterinario **QUIERO** que mi perfil no sea el mismo de un dueño de mascotas, **PARA**  poder diferenciar mis servicios.
 
 **Criterio de aceptación** Para realizar la historia de usuario N°3 voy a :
 
-	Luego de crear el perfil básico, los distintos tipos de usuario podrán elegir el tipo de perfil, los cuales serán:
-	
-	Perfil de Veterinario, Perfil Dueño de Mascotas, Perfil Vendedor, Perfil Otro.
-	
-	Podrán responder una encuesta de acuerdo a su perfil
-	Los perfiles de veterinario y vendedor tendrán la opción de agregar información que consideren relevante.
+	- Luego de crear el perfil básico, los distintos tipos de usuario podrán elegir el tipo de perfil, 
+	los cuales serán: Perfil de Veterinario, Perfil Dueño de Mascotas, Perfil Vendedor, Perfil Otro.	
+	- Podrán responder una encuesta de acuerdo a su perfil
+	- Los perfiles de veterinario y vendedor tendrán la opción de agregar información que consideren relevante.
 
 **COMO** usuario de la aplicación, **QUIERO** publicar una mascota encontrada para ubicar a su dueño.
 
 **Criterio de aceptación** Para realizar la historia de usuario N°4 voy a :
 
-	El usuario puede crear un post visible para la comunidad.
-	El usuario puede agregar una etiqueta para que se pueda filtrar por mascota encontrada.
-	La publicación debe tener contenido para poder publicarla antes de enviar.
-	Luego que el usuario crea el post, este quede en las primeras publicaciones de la comunidad..
+	- El usuario puede crear un post visible para la comunidad.
+	- El usuario puede agregar una etiqueta para que se pueda filtrar por mascota encontrada.
+	- La publicación debe tener contenido para poder publicarla antes de enviar.
+	- Luego que el usuario crea el post, este quede en las primeras publicaciones de la comunidad..
 
 
 **COMO** vendedor **QUIERO** editar la publicación de un articulo, **PARA**  actualizar una oferta.
 
 **Criterio de aceptación**   Para realizar la historia de usuario N°5 voy a :
 
-	Se debe permitir que el veterinario pueda editar un post.
-	Para permitir editar, el post debe tener contenido antes de publicarlo.
-	Que al editar el post, este quede en las primeras publicaciones..
+	- Se debe permitir que el veterinario pueda editar un post.
+	- Para permitir editar, el post debe tener contenido antes de publicarlo.
+	- Que al editar el post, este quede en las primeras publicaciones..
 
 **COMO** usuario que encontró una mascota perdida **QUIERO** eliminar el post **PARA**  que no sigan preguntándome por ella ya que encontré a sus dueños.
 
 **Criterio de aceptación** Para realizar la historia de usuario N°6 voy a :
 
-	Permitir al usuario eliminar un post.
-	Error de acción, preguntar si esta seguro que quiere eliminar el post
-	Que el post quede eliminado del muro del usuario y del muro de la comunidad.
+	- Permitir al usuario eliminar un post.
+	- Error de acción, preguntar si esta seguro que quiere eliminar el post
+	- Que el post quede eliminado del muro del usuario y del muro de la comunidad.
 
 
 **COMO** un usuario **QUIERO** adoptar una mascota y poder ver solo los post relacionados con adopciones **PARA**  encontrar la mascota que quiero.
 
 **Criterio de aceptación**   Para realizar la historia de usuario N°7 voy a :
 
-	Elegir un filtro que permita seleccionar solo las publicaciones con el tag adopcion
-	Ordenar por fecha de publicación
+	- Elegir un filtro que permita seleccionar solo las publicaciones con el tag adopcion
+	- Ordenar por fecha de publicación
 
 **COMO** dueño de mascotas **QUIERO** que mis amigos sepan que me gusta un producto, **PARA**  que ellos conozcan al producto y su vendedor.
 
 **Criterio de aceptación**   Para realizar la historia de usuario N°8 voy a :
 
-	El usuario puede agregar un Like a la publicación y visualizar el conteo de esta.
-	El usuario puede quitar el like a una publicación (Unlike).
+	- El usuario puede agregar un Like a la publicación y visualizar el conteo de esta.
+	- El usuario puede quitar el like a una publicación (Unlike).
 
 ## Prototipo de Baja Fidelidad
 
