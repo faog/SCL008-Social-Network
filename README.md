@@ -72,8 +72,10 @@ A partir de la encuesta realizada nacen distintas historias de usuario (**HU**) 
 
 **Criterio de aceptación** Para realizar la historia de usuario N°3 voy a :
 
-	Luego de crear el perfil básico, los distintos tipos de usuario podrán elegir el tipo de perfil, los cuales serán :
+	Luego de crear el perfil básico, los distintos tipos de usuario podrán elegir el tipo de perfil, los cuales serán:
+	
 	Perfil de Veterinario, Perfil Dueño de Mascotas, Perfil Vendedor, Perfil Otro.
+	
 	Podrán responder una encuesta de acuerdo a su perfil
 	Los perfiles de veterinario y vendedor tendrán la opción de agregar información que consideren relevante.
 
