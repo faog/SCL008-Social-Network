@@ -22,15 +22,17 @@ export const templateTimeLine = () =>{
                             </button>  
                         </nav>
                         <section class="templatetimeline">
+                            <h2>Bienvenido</h2>
                             <section id="sectiontimeline">
-                                <section id="userinformation">                            
+                            <h2>a Pet Community</h2>
+                                <div id="userinformation">                            
                                     <img src="" id="userphoto" alt="Foto del usuario"/>
                                     <textarea id="text" placeholder="¿Qué estás pensando?"></textarea>                                                      
-                                </section>
+                                </div>
                                 
-                                <section id="timeline">
+                                <div id="timeline">
                                     
-                                </section>   
+                                </div>   
                             </section>   
                         </section>                
                         `;
