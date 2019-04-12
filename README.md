@@ -6,7 +6,7 @@ Para el proyecto de Red Social se creó una red  pensada en los amantes y cuidad
 ## ¿Qué es Pet Community? 😺🐶🐰🐹
 [Pet Community](https://faog.github.io/SCL008-Social-Network/) nace como una aplicación pensanda en la necesidad de unificar las necesidades de las personas que de alguna manera tienen preocupaciones sobre las mascotas. 
 
-Hoy encontramos algunos sitios principalmente en Facebook donde promueven la adopción de mascotas, otros que buscan mascotas pérdidas y muchos otros sobre personas interesadas en vender sus productos para mascotas; pero aún no tenemos un sitio que muestre toda esta información en un sólo lugar y que sea de fácil acceso a los usuarios. Por esto se creó [Pet Community](https://faog.github.io/SCL008-Social-Network/) esperando lograr una gran comunidad de amantes de los animales, donde puedan encontrar toda la información que necesiten al alcance de un click.
+Hoy encontramos algunos sitios principalmente en Facebook donde promueven la adopción de mascotas, otros que buscan mascotas pérdidas y muchos otros sobre personas interesadas en vender sus productos para mascotas; pero aún no existe un sitio que muestre toda esta información en un sólo lugar y que sea de fácil acceso a los usuarios. Por esto se creó [Pet Community](https://faog.github.io/SCL008-Social-Network/) esperando lograr una gran comunidad de amantes de los animales, donde puedan encontrar toda la información que necesiten al alcance de un click.
 
 Esto facilitará las adopciones, contribuyendo con el bienestar animal y evitar más animales sufriendo en las calles, la necesidad inmediata de encontrar a un veterinario cerca de el lugar donde estemos, un hotel canino, incluso accesorios para ellas. 
 
