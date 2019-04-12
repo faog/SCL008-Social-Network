@@ -237,12 +237,12 @@
     
 }
 
-#informationsocialnetwork h1 {
+#informationsocialnetwork h2 {
     color:#4B4B4B; 
     font-size: 32px;
 }
 
-#informationsocialnetwork h2 {
+#informationsocialnetwork h3 {
     color:#4B4B4B; 
     font-size: 28px;
 }
@@ -311,11 +311,11 @@
             width: 70%;
         }
 
-        #informationsocialnetwork h1 {            
+        #informationsocialnetwork h2 {            
             font-size: 26px;
         }
         
-        #informationsocialnetwork h2 {           
+        #informationsocialnetwork h3 {           
             font-size:22px;
         }
         
@@ -368,11 +368,11 @@
         width: 40%;
     }
 
-    #informationsocialnetwork h1 {            
+    #informationsocialnetwork h2 {            
         font-size: 24px;
     }
     
-    #informationsocialnetwork h2, #newaccount h2 {           
+    #informationsocialnetwork h3, #newaccount h2 {           
         font-size:20px;
     }
 
@@ -415,6 +415,17 @@
     width: 80%; 
 }
 
+.templatetimeline h2{
+    margin-top:70px;
+    width:80%;
+    font-size:20px;
+    color:#4B4B4B; 
+}
+
+#sectiontimeline h2{
+    margin-top:0px;
+}
+
 #navinformation{
     top:0px;
     background-color:#00BF6F;
@@ -427,8 +438,8 @@
     align-content:center;
 }
 
-#userinformation{
-    margin-top: 100px;         
+#userinformation{    
+    margin-top:20px;      
     width: 80%; 
     background-color:white;        
 }
@@ -501,7 +512,7 @@
 }  
 
 #userpost{
-    margin-top:60px;
+    margin-top:10px;
     width:100%;
 }
 
@@ -516,7 +527,22 @@
 
 .btntimeline{
     width: 80%;
+    justify-content: flex-end;
 }
+
+.btnlike{
+    background-color: #808080;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    border:none;
+}
+
+
+
 .btndelete{    
     background-color: #C70039;   
     color:white;
@@ -540,13 +566,52 @@
 }
 
 #posterror{
+    margin-top:60px;
     color:#C70039;  
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 14px;
 }
+
+#userprofile{
+    display: flex;
+    flex-direction: column;
+}
+
+#userprofile img{
+    width: 30%;
+    border-radius: 1000px;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+#userprofile h2{
+    color:#4B4B4B; 
+    padding: 10px 0px;
+    font-size: 28px;
+ 
+}
+#userprofile h3{
+    color:#4B4B4B; 
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+}
+
 /*Dispositivos MOBILE Orientation PORTRAIT*/
 @media screen and (max-width: 1024px) and (orientation: portrait){   
+
+    #userprofile img{
+        width: 20%;            
+    }
+
+    #userprofile h2{
+        font-size: 24px;         
+    }
+    #userprofile h3{
+        font-size: 18px; 
+    }  
+
 
     /*Elementos de los contenedores para pantallas de celular*/
     @media (max-height: 860px) {
@@ -570,17 +635,29 @@
             padding: 5px 0px;  
         }
         
-        #userinformation {
-            margin-top: 60px;
+        #userinformation {    
+            margin-top:20px;         
             width: 80%;
             background-color: white;
         } 
 
-        .btndelete, .btnupdate{    
+        .btndelete, .btnupdate, .btnlike{    
             height: 25px;
             width: 80px;
             font-size: 14px;
-        }        
+        }   
+        
+        #userprofile img{
+            width: 25%;            
+        }
+
+        #userprofile h2{
+            font-size: 24px;         
+        }
+        #userprofile h3{
+            font-size: 18px; 
+        }       
+        
 
     }
     
@@ -609,9 +686,33 @@
     }
     
     #userinformation {
-        margin-top: 60px;
+        margin-top:20px;  
         width: 80%;
         background-color: white;
     } 
+
+    #userprofile img{
+        width: 12%;            
+    }
+
+    #userprofile h2{
+        font-size: 20px;         
+    }
+    #userprofile h3{
+        font-size: 16px; 
+    }  
     
+}
+
+@media (min-width: 990px) and (orientation: landscape)  {
+    #userprofile img{
+        width: 12%;            
+    }
+
+    #userprofile h2{
+        font-size: 20px;         
+    }
+    #userprofile h3{
+        font-size: 16px; 
+    }  
 }

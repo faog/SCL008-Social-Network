@@ -8,7 +8,7 @@ export const templateSignIn = () =>{
     
     document.getElementById('containersocialnetwork').innerHTML=    
         `
-        <section class="templatesignin">
+        <div class="templatesignin">
             <article id="signininformation">
                 <img src="assets/Images/logoVerde.png" id="logosignin" alt="logo Pet Community"/> 
                 <h2>Pet Community</h2>
@@ -20,8 +20,8 @@ export const templateSignIn = () =>{
                 <button id="signin">Iniciar Sesión</button>   
                 <button id="googlesignin">Iniciar con Google</button>    
                 <a id="createaccount" href="#/create">Crear cuenta</a>  
-            </article>
-        </section>
+            </article>            
+        </div>
         `;      
     
     document.getElementById('signin').addEventListener('click', () => {

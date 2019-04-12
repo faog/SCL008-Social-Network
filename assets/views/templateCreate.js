@@ -7,13 +7,13 @@ export const templateCreate = () => {
   const containerCreate = document.getElementById('containersocialnetwork');
   //Creo la estructura que necesito imprimir
   const contentCreate = `
-                        <section class="templatecreate">
+                        <div class="templatecreate">                          
                           <section id="informationsocialnetwork">
                             <a href="#" class="brand-logo">
                               <img src="assets/Images/logoVerde.png" id="logo" alt="logo Pet Community"/>
                             </a>                           
-                            <h1>Pet Community</h1>
-                            <h2>La comunidad de mascotas</h2>                     
+                            <h2>Pet Community</h2>
+                            <h3>La comunidad de mascotas</h3>                     
                           </section>
 
                           <section id="newaccount">
@@ -30,7 +30,7 @@ export const templateCreate = () => {
                             <button id="create" class="element">Crea tu cuenta</button>
                             <p id="accounterror"></p>
                           </section>
-                        </section>`;
+                        </div>`;
 
   // pasar el contenido de contentCreate a containerCreate
   containerCreate.innerHTML = contentCreate;
