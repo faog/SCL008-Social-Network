@@ -3,7 +3,7 @@
 ## ⭐️ Readme Social Network ⭐️
 Para el proyecto de Red Social se creó una red  pensada en los amantes y cuidadores de los animales a la que podrán acceder directamente en sus teléfonos móviles, llamada [Pet Community](https://faog.github.io/SCL008-Social-Network/). 
 
-## ¿Qué es Pet Comunity? 😺🐶🐰🐹
+## ¿Qué es Pet Community? 😺🐶🐰🐹
 [Pet Community](https://faog.github.io/SCL008-Social-Network/) nace como una aplicación pensanda en la necesidad de unificar las necesidades de las personas que de alguna manera tienen preocupaciones sobre las mascotas. 
 
 Hoy encontramos algunos sitios principalmente en Facebook donde promueven la adopción de mascotas, otros que buscan mascotas pérdidas y muchos otros sobre personas interesadas en vender sus productos para mascotas; pero aún no tenemos un sitio que muestre toda esta información en un sólo lugar y que sea de fácil acceso a los usuarios. Por esto se creó [Pet Community](https://faog.github.io/SCL008-Social-Network/) esperando lograr una gran comunidad de amantes de los animales, donde puedan encontrar toda la información que necesiten al alcance de un click.
