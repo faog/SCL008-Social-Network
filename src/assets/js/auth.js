@@ -1,4 +1,4 @@
-import { validateAccount, validateSignIn} from './../js/validation.js';
+import { validateAccount, validateSignIn} from './validation.js';
 import { getName } from './datamodel.js';
 
 /*1.)Función para crear una nueva cuenta
